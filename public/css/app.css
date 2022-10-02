@@ -27,6 +27,14 @@
     justify-content: center;
 }
 
+.navbar {
+    transition: background-color linear 0.3s;
+}
+
+.navactive {
+    background-color: #fff;
+}
+
 @media (max-width: 600px) {
     .nav-item-block {
         width: 100%;

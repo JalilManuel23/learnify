@@ -1,6 +1,6 @@
 <template>
     <main>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg fixed-top" v-bind:class="[isActive ? 'navbar-light navactive' : 'navbar-dark']">
             <div class="container">
                 <a class="navbar-brand fw-bold mr-4" href="#">
                     Learnify
@@ -27,24 +27,44 @@
                         </li>     
                         <div class="d-flex flex-md-row flex-column w-100 justify-content-cente r justify-content-md-end align-items-center">
                             <li class="nav-item nav-item-block d-flex justify-content-center">
-                                <button class="btn btn-primary border-2 fw-bold mx-md-2 m-0 w-100">Iniciar sesión</button>
+                                <router-link class="btn border-2 fw-bold mx-md-2 m-0 w-100 btn-primary" to="/">Iniciar sesión</router-link>
                             </li>
                             <li class="nav-item nav-item-block d-flex justify-content-center mt-2 mt-md-0">
-                                <button class="btn btn-outline-primary border-2 fw-bold w-100">Regístrarse</button>
+                                <router-link class="btn border-2 btn-outline-primary fw-bold w-100" to="/" >Regístrarse</router-link>
                             </li>
                         </div>  
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container mt-5">
-            <router-view></router-view>
-        </div>
+        <router-view></router-view>
     </main>
 </template>
  
 <script>
     import styles from '../../css/app.css';
 
-    export default {}
+    import debounce from 'lodash/debounce';
+
+    export default {
+        data() {
+            return {
+                isActive: false
+            }
+        },  
+        methods: {
+            handleScroll(event) {
+                this.isActive = (window.scrollY > 0) ? true : false;
+            }
+        },
+
+        mounted() {
+            this.handleDebouncedScroll = debounce(this.handleScroll);
+            window.addEventListener('scroll', this.handleDebouncedScroll);
+        },
+
+        beforeDestroy() {
+            window.removeEventListener('scroll', this.handleDebouncedScroll);
+        }
+    }
 </script>
