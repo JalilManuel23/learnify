@@ -1,10 +1,10 @@
 <template>
     <main>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
                 <a class="navbar-brand" href="#">
                     <!-- llamamos al logo de Vue -->
-                    <img src="https://vuejs.org/images/logo.svg" alt="" width="30" height="24">
+                    Learnify
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
