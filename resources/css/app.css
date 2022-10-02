@@ -1,0 +1,34 @@
+/* Estilos generales */
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Colores */
+.btn-primary {
+    background-color: #184E77;
+}
+
+.btn-outline-primary {
+    color: #184E77;
+}
+
+.btn-primary, .btn-outline-primary {
+    border-color: #184E77;
+}
+
+.btn-primary:hover, .btn-outline-primary:hover {
+    border-color: #1E6091;
+    background-color: #1E6091;
+}
+
+/* Navbar */
+.nav-link {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .nav-item-block {
+        width: 100%;
+    }
+}

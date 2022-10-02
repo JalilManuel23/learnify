@@ -25,12 +25,12 @@
                         <li class="nav-item">
                             <router-link exact-active-class="active" to="/" class="nav-link" aria-current="page">Contacto</router-link>
                         </li>     
-                        <div class="d-flex w-100 justify-content-end">
-                            <li class="nav-item m-r-2">
-                                <button class="btn btn-secondary border-2 fw-bold mx-2">Iniciar sesión</button>
+                        <div class="d-flex flex-md-row flex-column w-100 justify-content-cente r justify-content-md-end align-items-center">
+                            <li class="nav-item nav-item-block d-flex justify-content-center">
+                                <button class="btn btn-primary border-2 fw-bold mx-md-2 m-0 w-100">Iniciar sesión</button>
                             </li>
-                            <li class="nav-item">
-                                <button class="btn btn-outline-secondary border-2 fw-bold">Regístrarse</button>
+                            <li class="nav-item nav-item-block d-flex justify-content-center mt-2 mt-md-0">
+                                <button class="btn btn-outline-primary border-2 fw-bold w-100">Regístrarse</button>
                             </li>
                         </div>  
                     </ul>
@@ -44,5 +44,7 @@
 </template>
  
 <script>
+    import styles from '../../css/app.css';
+
     export default {}
 </script>

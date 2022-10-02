@@ -19787,6 +19787,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _css_app_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../css/app.css */ "./resources/css/app.css");
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -19855,7 +19857,7 @@ var _hoisted_11 = {
   "class": "nav-item"
 };
 
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex w-100 justify-content-end\"><li class=\"nav-item m-r-2\"><button class=\"btn btn-secondary border-2 fw-bold mx-2\">Iniciar sesión</button></li><li class=\"nav-item\"><button class=\"btn btn-outline-secondary border-2 fw-bold\">Regístrarse</button></li></div>", 1);
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"d-flex flex-md-row flex-column w-100 justify-content-cente r justify-content-md-end align-items-center\"><li class=\"nav-item nav-item-block d-flex justify-content-center\"><button class=\"btn btn-primary border-2 fw-bold mx-md-2 m-0 w-100\">Iniciar sesión</button></li><li class=\"nav-item nav-item-block d-flex justify-content-center mt-2 mt-md-0\"><button class=\"btn btn-outline-primary border-2 fw-bold w-100\">Regístrarse</button></li></div>", 1);
 
 var _hoisted_13 = {
   "class": "container mt-5"
