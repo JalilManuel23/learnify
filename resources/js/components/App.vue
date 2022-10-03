@@ -1,6 +1,6 @@
 <template>
     <main>
-        <nav class="navbar navbar-expand-lg fixed-top" v-bind:class="[isActive ? 'navbar-light navactive' : 'navbar-dark']">
+        <nav class="navbar navbar-expand-lg fixed-top mt-0 mt-md-3" v-bind:class="[isActive ? 'navbar-light navactive' : 'navbar-dark']">
             <div class="container">
                 <a class="navbar-brand fw-bold mr-4" href="#">
                     Learnify
@@ -18,19 +18,17 @@
                         </li>           
                         <li class="nav-item">
                             <router-link exact-active-class="active" to="/" class="nav-link" aria-current="page">Planes</router-link>
-                        </li>           
-                        <li class="nav-item">
-                            <router-link exact-active-class="active" to="/" class="nav-link" aria-current="page">Nosotros</router-link>
-                        </li>           
+                        </li>                      
                         <li class="nav-item">
                             <router-link exact-active-class="active" to="/" class="nav-link" aria-current="page">Contacto</router-link>
                         </li>     
                         <div class="d-flex flex-md-row flex-column w-100 justify-content-cente r justify-content-md-end align-items-center">
                             <li class="nav-item nav-item-block d-flex justify-content-center">
-                                <router-link class="btn border-2 fw-bold mx-md-2 m-0 w-100 btn-primary" to="/">Iniciar sesión</router-link>
+                                <router-link class="btn border-2 fw-bold mx-md-2 m-0 w-100"
+                                v-bind:class="[isActive ? 'btn-primary' : 'btn-light']" to="/">Iniciar sesión</router-link>
                             </li>
                             <li class="nav-item nav-item-block d-flex justify-content-center mt-2 mt-md-0">
-                                <router-link class="btn border-2 btn-outline-primary fw-bold w-100" to="/" >Regístrarse</router-link>
+                                <router-link class="btn border-2 fw-bold w-100" to="/" v-bind:class="[isActive ? 'btn-outline-primary' : 'btn-outline-light']" >Regístrarse</router-link>
                             </li>
                         </div>  
                     </ul>

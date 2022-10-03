@@ -3,6 +3,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 4vmin;
+    }
+}
+
 /* Colores */
 .btn-primary {
     background-color: #184E77;
@@ -16,9 +27,22 @@
     border-color: #184E77;
 }
 
+.btn-light {
+    color: #184E77;
+}
+
 .btn-primary:hover, .btn-outline-primary:hover {
     border-color: #1E6091;
     background-color: #1E6091;
+}
+
+.btn-light:hover {
+    color: #1E6091;
+}
+
+/* Botones */
+.btn {
+    font-weight: bold;
 }
 
 /* Navbar */
@@ -38,5 +62,9 @@
 @media (max-width: 600px) {
     .nav-item-block {
         width: 100%;
+    }
+
+    .navbar {
+        background-color: #184E77;
     }
 }
