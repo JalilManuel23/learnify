@@ -1,6 +1,6 @@
 <template>
     <main>
-        <nav class="navbar navbar-expand-lg fixed-top" v-bind:class="[isActive ? 'navbar-light navactive' : 'navbar-dark']">
+        <nav class="navbar navbar-expand-lg fixed-top pt-3 pb-3" v-bind:class="[isActive ? 'navbar-light navactive' : 'navbar-dark']">
             <div class="container">
                 <a class="navbar-brand fw-bold mr-4" href="#">
                     Learnify
