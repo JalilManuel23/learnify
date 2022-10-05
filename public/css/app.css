@@ -73,4 +73,10 @@ h1 {
         background-color: #184E77;
     }
 }
-
+body::-webkit-scrollbar {
+    width: 5px;
+    }
+body::-webkit-scrollbar-thumb {
+    background-color: #184E77 !important;
+    border-radius: 50px;
+}
