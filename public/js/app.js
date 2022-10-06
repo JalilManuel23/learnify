@@ -20044,10 +20044,18 @@ var Home = function Home() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Home.vue */ "./resources/js/components/Home.vue"));
 };
 
+var InicioSesion = function InicioSesion() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_login_InicioSesion_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/login/InicioSesion.vue */ "./resources/js/components/login/InicioSesion.vue"));
+};
+
 var routes = [{
   name: 'home',
   path: '/',
   component: Home
+}, {
+  name: 'InicioSesion',
+  path: '/inicio-sesion',
+  component: InicioSesion
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (routes);
 
@@ -42075,7 +42083,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if (chunkId === "resources_js_components_Home_vue") return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_login_InicioSesion_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
