@@ -1,6 +1,9 @@
+import { createRouter, createWebHistory } from 'vue-router';
+
 const Home = () => import('./components/Home.vue')
 const InicioSesion = () => import('./components/login/InicioSesion.vue')
-export const routes = [
+
+const routes = [
     {
         name: 'home',
         path: '/',
@@ -13,4 +16,7 @@ export const routes = [
     }
 ]
 
-export default routes;
+export default createRouter({
+    history: createWebHistory(),
+    routes
+})

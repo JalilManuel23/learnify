@@ -7,16 +7,6 @@ import App from './components/App.vue';
 //importamos Axios
 import VueAxios from 'vue-axios'
 
+import router from './router.js';
 
-//Importamos y configuramos el Vue-router
-import { createWebHashHistory, createRouter } from "vue-router";
-import {routes} from './routes';
- 
-const router = createRouter({
-    history: createWebHashHistory(),
-    routes
-});
-
-createApp(App).use(router).mount('#app')
-app.use(VueAxios, axios);
- 
+createApp(App).use(router, VueAxios, axios).mount('#app');

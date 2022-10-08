@@ -19,6 +19,6 @@
     "dependencies": {
         "vue": "^3.2.40",
         "vue-axios": "^3.4.1",
-        "vue-router": "^4.0.13"
+        "vue-router": "^4.1.5"
     }
 }
