@@ -64,7 +64,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="text-center mt-3">
-                                    <a href="">Crear cuenta</a>
+                                    <router-link to="/registrarse">Crear cuenta</router-link>
                                 </div>
                             </div>
                         </div>
