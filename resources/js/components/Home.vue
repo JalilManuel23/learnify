@@ -1,305 +1,296 @@
 <template>
-  <section class="home">
-    <div class="container vh-100 d-flex align-items-center">
-      <div class="row">
-        <div
-          class="
-            col-md-6 col-12
-            text-center
-            d-flex
-            flex-column
-            align-md-items-start
-            justify-md-content-start justify-content-center
-            align-items-center
-          "
-        >
-          <div class="title-container text-md-start text-center mb-4">
-            <h1>Aprende sin límites</h1>
-            <p>
-              Somos la plataforma de aprendizaje y desarrollo de talento que
-              ayuda a construir equipos más competitivos.
-            </p>
+  <div>
+    <section id="header" class="home">
+      <div class="container vh-100 d-flex align-items-center">
+        <div class="row">
+          <div
+            class="
+              col-md-6 col-12
+              text-center
+              d-flex
+              flex-column
+              align-md-items-start
+              justify-md-content-start justify-content-center
+              align-items-center
+            "
+          >
+            <div class="title-container text-md-start text-center mb-4">
+              <h1>Aprende sin límites</h1>
+              <p>
+                Somos la plataforma de aprendizaje y desarrollo de talento que
+                ayuda a construir equipos más competitivos.
+              </p>
+            </div>
+            <div>
+              <router-link to="/" class="btn btn-light px-4 py-2"
+                >Empezar ahora</router-link
+              >
+            </div>
           </div>
-          <div>
-            <router-link to="/" class="btn btn-light px-4 py-2"
-              >Empezar ahora</router-link
-            >
+          <div
+            class="
+              col-md-6
+              d-flex
+              align-md-items-end
+              justify-md-content-center justify-content-center
+              pt-md-5
+              mt-5
+            "
+          >
+            <img src="../../img/bg.png" class="img-fluid w-100 text-center" />
           </div>
-        </div>
-        <div
-          class="
-            col-md-6
-            d-flex
-            align-md-items-end
-            justify-md-content-center justify-content-center
-            pt-md-5
-            mt-5
-          "
-        >
-          <img src="../../img/bg.png" class="img-fluid w-100 text-center" />
         </div>
       </div>
-    </div>
-  </section>
-  <section class="categorias">
-    <div class="container py-5">
-      <div>
-        <h2 class="h1-responsive font-weight-bold text-center mb-3">
-          Categorías
-        </h2>
-        <!--Section description-->
-        <p class="text-center w-responsive mx-auto mb-5">
-          Aprende lo que necesitas para desarrollar tu perfil profesional
-        </p>
+    </section>
+    <section id="categorias" class="categorias">
+      <div class="container py-5">
+        <div>
+          <h2 class="h1-responsive font-weight-bold text-center mb-3">
+            Categorías
+          </h2>
+          <!--Section description-->
+          <p class="text-center w-responsive mx-auto mb-5">
+            Aprende lo que necesitas para desarrollar tu perfil profesional
+          </p>
+          <div class="row">
+            <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card">
+                <!-- Card body -->
+                <div class="card-body p-3">
+                  <div class="d-flex align-items-center">
+                    <img src="../../img/desarrollo-ingenieria.png" class="img-fluid w-25 text-center">
+                    <div class="ms-3">
+                      <span class="h6 font-weight-bold mb-0">Desarrollo e Ingeniería</span>
+                      <h6 class="card-title text-capitalize text-muted text-sm mb-0">90 Cursos</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+              <div class="card">
+              <!-- Card body -->
+              <div class="card-body p-3">
+                <div class="d-flex align-items-center">
+                  <img src="../../img/marketing.png" class="img-fluid w-25 text-center">
+                  <div class="ms-3">
+                    <span class="h6 font-weight-bold mb-0">Marketing</span>
+                    <h6 class="card-title text-capitalize text-muted text-sm mb-0">108 Cursos</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card">
+              <!-- Card body -->
+              <div class="card-body p-3">
+                <div class="d-flex align-items-center">
+                  <img src="../../img/english.png" class="img-fluid w-25 text-center">
+                  <div class="ms-3">
+                    <span class="h6 font-weight-bold mb-0">Inglés</span>
+                    <h6 class="card-title text-capitalize text-muted text-sm mb-0">55 Cursos</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card">
+              <!-- Card body -->
+              <div class="card-body p-3">
+                <div class="d-flex align-items-center">
+                  <img src="../../img/diseno-ux.png" class="img-fluid w-25 text-center">
+                  <div class="ms-3">
+                    <span class="h6 font-weight-bold mb-0">Diseño y UX</span>
+                    <h6 class="card-title text-capitalize text-muted text-sm mb-0">15 Cursos</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="row">
           <div class="col-xl-3 col-md-6 mb-4">
             <div class="card">
               <!-- Card body -->
               <div class="card-body p-3">
                 <div class="d-flex align-items-center">
-                  <img src="../../img/desarrollo-ingenieria.png" class="img-fluid w-25 text-center">
+                  <img src="../../img/finanzas.png" class="img-fluid w-25 text-center">
                   <div class="ms-3">
-                    <span class="h6 font-weight-bold mb-0">Desarrollo e Ingeniería</span>
+                    <span class="h6 font-weight-bold mb-0">Finanzas e Inversiones</span>
                     <h6 class="card-title text-capitalize text-muted text-sm mb-0">90 Cursos</h6>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        <div class="col-xl-3 col-md-6 mb-4">
+          <div class="col-xl-3 col-md-6 mb-4">
             <div class="card">
-            <!-- Card body -->
-            <div class="card-body p-3">
-              <div class="d-flex align-items-center">
-                <img src="../../img/marketing.png" class="img-fluid w-25 text-center">
-                <div class="ms-3">
-                  <span class="h6 font-weight-bold mb-0">Marketing</span>
-                  <h6 class="card-title text-capitalize text-muted text-sm mb-0">108 Cursos</h6>
+              <!-- Card body -->
+              <div class="card-body">
+                <div class="d-flex align-items-center">
+                  <img src="../../img/videogame.png" class="img-fluid w-25 text-center">
+                  <div class="ms-3">
+                    <span class="h6 font-weight-bold mb-0">Videojuegos</span>
+                    <h6 class="card-title text-capitalize text-muted text-sm mb-0">20 Cursos</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card py-0 px-">
+              <!-- Card body -->
+              <div class="card-body p-3">
+                <div class="d-flex align-items-center">
+                  <img src="../../img/estilo-de-vida.png" class="img-fluid w-25 text-center">
+                  <div class="ms-3">
+                    <span class="h6 font-weight-bold mb-0">Estilo de vida</span>
+                    <h6 class="card-title text-capitalize text-muted text-sm mb-0">89 Cursos</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-md-6 mb-4">
+            <div class="card">
+              <!-- Card body -->
+              <div class="card-body p-3">
+                <div class="d-flex align-items-center">
+                  <img src="../../img/liderazgo.png" class="img-fluid w-25 text-center">
+                  <div class="ms-3">
+                    <span class="h6 font-weight-bold mb-0">Liderazgo</span>
+                    <h6 class="card-title text-capitalize text-muted text-sm mb-0">35 Cursos</h6>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-xl-3 col-md-6 mb-4">
-          <div class="card">
-            <!-- Card body -->
-            <div class="card-body p-3">
-              <div class="d-flex align-items-center">
-                <img src="../../img/english.png" class="img-fluid w-25 text-center">
-                <div class="ms-3">
-                  <span class="h6 font-weight-bold mb-0">Inglés</span>
-                  <h6 class="card-title text-capitalize text-muted text-sm mb-0">55 Cursos</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-4">
-          <div class="card">
-            <!-- Card body -->
-            <div class="card-body p-3">
-              <div class="d-flex align-items-center">
-                <img src="../../img/diseno-ux.png" class="img-fluid w-25 text-center">
-                <div class="ms-3">
-                  <span class="h6 font-weight-bold mb-0">Diseño y UX</span>
-                  <h6 class="card-title text-capitalize text-muted text-sm mb-0">15 Cursos</h6>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xl-3 col-md-6 mb-4">
-          <div class="card">
-            <!-- Card body -->
-            <div class="card-body p-3">
-              <div class="d-flex align-items-center">
-                <img src="../../img/finanzas.png" class="img-fluid w-25 text-center">
-                <div class="ms-3">
-                  <span class="h6 font-weight-bold mb-0">Finanzas e Inversiones</span>
-                  <h6 class="card-title text-capitalize text-muted text-sm mb-0">90 Cursos</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-4">
-          <div class="card">
-            <!-- Card body -->
-            <div class="card-body">
-              <div class="d-flex align-items-center">
-                <img src="../../img/videogame.png" class="img-fluid w-25 text-center">
-                <div class="ms-3">
-                  <span class="h6 font-weight-bold mb-0">Videojuegos</span>
-                  <h6 class="card-title text-capitalize text-muted text-sm mb-0">20 Cursos</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-4">
-          <div class="card py-0 px-">
-            <!-- Card body -->
-            <div class="card-body p-3">
-              <div class="d-flex align-items-center">
-                <img src="../../img/estilo-de-vida.png" class="img-fluid w-25 text-center">
-                <div class="ms-3">
-                  <span class="h6 font-weight-bold mb-0">Estilo de vida</span>
-                  <h6 class="card-title text-capitalize text-muted text-sm mb-0">89 Cursos</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-xl-3 col-md-6 mb-4">
-          <div class="card">
-            <!-- Card body -->
-            <div class="card-body p-3">
-              <div class="d-flex align-items-center">
-                <img src="../../img/liderazgo.png" class="img-fluid w-25 text-center">
-                <div class="ms-3">
-                  <span class="h6 font-weight-bold mb-0">Liderazgo</span>
-                  <h6 class="card-title text-capitalize text-muted text-sm mb-0">35 Cursos</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-    </div>
-  </section>
-  <section class="contact">
-    <div class="container align-items-center my-4">
-      <section class="mb-4">
-        <!--Section heading-->
-        <h2 class="h1-responsive font-weight-bold text-center ">
-          Contáctanos
-        </h2>
-        <!--Section description-->
-        <p class="text-center w-responsive mx-auto mb-5">
-          ¿Tienes alguna duda? Envíanos un mensaje
-        </p>
-
-        <div class="row">
-          <!--Grid column-->
-          <div class="col-md-9 mb-md-0 mb-5">
-            <form
-              id="contact-form"
-              name="contact-form"
-              action="mail.php"
-              method="POST"
-            >
-              <!--Grid row-->
-              <div class="row">
-              
-                <!--Grid column-->
-                <div class="col-md-6">
-                  <label for="name" class="">Nombre</label>
-                  <div class="md-form mb-0">
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-                <!--Grid column-->
-
-                <!--Grid column-->
-                
-                <div class="col-md-6">
-                  <label>Correo</label>
-                  <div class="md-form mb-0">
-                    <input
-                      type="text"
-                      id="email"
-                      name="email"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-
-                <!--Grid column-->
-              </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-                <label for="subject" class="">Asunto</label>
-
-                <div class="col-md-12">
-                  <div class="md-form mb-0">
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      class="form-control"
-                    />
-                  </div>
-                </div>
-              </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-                <label for="message">Mensaje</label>
-
-                <!--Grid column-->
-                <div class="col-md-12">
-                  <div class="md-form">
-                    <textarea
-                      type="text"
-                      id="message"
-                      name="message"
-                      rows="2"
-                      class="form-control md-textarea"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
-              <!--Grid row-->
-            </form>
-
-            <div class="text-center text-md-left ">
-              <a
-                class="btn btn-primary mt-4"
-                onclick=""
-                >Enviar</a
+    </section>
+    <section id="contacto" class="contact">
+      <div class="container align-items-center my-4">
+        <section class="mb-4">
+          <!--Section heading-->
+          <h2 class="h1-responsive font-weight-bold text-center ">
+            Contáctanos
+          </h2>
+          <!--Section description-->
+          <p class="text-center w-responsive mx-auto mb-5">
+            ¿Tienes alguna duda? Envíanos un mensaje
+          </p>
+          <div class="row">
+            <!--Grid column-->
+            <div class="col-md-9 mb-md-0 mb-5">
+              <form
+                id="contact-form"
+                name="contact-form"
+                action="mail.php"
+                method="POST"
               >
+                <!--Grid row-->
+                <div class="row">
+    
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                    <label for="name" class="">Nombre</label>
+                    <div class="md-form mb-0">
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <!--Grid column-->
+                  <!--Grid column-->
+    
+                  <div class="col-md-6">
+                    <label>Correo</label>
+                    <div class="md-form mb-0">
+                      <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+                <!--Grid row-->
+                <div class="row">
+                  <label for="subject" class="">Asunto</label>
+                  <div class="col-md-12">
+                    <div class="md-form mb-0">
+                      <input
+                        type="text"
+                        id="subject"
+                        name="subject"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <!--Grid row-->
+                <!--Grid row-->
+                <div class="row">
+                  <label for="message">Mensaje</label>
+                  <!--Grid column-->
+                  <div class="col-md-12">
+                    <div class="md-form">
+                      <textarea
+                        type="text"
+                        id="message"
+                        name="message"
+                        rows="2"
+                        class="form-control md-textarea"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <!--Grid row-->
+              </form>
+              <div class="text-center text-md-left ">
+                <a
+                  class="btn btn-primary mt-4"
+                  onclick=""
+                  >Enviar</a
+                >
+              </div>
+              <div class="status"></div>
             </div>
-            <div class="status"></div>
+            <!--Grid column-->
+            <!--Grid column-->
+            <div class="col-md-3 text-center">
+              <ul class="list-unstyled mb-0">
+                <li>
+                  <i class="fas fa-map-marker-alt fa-2x"></i>
+                  <p>Durango - Mezquital, 34308 Gabino Santillán, Dgo.</p>
+                </li>
+                <li>
+                  <i class="fas fa-phone mt-4 fa-2x"></i>
+                  <br>
+                  <a style="text-decoration: none;" class="text-black" href="tel:+526181373050">+52 618 137 30 50</a>
+                </li>
+                <li>
+                  <i class="fas fa-envelope mt-4 fa-2x"></i>
+                  <br>
+                  <a style="text-decoration: none;" class="text-black" href="emailto:paolarosalesv2001@gmail.com">paolarosalesv2001@gmail.com</a>
+                </li>
+              </ul>
+            </div>
+            <!--Grid column-->
           </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-md-3 text-center">
-            <ul class="list-unstyled mb-0">
-              <li>
-                <i class="fas fa-map-marker-alt fa-2x"></i>
-                <p>Durango - Mezquital, 34308 Gabino Santillán, Dgo.</p>
-              </li>
-
-              <li>
-                <i class="fas fa-phone mt-4 fa-2x"></i>
-                <br>
-                <a style="text-decoration: none;" class="text-black" href="tel:+526181373050">+52 618 137 30 50</a>
-              </li>
-
-              <li>
-                <i class="fas fa-envelope mt-4 fa-2x"></i>
-                <br>
-                <a style="text-decoration: none;" class="text-black" href="emailto:paolarosalesv2001@gmail.com">paolarosalesv2001@gmail.com</a>
-              </li>
-            </ul>
-          </div>
-          <!--Grid column-->
-        </div>
-      </section>
-    </div>
-  </section>
+        </section>
+      </div>
+    </section>
+  </div>
 </template>
 
 <style>
