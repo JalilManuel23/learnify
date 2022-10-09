@@ -19989,6 +19989,18 @@ var InicioSesion = function InicioSesion() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_login_InicioSesion_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/login/InicioSesion.vue */ "./resources/js/components/login/InicioSesion.vue"));
 };
 
+var Registro = function Registro() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_login_Registro_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/login/Registro.vue */ "./resources/js/components/login/Registro.vue"));
+};
+
+var RecuperacionContrasena = function RecuperacionContrasena() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_login_RecuperacionContrasena_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/login/RecuperacionContrasena.vue */ "./resources/js/components/login/RecuperacionContrasena.vue"));
+};
+
+var RestablecerContrasena = function RestablecerContrasena() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_login_RestablecerContrasena_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/login/RestablecerContrasena.vue */ "./resources/js/components/login/RestablecerContrasena.vue"));
+};
+
 var routes = [{
   name: 'home',
   path: '/',
@@ -19997,6 +20009,18 @@ var routes = [{
   name: 'InicioSesion',
   path: '/inicio-sesion',
   component: InicioSesion
+}, {
+  name: 'Registro',
+  path: '/registrarse',
+  component: Registro
+}, {
+  name: 'RecuperarContrasena',
+  path: '/recuperar-contrasena',
+  component: RecuperacionContrasena
+}, {
+  name: 'RestablecerContrasena',
+  path: '/restablecer-contrasena',
+  component: RestablecerContrasena
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(),
@@ -42027,7 +42051,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_login_InicioSesion_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_login_InicioSesion_vue":1,"resources_js_components_login_Registro_vue":1,"resources_js_components_login_RecuperacionContrasena_vue":1,"resources_js_components_login_RestablecerContrasena_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

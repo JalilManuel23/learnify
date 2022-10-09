@@ -57,7 +57,7 @@
                         <div class="row">
                             <div class="col">
                                 <div class="text-center mt-3">
-                                    <a href="">¿Olvidaste  tu contraseña?</a>
+                                    <router-link to="/recuperar-contrasena">¿Olvidaste  tu contraseña?</router-link>
                                 </div>
                             </div>
                         </div>
