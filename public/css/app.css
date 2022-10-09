@@ -73,6 +73,10 @@ h1 {
     .navbar {
         background-color: #184E77;
     }
+
+    .navactive {
+        background-color: #fff;
+    }
 }
 body::-webkit-scrollbar {
     width: 5px;
