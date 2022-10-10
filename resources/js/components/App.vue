@@ -1,6 +1,6 @@
 <template>
     <main>
-        <nav class="navbar navbar-expand-lg fixed-top pt-3 pb-3" v-bind:class="[isActive ? 'navbar-light navactive' : 'navbar-dark']">
+        <nav class="navbar navbar-expand-lg fixed-top pt-3 pb-3" v-bind:class="[(isActive || pagesNavWhite.includes($route.name)) ? 'navbar-light navactive' : 'navbar-dark']">
             <div class="container">
                 <router-link exact-active-class="active" to="/" class="navbar-brand fw-bold mr-4">
                     Learnify
@@ -11,16 +11,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100">
                         <li class="nav-item">
-                            <a href="#header" class="nav-link active">Inicio</a>
+                            <a v-if="$route.name == 'home'" href="#header" class="nav-link active">Inicio</a>
+                            <router-link v-else to="/" class="nav-link active">Inicio</router-link>
                         </li>           
                         <li class="nav-item">
-                            <a href="#categorias" class="nav-link">Cursos</a>
+                            <a v-if="$route.name == 'home'" href="#categorias" class="nav-link active">Cursos</a>
+                            <router-link v-else to="/categorias" class="nav-link active">Cursos</router-link>
                         </li>           
                         <li class="nav-item">
-                            <a href="#planes" class="nav-link">Planes</a>
+                            <a v-if="$route.name == 'home'" href="#planes" class="nav-link active">Planes</a>
+                            <router-link v-else to="/planes" class="nav-link active">Planes</router-link>
                         </li>                      
                         <li class="nav-item">
-                            <a href="#contacto" class="nav-link">Contacto</a>
+                            <a v-if="$route.name == 'home'" href="#contacto" class="nav-link active">Contacto</a>
+                            <router-link v-else to="/contacto" class="nav-link active">Contacto</router-link>
                         </li>     
                         <div class="d-flex flex-md-row flex-column w-100 justify-content-cente r justify-content-md-end align-items-center">
                             <li class="nav-item nav-item-block d-flex justify-content-center">
@@ -47,7 +51,8 @@
     export default {
         data() {
             return {
-                isActive: false
+                isActive: false, 
+                pagesNavWhite: ['Categorias', 'Planes', 'Contacto']
             }
         },  
         methods: {

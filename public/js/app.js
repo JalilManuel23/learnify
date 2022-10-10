@@ -19795,7 +19795,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
-      isActive: false
+      isActive: false,
+      pagesNavWhite: ['Categorias', 'Planes', 'Contacto']
     };
   },
   methods: {
@@ -19852,16 +19853,45 @@ var _hoisted_3 = {
 var _hoisted_4 = {
   "class": "navbar-nav me-auto mb-2 mb-lg-0 w-100"
 };
-
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"nav-item\"><a href=\"#header\" class=\"nav-link active\">Inicio</a></li><li class=\"nav-item\"><a href=\"#categorias\" class=\"nav-link\">Cursos</a></li><li class=\"nav-item\"><a href=\"#planes\" class=\"nav-link\">Planes</a></li><li class=\"nav-item\"><a href=\"#contacto\" class=\"nav-link\">Contacto</a></li>", 4);
-
+var _hoisted_5 = {
+  "class": "nav-item"
+};
+var _hoisted_6 = {
+  key: 0,
+  href: "#header",
+  "class": "nav-link active"
+};
+var _hoisted_7 = {
+  "class": "nav-item"
+};
+var _hoisted_8 = {
+  key: 0,
+  href: "#categorias",
+  "class": "nav-link active"
+};
 var _hoisted_9 = {
-  "class": "d-flex flex-md-row flex-column w-100 justify-content-cente r justify-content-md-end align-items-center"
+  "class": "nav-item"
 };
 var _hoisted_10 = {
-  "class": "nav-item nav-item-block d-flex justify-content-center"
+  key: 0,
+  href: "#planes",
+  "class": "nav-link active"
 };
 var _hoisted_11 = {
+  "class": "nav-item"
+};
+var _hoisted_12 = {
+  key: 0,
+  href: "#contacto",
+  "class": "nav-link active"
+};
+var _hoisted_13 = {
+  "class": "d-flex flex-md-row flex-column w-100 justify-content-cente r justify-content-md-end align-items-center"
+};
+var _hoisted_14 = {
+  "class": "nav-item nav-item-block d-flex justify-content-center"
+};
+var _hoisted_15 = {
   "class": "nav-item nav-item-block d-flex justify-content-center mt-2 mt-md-0"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -19870,7 +19900,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-view");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("main", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", {
-    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["navbar navbar-expand-lg fixed-top pt-3 pb-3", [$data.isActive ? 'navbar-light navactive' : 'navbar-dark']])
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["navbar navbar-expand-lg fixed-top pt-3 pb-3", [$data.isActive || $data.pagesNavWhite.includes(_ctx.$route.name) ? 'navbar-light navactive' : 'navbar-dark']])
   }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     "exact-active-class": "active",
     to: "/",
@@ -19882,7 +19912,51 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  }), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  }), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ul", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_5, [_ctx.$route.name == 'home' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", _hoisted_6, "Inicio")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_link, {
+    key: 1,
+    to: "/",
+    "class": "nav-link active"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Inicio")];
+    }),
+    _: 1
+    /* STABLE */
+
+  }))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_7, [_ctx.$route.name == 'home' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", _hoisted_8, "Cursos")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_link, {
+    key: 1,
+    to: "/categorias",
+    "class": "nav-link active"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Cursos")];
+    }),
+    _: 1
+    /* STABLE */
+
+  }))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_9, [_ctx.$route.name == 'home' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", _hoisted_10, "Planes")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_link, {
+    key: 1,
+    to: "/planes",
+    "class": "nav-link active"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Planes")];
+    }),
+    _: 1
+    /* STABLE */
+
+  }))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_11, [_ctx.$route.name == 'home' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", _hoisted_12, "Contacto")) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_router_link, {
+    key: 1,
+    to: "/contacto",
+    "class": "nav-link active"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Contacto")];
+    }),
+    _: 1
+    /* STABLE */
+
+  }))]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_14, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["btn border-2 fw-bold mx-md-2 m-0 w-100", [$data.isActive ? 'btn-primary' : 'btn-light']]),
     to: "/inicio-sesion"
   }, {
@@ -19894,7 +19968,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["class"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+  , ["class"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["btn border-2 fw-bold w-100", [$data.isActive ? 'btn-outline-primary' : 'btn-outline-light']]),
     to: "/registrarse"
   }, {
@@ -19985,6 +20059,18 @@ var Home = function Home() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/Home.vue */ "./resources/js/components/Home.vue"));
 };
 
+var Categorias = function Categorias() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_home_Categorias_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/home/Categorias.vue */ "./resources/js/components/home/Categorias.vue"));
+};
+
+var Planes = function Planes() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_home_Planes_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/home/Planes.vue */ "./resources/js/components/home/Planes.vue"));
+};
+
+var Contacto = function Contacto() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_home_Contacto_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/home/Contacto.vue */ "./resources/js/components/home/Contacto.vue"));
+};
+
 var InicioSesion = function InicioSesion() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_login_InicioSesion_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/login/InicioSesion.vue */ "./resources/js/components/login/InicioSesion.vue"));
 };
@@ -20005,6 +20091,18 @@ var routes = [{
   name: 'home',
   path: '/',
   component: Home
+}, {
+  name: 'Categorias',
+  path: '/categorias',
+  component: Categorias
+}, {
+  name: 'Planes',
+  path: '/planes',
+  component: Planes
+}, {
+  name: 'Contacto',
+  path: '/contacto',
+  component: Contacto
 }, {
   name: 'InicioSesion',
   path: '/inicio-sesion',
@@ -42194,7 +42292,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_login_InicioSesion_vue":1,"resources_js_components_login_Registro_vue":1,"resources_js_components_login_RecuperacionContrasena_vue":1,"resources_js_components_login_RestablecerContrasena_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_home_Categorias_vue":1,"resources_js_components_home_Planes_vue":1,"resources_js_components_home_Contacto_vue":1,"resources_js_components_login_InicioSesion_vue":1,"resources_js_components_login_Registro_vue":1,"resources_js_components_login_RecuperacionContrasena_vue":1,"resources_js_components_login_RestablecerContrasena_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
