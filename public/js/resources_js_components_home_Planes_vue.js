@@ -30,17 +30,423 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container\"><!--Section heading--><h2 class=\"h1-responsive font-weight-bold text-center\"> Planes Learnify </h2><!--Section description--><p class=\"text-center w-responsive mx-auto mb-5\"> Eleva tu talento con el plan que mejor se amolde a tus necesidades. </p><div class=\"row\"><div class=\"col-md-12\"><div class=\"row iq-star-inserted row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5 text-center\"><div class=\"col iq-star-inserted-1\"><div class=\"card my-5\"><div class=\"card-body\"><h2 class=\"my-0 fw-normal mb-4\">Enterprise</h2><h1 class=\"card-title pricing-card-title mb-0\">$29 <small class=\"text-secondary\"> / month</small></h1><p class=\"mb-0\">billed yearly</p><p>$79.9 billed monthly</p><ul class=\"list-unstyled my-3 p-0\"><li><p>30 users included</p></li><li><p>15 GB of storage</p></li><li><p>Call and email support</p></li><li><p>Help center access</p></li></ul><button type=\"button\" class=\"btn btn-primary rounded-pill w-100\">Get Started</button></div></div></div><div class=\"col iq-star-inserted-2\"><div class=\"card mb-0 shadow-lg\"><div class=\"card-body\"><h2><span class=\"badge rounded-pill bg-soft-primary mb-4\"><small class=\"text-uppercase px-3\">Popular</small></span></h2><h2 class=\"my-0 fw-normal mb-4\">Pro</h2><h1 class=\"card-title pricing-card-title mb-0\">$15<small class=\"text-secondary\"> / month</small></h1><p class=\"mb-0\">billed yearly</p><p>$55.0 billed monthly</p><ul class=\"list-unstyled my-3 p-0\"><li><p>20 users included</p></li><li><p>10 GB of storage</p></li><li><p>Priority email support</p></li><li><p>Help center access</p></li></ul><button type=\"button\" class=\"btn btn-primary rounded-pill w-100\">Get Started</button></div></div></div><div class=\"col iq-star-inserted-3\"><div class=\"card my-5\"><div class=\"card-body\"><h2 class=\"my-0 fw-normal mb-4\">Premium</h2><h1 class=\"card-title pricing-card-title mb-0\">$49 <small class=\"text-secondary\"> / month</small></h1><p class=\"mb-0\">billed yearly</p><p>$99.9 billed monthly</p><ul class=\"list-unstyled my-3 p-0\"><li><p>50 users included</p></li><li><p>60 GB of storage</p></li><li><p>24 X 7 call support</p></li><li><p>Help center access</p></li></ul><button type=\"button\" class=\"btn btn-primary rounded-pill w-100\">Get Started</button></div></div></div></div></div></div><div class=\"card\"><div class=\"row no-gutters\"><div class=\"col-md-8\"><div class=\"card-body\"><h4>Lifetime Membership</h4><p class=\"mt-2\"> If you will take advantage of the above-listed amenities, classes, and services, Life Time&#39;s membership fees may be worth the cost. </p><div class=\"mb-5 pt-2\"><p class=\"line-around text-secondary mb-0\"><span class=\"line-around-1\">Included Features</span></p></div><div class=\"row\"><div class=\"col-lg-6 col-md-6 col-sm-12\"><div class=\"d-flex align-items-center\"><svg width=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.3345 2.75024H7.66549C4.64449 2.75024 2.75049 4.88924 2.75049 7.91624V16.0842C2.75049 19.1112 4.63549 21.2502 7.66549 21.2502H16.3335C19.3645 21.2502 21.2505 19.1112 21.2505 16.0842V7.91624C21.2505 4.88924 19.3645 2.75024 16.3345 2.75024Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M8.43994 12.0002L10.8139 14.3732L15.5599 9.6272\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg><div class=\"ms-2\">Private forum access</div></div></div><div class=\"col-lg-6 col-md-6 col-sm-12\"><div class=\"d-flex align-items-center\"><svg width=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.3345 2.75024H7.66549C4.64449 2.75024 2.75049 4.88924 2.75049 7.91624V16.0842C2.75049 19.1112 4.63549 21.2502 7.66549 21.2502H16.3335C19.3645 21.2502 21.2505 19.1112 21.2505 16.0842V7.91624C21.2505 4.88924 19.3645 2.75024 16.3345 2.75024Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M8.43994 12.0002L10.8139 14.3732L15.5599 9.6272\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg><div class=\"ms-2\">Private forum access</div></div></div></div><div class=\"row\"><div class=\"col-lg-6 col-md-6 col-sm-12\"><div class=\"d-flex align-items-center\"><svg width=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.3345 2.75024H7.66549C4.64449 2.75024 2.75049 4.88924 2.75049 7.91624V16.0842C2.75049 19.1112 4.63549 21.2502 7.66549 21.2502H16.3335C19.3645 21.2502 21.2505 19.1112 21.2505 16.0842V7.91624C21.2505 4.88924 19.3645 2.75024 16.3345 2.75024Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M8.43994 12.0002L10.8139 14.3732L15.5599 9.6272\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg><div class=\"ms-2\">Private forum access</div></div></div><div class=\"col-lg-6 col-md-6 col-sm-12\"><div class=\"d-flex align-items-center\"><svg width=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.3345 2.75024H7.66549C4.64449 2.75024 2.75049 4.88924 2.75049 7.91624V16.0842C2.75049 19.1112 4.63549 21.2502 7.66549 21.2502H16.3335C19.3645 21.2502 21.2505 19.1112 21.2505 16.0842V7.91624C21.2505 4.88924 19.3645 2.75024 16.3345 2.75024Z\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M8.43994 12.0002L10.8139 14.3732L15.5599 9.6272\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg><div class=\"ms-2\">Private forum access</div></div></div></div></div></div><div class=\"col-md-4\"><div class=\"card-body text-center h-100 iq-single-card\"><div class=\"d-flex align-items-center justify-content-center mb-2\"><h1 class=\"card-title pricing-card-title mb-0\"> $599 </h1><small class=\"ms-1 text-muted fw-light\">USD</small></div><div class=\"font-medium text-center text-secondary\"><div>No monthly subscription,</div><div>you only pay once.</div></div><button class=\"btn btn-primary rounded-pill mt-5 w-100\">Get Started</button></div></div></div></div></div>", 1);
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container\"><!--Section heading--><h2 class=\"h1-responsive font-weight-bold text-center\"> Planes </h2><!--Section description--><p class=\"text-center w-responsive mx-auto mb-5\"> Descubre los distintos planes que tenemos para ti, y elige el que más se acomode a tus necesidades. </p><div class=\"row\"><!-- Free Tier --><div class=\"col-lg-4\"><div class=\"card mb-5 mb-lg-0\"><div class=\"card-body\"><h5 class=\"card-title text-muted text-uppercase text-center\">Básico</h5><h6 class=\"card-price text-center\">$99<span class=\"period\">/mes</span></h6><hr><ul class=\"fa-ul\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Acceso a cursos limitados</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Obtención de Constancia de Participación</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Acceso a actividades y evaluaciones limitadas</li><li class=\"text-muted\"><span class=\"fa-li\"><i class=\"fas fa-times\"></i></span>Obtención de Certificado de Nivel de Conocimiento</li><li class=\"text-muted\"><span class=\"fa-li\"><i class=\"fas fa-times\"></i></span>Asesorías Personalizadas</li><li class=\"text-muted\"><span class=\"fa-li\"><i class=\"fas fa-times\"></i></span>Espacio para realización de Proyectos</li></ul><div class=\"d-grid\"><a href=\"#\" class=\"btn btn-primary text-uppercase\">¡Lo quiero!</a></div></div></div></div><!-- Plus Tier --><div class=\"col-lg-4\"><div class=\"card mb-5 mb-lg-0\"><div class=\"card-body\"><h5 class=\"card-title text-muted text-uppercase text-center\">Intermedio</h5><h6 class=\"card-price text-center\">$179<span class=\"period\">/mes</span></h6><hr><ul class=\"fa-ul\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Acceso a cursos limitados</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Obtención de Constancia de Participación</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Acceso a actividades y evaluaciones limitadas</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Obtención de Certificado de Nivel de Conocimiento</li><li class=\"text-muted\"><span class=\"fa-li\"><i class=\"fas fa-times\"></i></span>Asesorías Personalizadas</li><li class=\"text-muted\"><span class=\"fa-li\"><i class=\"fas fa-times\"></i></span>Espacio para realización de Proyectos</li></ul><div class=\"d-grid\"><a href=\"#\" class=\"btn btn-primary text-uppercase\">¡Lo quiero!</a></div></div></div></div><!-- Pro Tier --><div class=\"col-lg-4\"><div class=\"card\"><div class=\"card-body\"><h5 class=\"card-title text-muted text-uppercase text-center\">Pro</h5><h6 class=\"card-price text-center\">$259<span class=\"period\">/mes</span></h6><hr><ul class=\"fa-ul\"><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Acceso a cursos limitados</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Obtención de Constancia de Participación</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Acceso a actividades y evaluaciones limitadas</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Obtención de Certificado de Nivel de Conocimiento</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Asesorías Personalizadas</li><li><span class=\"fa-li\"><i class=\"fas fa-check\"></i></span>Espacio para realización de Proyectos</li></ul><div class=\"d-grid\"><a href=\"#\" class=\"btn btn-primary text-uppercase\">¡Lo quiero!</a></div></div></div></div></div></div>", 1);
 
 var _hoisted_2 = [_hoisted_1];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", {
     id: "planes",
-    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)(_ctx.$route.name == 'Planes' ? 'padding-top: 20vh;padding-bottom: 15vh;' : 'padding-top: 0;')
+    style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)(_ctx.$route.name == 'Planes' ? 'padding-top: 20vh;padding-bottom: 25vh;' : 'padding-top: 0;'),
+    "class": "pricing"
   }, _hoisted_2, 4
   /* STYLE */
   );
 }
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.pricing .card {\r\n   border: none;\r\n   border-radius: 1rem;\r\n   transition: all 0.2s;\r\n   box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);\n}\n.pricing hr {\r\n   margin: 1.5rem 0;\n}\n.pricing .card-title {\r\n   margin: 0.5rem 0;\r\n   font-size: 0.9rem;\r\n   letter-spacing: .1rem;\r\n   font-weight: bold;\n}\n.pricing .card-price {\r\n   font-size: 3rem;\r\n   margin: 0;\n}\n.pricing .card-price .period {\r\n   font-size: 0.8rem;\n}\n.pricing ul li {\r\n   margin-bottom: 1rem;\n}\n.pricing .text-muted {\r\n   opacity: 0.7;\n}\n.pricing .btn {\r\n   font-size: 80%;\r\n   border-radius: 5rem;\r\n   letter-spacing: .1rem;\r\n   font-weight: bold;\r\n   padding: 1rem;\r\n   opacity: 0.7;\r\n   transition: all 0.2s;\n}\r\n\r\n/* Hover Effects on Card */\n@media (min-width: 992px) {\n.pricing .card:hover {\r\n      margin-top: -.25rem;\r\n      margin-bottom: .25rem;\r\n      box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);\n}\n.pricing .card:hover .btn {\r\n      opacity: 1;\n}\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (cssWithMappingToString) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join("");
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === "string") {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, ""]];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Planes_vue_vue_type_style_index_0_id_311a586c_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Planes.vue?vue&type=style&index=0&id=311a586c&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Planes_vue_vue_type_style_index_0_id_311a586c_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Planes_vue_vue_type_style_index_0_id_311a586c_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+
+
+var isOldIE = function isOldIE() {
+  var memo;
+  return function memorize() {
+    if (typeof memo === 'undefined') {
+      // Test for IE <= 9 as proposed by Browserhacks
+      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+      // Tests for existence of standard globals is to allow style-loader
+      // to operate correctly into non-standard environments
+      // @see https://github.com/webpack-contrib/style-loader/issues/177
+      memo = Boolean(window && document && document.all && !window.atob);
+    }
+
+    return memo;
+  };
+}();
+
+var getTarget = function getTarget() {
+  var memo = {};
+  return function memorize(target) {
+    if (typeof memo[target] === 'undefined') {
+      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+        try {
+          // This will throw an exception if access to iframe is blocked
+          // due to cross-origin restrictions
+          styleTarget = styleTarget.contentDocument.head;
+        } catch (e) {
+          // istanbul ignore next
+          styleTarget = null;
+        }
+      }
+
+      memo[target] = styleTarget;
+    }
+
+    return memo[target];
+  };
+}();
+
+var stylesInDom = [];
+
+function getIndexByIdentifier(identifier) {
+  var result = -1;
+
+  for (var i = 0; i < stylesInDom.length; i++) {
+    if (stylesInDom[i].identifier === identifier) {
+      result = i;
+      break;
+    }
+  }
+
+  return result;
+}
+
+function modulesToDom(list, options) {
+  var idCountMap = {};
+  var identifiers = [];
+
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i];
+    var id = options.base ? item[0] + options.base : item[0];
+    var count = idCountMap[id] || 0;
+    var identifier = "".concat(id, " ").concat(count);
+    idCountMap[id] = count + 1;
+    var index = getIndexByIdentifier(identifier);
+    var obj = {
+      css: item[1],
+      media: item[2],
+      sourceMap: item[3]
+    };
+
+    if (index !== -1) {
+      stylesInDom[index].references++;
+      stylesInDom[index].updater(obj);
+    } else {
+      stylesInDom.push({
+        identifier: identifier,
+        updater: addStyle(obj, options),
+        references: 1
+      });
+    }
+
+    identifiers.push(identifier);
+  }
+
+  return identifiers;
+}
+
+function insertStyleElement(options) {
+  var style = document.createElement('style');
+  var attributes = options.attributes || {};
+
+  if (typeof attributes.nonce === 'undefined') {
+    var nonce =  true ? __webpack_require__.nc : 0;
+
+    if (nonce) {
+      attributes.nonce = nonce;
+    }
+  }
+
+  Object.keys(attributes).forEach(function (key) {
+    style.setAttribute(key, attributes[key]);
+  });
+
+  if (typeof options.insert === 'function') {
+    options.insert(style);
+  } else {
+    var target = getTarget(options.insert || 'head');
+
+    if (!target) {
+      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+    }
+
+    target.appendChild(style);
+  }
+
+  return style;
+}
+
+function removeStyleElement(style) {
+  // istanbul ignore if
+  if (style.parentNode === null) {
+    return false;
+  }
+
+  style.parentNode.removeChild(style);
+}
+/* istanbul ignore next  */
+
+
+var replaceText = function replaceText() {
+  var textStore = [];
+  return function replace(index, replacement) {
+    textStore[index] = replacement;
+    return textStore.filter(Boolean).join('\n');
+  };
+}();
+
+function applyToSingletonTag(style, index, remove, obj) {
+  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
+
+  /* istanbul ignore if  */
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = replaceText(index, css);
+  } else {
+    var cssNode = document.createTextNode(css);
+    var childNodes = style.childNodes;
+
+    if (childNodes[index]) {
+      style.removeChild(childNodes[index]);
+    }
+
+    if (childNodes.length) {
+      style.insertBefore(cssNode, childNodes[index]);
+    } else {
+      style.appendChild(cssNode);
+    }
+  }
+}
+
+function applyToTag(style, options, obj) {
+  var css = obj.css;
+  var media = obj.media;
+  var sourceMap = obj.sourceMap;
+
+  if (media) {
+    style.setAttribute('media', media);
+  } else {
+    style.removeAttribute('media');
+  }
+
+  if (sourceMap && typeof btoa !== 'undefined') {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    while (style.firstChild) {
+      style.removeChild(style.firstChild);
+    }
+
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var singleton = null;
+var singletonCounter = 0;
+
+function addStyle(obj, options) {
+  var style;
+  var update;
+  var remove;
+
+  if (options.singleton) {
+    var styleIndex = singletonCounter++;
+    style = singleton || (singleton = insertStyleElement(options));
+    update = applyToSingletonTag.bind(null, style, styleIndex, false);
+    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+  } else {
+    style = insertStyleElement(options);
+    update = applyToTag.bind(null, style, options);
+
+    remove = function remove() {
+      removeStyleElement(style);
+    };
+  }
+
+  update(obj);
+  return function updateStyle(newObj) {
+    if (newObj) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+        return;
+      }
+
+      update(obj = newObj);
+    } else {
+      remove();
+    }
+  };
+}
+
+module.exports = function (list, options) {
+  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+  // tags it will allow on a page
+
+  if (!options.singleton && typeof options.singleton !== 'boolean') {
+    options.singleton = isOldIE();
+  }
+
+  list = list || [];
+  var lastIdentifiers = modulesToDom(list, options);
+  return function update(newList) {
+    newList = newList || [];
+
+    if (Object.prototype.toString.call(newList) !== '[object Array]') {
+      return;
+    }
+
+    for (var i = 0; i < lastIdentifiers.length; i++) {
+      var identifier = lastIdentifiers[i];
+      var index = getIndexByIdentifier(identifier);
+      stylesInDom[index].references--;
+    }
+
+    var newLastIdentifiers = modulesToDom(newList, options);
+
+    for (var _i = 0; _i < lastIdentifiers.length; _i++) {
+      var _identifier = lastIdentifiers[_i];
+
+      var _index = getIndexByIdentifier(_identifier);
+
+      if (stylesInDom[_index].references === 0) {
+        stylesInDom[_index].updater();
+
+        stylesInDom.splice(_index, 1);
+      }
+    }
+
+    lastIdentifiers = newLastIdentifiers;
+  };
+};
 
 /***/ }),
 
@@ -56,13 +462,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Planes_vue_vue_type_template_id_311a586c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Planes.vue?vue&type=template&id=311a586c */ "./resources/js/components/home/Planes.vue?vue&type=template&id=311a586c");
 /* harmony import */ var _Planes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Planes.vue?vue&type=script&lang=js */ "./resources/js/components/home/Planes.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_learnify_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _Planes_vue_vue_type_style_index_0_id_311a586c_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Planes.vue?vue&type=style&index=0&id=311a586c&lang=css */ "./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css");
+/* harmony import */ var C_laragon_www_learnify_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_learnify_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Planes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Planes_vue_vue_type_template_id_311a586c__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/home/Planes.vue"]])
+
+
+const __exports__ = /*#__PURE__*/(0,C_laragon_www_learnify_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Planes_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Planes_vue_vue_type_template_id_311a586c__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/home/Planes.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -97,6 +506,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Planes_vue_vue_type_template_id_311a586c__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Planes_vue_vue_type_template_id_311a586c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Planes.vue?vue&type=template&id=311a586c */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=template&id=311a586c");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css ***!
+  \*********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Planes_vue_vue_type_style_index_0_id_311a586c_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Planes.vue?vue&type=style&index=0&id=311a586c&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css");
 
 
 /***/ })
