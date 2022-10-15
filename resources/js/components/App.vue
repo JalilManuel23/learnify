@@ -56,7 +56,7 @@
         <router-view></router-view>
     </main>
 </template>
- 
+
 <script>
     import styles from '../../css/app.css';
 
@@ -65,10 +65,10 @@
     export default {
         data() {
             return {
-                isActive: false, 
-                pagesNavWhite: ['Categorias', 'Planes', 'Contacto', 'DesarrolloIngenieria']
+                isActive: false,
+                pagesNavWhite: ['Categorias', 'Planes', 'Contacto']
             }
-        },  
+        },
         methods: {
             handleScroll(event) {
                 this.isActive = (window.scrollY > 0) ? true : false;

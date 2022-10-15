@@ -19796,7 +19796,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       isActive: false,
-      pagesNavWhite: ['Categorias', 'Planes', 'Contacto', 'DesarrolloIngenieria']
+      pagesNavWhite: ['Categorias', 'Planes', 'Contacto']
     };
   },
   methods: {
