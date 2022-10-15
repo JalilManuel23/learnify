@@ -13,19 +13,33 @@
                         <li class="nav-item">
                             <a v-if="$route.name == 'home'" href="#header" class="nav-link active">Inicio</a>
                             <router-link v-else to="/" class="nav-link active">Inicio</router-link>
-                        </li>           
-                        <li class="nav-item">
-                            <a v-if="$route.name == 'home'" href="#categorias" class="nav-link active">Cursos</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a v-if="$route.name == 'home'" href="#categorias" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown" aria-expanded="false" data-bs-offset="10,20">Cursos</a>
                             <router-link v-else to="/categorias" class="nav-link active">Cursos</router-link>
-                        </li>           
+                            <ul class="dropdown-menu shadow-sm">
+                                <li><a href="" class="dropdown-item">Categorías</a>
+                                    <ul class="dropdown-menu submenu shadow-sm">
+                                        <li><a href="" class="dropdown-item">Desarrollo e Ingeniería</a></li>
+                                        <li><a href="" class="dropdown-item">Marketing</a></li>
+                                        <li><a href="" class="dropdown-item">Inglés</a></li>
+                                        <li><a href="" class="dropdown-item">Diseño UX/UI</a></li>
+                                        <li><a href="" class="dropdown-item">Finanzas e Inversiones</a></li>
+                                        <li><a href="" class="dropdown-item">Videojuegos</a></li>
+                                        <li><a href="" class="dropdown-item">Estilos de vida</a></li>
+                                        <li><a href="" class="dropdown-item">Liderazgo</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="nav-item">
                             <a v-if="$route.name == 'home'" href="#planes" class="nav-link active">Planes</a>
                             <router-link v-else to="/planes" class="nav-link active">Planes</router-link>
-                        </li>                      
+                        </li>
                         <li class="nav-item">
                             <a v-if="$route.name == 'home'" href="#contacto" class="nav-link active">Contacto</a>
                             <router-link v-else to="/contacto" class="nav-link active">Contacto</router-link>
-                        </li>     
+                        </li>
                         <div class="d-flex flex-md-row flex-column w-100 justify-content-cente r justify-content-md-end align-items-center">
                             <li class="nav-item nav-item-block d-flex justify-content-center">
                                 <router-link class="btn border-2 fw-bold mx-md-2 m-0 w-100"
@@ -34,7 +48,7 @@
                             <li class="nav-item nav-item-block d-flex justify-content-center mt-2 mt-md-0">
                                 <router-link class="btn border-2 fw-bold w-100" to="/registrarse" v-bind:class="[isActive ? 'btn-outline-primary' : 'btn-outline-light']" >Regístrarse</router-link>
                             </li>
-                        </div>  
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -52,7 +66,7 @@
         data() {
             return {
                 isActive: false, 
-                pagesNavWhite: ['Categorias', 'Planes', 'Contacto']
+                pagesNavWhite: ['Categorias', 'Planes', 'Contacto', 'DesarrolloIngenieria']
             }
         },  
         methods: {
@@ -71,3 +85,27 @@
         }
     }
 </script>
+
+<style scoped>
+    .dropdown-menu li {
+        position: relative;
+    }
+    .dropdown-menu .submenu {
+        display:none;
+        position: absolute;
+    }
+    .dropdown-menu>li:hover>.submenu {
+        display: block;
+        left: 100%;
+        top: -30%;
+    }
+    @media (max-width: 600px) {
+        .dropdown-menu .submenu {
+        display:none;
+        position: absolute;
+    }
+        .dropdown-menu>li:hover>.submenu {
+        display:block;
+    }
+    }
+</style>
