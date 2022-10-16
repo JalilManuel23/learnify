@@ -36,12 +36,16 @@
         </div>
       </div>
     </div>
+
+    <Footer />
 </template>
 
 <script>
+import Footer from '../home/Footer.vue';
     export default {
-        name: 'Categoria'
-    }
+    name: "Categoria",
+    components: { Footer }
+}
 </script>
 
 <style scoped>
