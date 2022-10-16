@@ -11,145 +11,31 @@
               Aprende lo que necesitas para desarrollar tu perfil profesional
             </p>
             <div class="container mt-3">
-              <div class="row">
-                <div class="col-xl-3 col-md-6 mb-4">
-                  <a href="" class="text-decoration-none" title="Ver más">
+              <div class="row">              
+                <div v-for="({ titulo, name, cursos, imagen }, index) in this.categorias" :key="index" class="col-xl-3 col-md-6 mb-4">
+                  <router-link :to="{
+                    name: 'Categoria',
+                    params: {
+                      categoria: name
+                    }
+                  }"                     
+                  class="text-decoration-none"
+                  title="Ver más">
                     <div class="card">
                       <!-- Card body -->
                       <div class="card-body p-3">
                         <div class="d-flex align-items-center">
-                          <img src="../../../img/desarrollo-ingenieria.png" class="img-fluid w-25 text-center">
+                          <img :src="imagen" class="img-fluid w-25 text-center">
                           <div class="ms-3">
-                            <span class="h6 font-weight-bold mb-0" style="color:black">Desarrollo e Ingeniería</span>
-                            <h6 class="card-title text-capitalize text-muted text-sm mb-0">90 Cursos</h6>
+                            <span class="h6 font-weight-bold mb-0" style="color:black">{{ titulo }}</span>
+                            <h6 class="card-title text-capitalize text-muted text-sm mb-0">{{ cursos }} Cursos</h6>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </a>
-                  <router-link to="/"></router-link>
+                  </router-link>
                 </div>
-                <div class="col-xl-3 col-md-6 mb-4">
-                  <a href="" class="text-decoration-none" title="Ver más">
-                    <div class="card">
-                      <!-- Card body -->
-                      <div class="card-body p-3">
-                        <div class="d-flex align-items-center">
-                          <img src="../../../img/marketing.png" class="img-fluid w-25 text-center">
-                          <div class="ms-3">
-                            <span class="h6 font-weight-bold mb-0" style="color:black">Marketing</span>
-                            <h6 class="card-title text-capitalize text-muted text-sm mb-0">108 Cursos</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <router-link to="/"></router-link>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-4">
-                  <a href="" class="text-decoration-none" title="Ver más">
-                    <div class="card">
-                      <!-- Card body -->
-                      <div class="card-body p-3">
-                        <div class="d-flex align-items-center">
-                          <img src="../../../img/english.png" class="img-fluid w-25 text-center">
-                          <div class="ms-3">
-                            <span class="h6 font-weight-bold mb-0" style="color:black">Inglés</span>
-                            <h6 class="card-title text-capitalize text-muted text-sm mb-0">55 Cursos</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <router-link to=""></router-link>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-4">
-                  <a href="" class="text-decoration-none" title="Ver más">
-                    <div class="card">
-                      <!-- Card body -->
-                      <div class="card-body p-3">
-                        <div class="d-flex align-items-center">
-                          <img src="../../../img/diseno-ux.png" class="img-fluid w-25 text-center">
-                          <div class="ms-3">
-                            <span class="h6 font-weight-bold mb-0" style="color:black">Diseño y UX</span>
-                            <h6 class="card-title text-capitalize text-muted text-sm mb-0">15 Cursos</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <router-link to=""></router-link>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-xl-3 col-md-6 mb-4">
-                  <a href="" class="text-decoration-none" title="Ver más">
-                    <div class="card">
-                      <!-- Card body -->
-                      <div class="card-body p-3">
-                        <div class="d-flex align-items-center">
-                          <img src="../../../img/finanzas.png" class="img-fluid w-25 text-center">
-                          <div class="ms-3">
-                            <span class="h6 font-weight-bold mb-0" style="color:black">Finanzas e Inversiones</span>
-                            <h6 class="card-title text-capitalize text-muted text-sm mb-0">90 Cursos</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <router-link to="/"></router-link>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-4">
-                  <a href="" class="text-decoration-none" title="Ver más">
-                    <div class="card">
-                      <!-- Card body -->
-                      <div class="card-body">
-                        <div class="d-flex align-items-center">
-                          <img src="../../../img/videogame.png" class="img-fluid w-25 text-center">
-                          <div class="ms-3">
-                            <span class="h6 font-weight-bold mb-0" style="color:black">Videojuegos</span>
-                            <h6 class="card-title text-capitalize text-muted text-sm mb-0">20 Cursos</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <router-link to="/"></router-link>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-4">
-                  <a href="" class="text-decoration-none" title="Ver más">
-                    <div class="card py-0 px-">
-                      <!-- Card body -->
-                      <div class="card-body p-3">
-                        <div class="d-flex align-items-center">
-                          <img src="../../../img/estilo-de-vida.png" class="img-fluid w-25 text-center">
-                          <div class="ms-3">
-                            <span class="h6 font-weight-bold mb-0" style="color:black">Estilo de vida</span>
-                            <h6 class="card-title text-capitalize text-muted text-sm mb-0">89 Cursos</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <router-link to=""></router-link>
-                </div>
-                <div class="col-xl-3 col-md-6 mb-4">
-                  <a href="" class="text-decoration-none" title="Ver más">
-                    <div class="card">
-                      <!-- Card body -->
-                      <div class="card-body p-3">
-                        <div class="d-flex align-items-center">
-                          <img src="../../../img/liderazgo.png" class="img-fluid w-25 text-center">
-                          <div class="ms-3">
-                            <span class="h6 font-weight-bold mb-0" style="color:black">Liderazgo</span>
-                            <h6 class="card-title text-capitalize text-muted text-sm mb-0">35 Cursos</h6>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <router-link to=""></router-link>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -159,8 +45,24 @@
 </template>
 
 <script>
+  import categorias from '../categorias/categorias';
+
   export default {
-      name: "Categorias"
+
+    name: "Categorias",
+    data() {
+      return {
+        categorias: []
+      }
+    },
+    methods: {
+      cargarCategorias() {
+        this.categorias = categorias;
+      }
+    },
+    mounted() {
+      this.cargarCategorias();
+    }
   }
 </script>
 
