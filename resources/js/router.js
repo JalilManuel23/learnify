@@ -5,6 +5,7 @@ const Home = () => import('./components/Home.vue')
 const Categorias = () => import('./components/home/Categorias.vue')
 const Planes = () => import('./components/home/Planes.vue')
 const Contacto = () => import('./components/home/Contacto.vue')
+const Footer = () => import('./components/home/Footer.vue')
 
 const InicioSesion = () => import('./components/login/InicioSesion.vue')
 const Registro = () => import('./components/login/Registro.vue')

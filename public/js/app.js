@@ -19802,7 +19802,7 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       isActive: false,
-      pagesHome: ['home', 'Categorias', 'Planes', 'Contacto'],
+      pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer'],
       pagesCategorias: ['Categoria'],
       pagesAuth: ['Dashboard']
     };
@@ -20338,6 +20338,10 @@ var Planes = function Planes() {
 
 var Contacto = function Contacto() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_home_Contacto_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/home/Contacto.vue */ "./resources/js/components/home/Contacto.vue"));
+};
+
+var Footer = function Footer() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_home_Footer_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/home/Footer.vue */ "./resources/js/components/home/Footer.vue"));
 };
 
 var InicioSesion = function InicioSesion() {
@@ -43153,7 +43157,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_home_Categorias_vue":1,"resources_js_components_home_Planes_vue":1,"resources_js_components_home_Contacto_vue":1,"resources_js_components_login_InicioSesion_vue":1,"resources_js_components_login_Registro_vue":1,"resources_js_components_login_RecuperacionContrasena_vue":1,"resources_js_components_login_RestablecerContrasena_vue":1,"resources_js_components_categorias_Categoria_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_home_Categorias_vue":1,"resources_js_components_home_Planes_vue":1,"resources_js_components_home_Contacto_vue":1,"resources_js_components_home_Footer_vue":1,"resources_js_components_login_InicioSesion_vue":1,"resources_js_components_login_Registro_vue":1,"resources_js_components_login_RecuperacionContrasena_vue":1,"resources_js_components_login_RestablecerContrasena_vue":1,"resources_js_components_categorias_Categoria_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
