@@ -56,7 +56,7 @@ const routes = [
     },
     {
         name: 'Categoria',
-        path: '/categoria',
+        path: '/categoria/:categoria',
         component: Categoria
     },
 ]
