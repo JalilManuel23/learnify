@@ -10,6 +10,7 @@ const InicioSesion = () => import('./components/login/InicioSesion.vue')
 const Registro = () => import('./components/login/Registro.vue')
 const RecuperacionContrasena = () => import('./components/login/RecuperacionContrasena.vue')
 const RestablecerContrasena = () => import('./components/login/RestablecerContrasena.vue')
+const Categoria = () => import('./components/categorias/Categoria.vue')
 
 const routes = [
     {
@@ -51,6 +52,11 @@ const routes = [
         name: 'RestablecerContrasena',
         path: '/restablecer-contrasena',
         component: RestablecerContrasena
+    },
+    {
+        name: 'Categoria',
+        path: '/categoria',
+        component: Categoria
     },
 ]
 
