@@ -20,14 +20,9 @@
                             <ul class="dropdown-menu shadow-sm">
                                 <li><a href="" class="dropdown-item">Categorías</a>
                                     <ul class="dropdown-menu submenu shadow-sm">
-                                        <li><a href="" class="dropdown-item">Desarrollo e Ingeniería</a></li>
-                                        <li><a href="" class="dropdown-item">Marketing</a></li>
-                                        <li><a href="" class="dropdown-item">Inglés</a></li>
-                                        <li><a href="" class="dropdown-item">Diseño UX/UI</a></li>
-                                        <li><a href="" class="dropdown-item">Finanzas e Inversiones</a></li>
-                                        <li><a href="" class="dropdown-item">Videojuegos</a></li>
-                                        <li><a href="" class="dropdown-item">Estilos de vida</a></li>
-                                        <li><a href="" class="dropdown-item">Liderazgo</a></li>
+                                        <li v-for="({ titulo, name }, index) in this.categorias" :key="index">
+                                            <router-link :to="`/categoria/${name}`" class="dropdown-item">{{ titulo }}</router-link>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -58,6 +53,7 @@
 
 <script>
     import styles from '../../../css/app.css';
+    import categorias from '../categorias/categorias'
 
     import debounce from 'lodash/debounce';
 
@@ -65,18 +61,23 @@
         data() {
             return {
                 isActive: false,
-                pagesNavWhite: ['Categorias', 'Planes', 'Contacto','Categoria']
+                pagesNavWhite: ['Categorias', 'Planes', 'Contacto','Categoria'],
+                categorias: []
             }
         },
         methods: {
             handleScroll(event) {
                 this.isActive = (window.scrollY > 0) ? true : false;
+            },
+            cargarCategorias() {
+                this.categorias = categorias;
             }
         },
 
         mounted() {
             this.handleDebouncedScroll = debounce(this.handleScroll);
             window.addEventListener('scroll', this.handleDebouncedScroll);
+            this.cargarCategorias();
         },
 
         beforeDestroy() {
