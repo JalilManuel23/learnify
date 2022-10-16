@@ -12,11 +12,48 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _home_Footer_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../home/Footer.vue */ "./resources/js/components/home/Footer.vue");
+/* harmony import */ var _categorias__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./categorias */ "./resources/js/components/categorias/categorias.js");
+
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Categoria",
+  data: function data() {
+    return {
+      id: null,
+      name: "",
+      titulo: "",
+      descripcion: "",
+      cursos: null,
+      imagen: ""
+    };
+  },
   components: {
     Footer: _home_Footer_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  mounted: function mounted() {
+    this.cargarCategoriaData();
+  },
+  methods: {
+    cargarCategoriaData: function cargarCategoriaData() {
+      var _this = this;
+
+      _categorias__WEBPACK_IMPORTED_MODULE_1__["default"].map(function (categoria) {
+        if (categoria.name == _this.$route.params.categoria) {
+          var id = categoria.id,
+              name = categoria.name,
+              titulo = categoria.titulo,
+              descripcion = categoria.descripcion,
+              cursos = categoria.cursos,
+              imagen = categoria.imagen;
+          _this.id = id;
+          _this.name = name;
+          _this.titulo = titulo;
+          _this.descripcion = descripcion;
+          _this.cursos = cursos;
+          _this.imagen = imagen;
+        }
+      });
+    }
   }
 });
 
@@ -63,37 +100,99 @@ var _hoisted_1 = {
 var _hoisted_2 = {
   "class": "container"
 };
-
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<nav style=\"--bs-breadcrumb-divider:url(&quot;data:image/svg+xml,%3Csvg xmlns=&#39;http://www.w3.org/2000/svg&#39; width=&#39;8&#39; height=&#39;8&#39;%3E%3Cpath d=&#39;M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z&#39; fill=&#39;%236c757d&#39;/%3E%3C/svg%3E&quot;);\" aria-label=\"breadcrumb\" data-v-2a1903a2><ol class=\"breadcrumb\" data-v-2a1903a2><li class=\"breadcrumb-item\" data-v-2a1903a2><a href=\"#\" class=\"text-decoration-none\" style=\"color:#184E77;\" data-v-2a1903a2>Inicio</a></li><li class=\"breadcrumb-item\" aria-current=\"page\" data-v-2a1903a2><a href=\"\" class=\"text-decoration-none\" style=\"color:#184E77;\" data-v-2a1903a2>Categorías</a></li><li class=\"breadcrumb-item active\" aria-current=\"page\" data-v-2a1903a2>Desarrollo e Ingeniería</li></ol></nav>", 1);
-
+var _hoisted_3 = {
+  style: {
+    "--bs-breadcrumb-divider": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E\")"
+  },
+  "aria-label": "breadcrumb"
+};
 var _hoisted_4 = {
-  "class": ""
+  "class": "breadcrumb"
 };
 var _hoisted_5 = {
+  "class": "breadcrumb-item"
+};
+var _hoisted_6 = {
+  "class": "breadcrumb-item",
+  "aria-current": "page"
+};
+var _hoisted_7 = {
+  "class": "breadcrumb-item active",
+  "aria-current": "page"
+};
+var _hoisted_8 = {
+  "class": ""
+};
+var _hoisted_9 = {
   "class": "h1-responsive font-weight-bold text-left mb-3 mt-4"
 };
 
-var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"clearfix mb-5\" data-v-2a1903a2><p class=\"float-start fw-light\" style=\"font-size:12px;\" data-v-2a1903a2>Resultados</p><p class=\"float-end fw-light\" style=\"font-size:12px;\" data-v-2a1903a2>Ordenar por</p></div><div class=\"row align-items-center\" data-v-2a1903a2><div class=\"col\" data-v-2a1903a2><div class=\"card\" style=\"width:18rem;\" data-v-2a1903a2><img src=\"" + _img_desarrollo_ingenieria_png__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" class=\"card-img-top\" alt=\"...\" data-v-2a1903a2><div class=\"card-body\" data-v-2a1903a2><h5 class=\"card-title\" data-v-2a1903a2>Título del curso</h5><p class=\"card-text\" data-v-2a1903a2>Nombre del instructor</p><p class=\"card-text\" data-v-2a1903a2>Precio</p><p class=\"card-text\" data-v-2a1903a2>duración</p><div class=\"clearfix\" data-v-2a1903a2><a href=\"#\" class=\"btn btn-primary float-start\" data-v-2a1903a2>Comprar ahora</a><a href=\"#\" class=\"btn btn-primary float-end\" style=\"color:white;\" data-v-2a1903a2><i class=\"fa fa-shopping-basket\" aria-hidden=\"true\" data-v-2a1903a2></i></a></div></div></div></div></div>", 2);
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"clearfix mb-5\" data-v-2a1903a2><p class=\"float-start fw-light\" style=\"font-size:12px;\" data-v-2a1903a2>Resultados</p><p class=\"float-end fw-light\" style=\"font-size:12px;\" data-v-2a1903a2>Ordenar por</p></div><div class=\"row align-items-center\" data-v-2a1903a2><div class=\"col\" data-v-2a1903a2><div class=\"card\" style=\"width:18rem;\" data-v-2a1903a2><img src=\"" + _img_desarrollo_ingenieria_png__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" class=\"card-img-top\" alt=\"...\" data-v-2a1903a2><div class=\"card-body\" data-v-2a1903a2><h5 class=\"card-title\" data-v-2a1903a2>Título del curso</h5><p class=\"card-text\" data-v-2a1903a2>Nombre del instructor</p><p class=\"card-text\" data-v-2a1903a2>Precio</p><p class=\"card-text\" data-v-2a1903a2>duración</p><div class=\"clearfix\" data-v-2a1903a2><a href=\"#\" class=\"btn btn-primary float-start\" data-v-2a1903a2>Comprar ahora</a><a href=\"#\" class=\"btn btn-primary float-end\" style=\"color:white;\" data-v-2a1903a2><i class=\"fa fa-shopping-basket\" aria-hidden=\"true\" data-v-2a1903a2></i></a></div></div></div></div></div>", 2);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _this = this;
+
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
   var _component_spam = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("spam");
 
-  var _component_Footer = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Footer");
-
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Cursos de "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_spam, {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("nav", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("ol", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/",
+    "class": "text-decoration-none",
     style: {
       "color": "#184E77"
     }
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Desarrollo e Ingeniería")];
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Inicio")];
     }),
     _: 1
     /* STABLE */
 
-  })])]), _hoisted_6])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)], 64
-  /* STABLE_FRAGMENT */
-  );
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/categorias",
+    "class": "text-decoration-none",
+    style: {
+      "color": "#184E77"
+    }
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Categorías")];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: '/categoria/' + this.name,
+    "class": "text-decoration-none",
+    style: {
+      "color": "#184E77"
+    }
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_this.titulo), 1
+      /* TEXT */
+      )];
+    }),
+    _: 1
+    /* STABLE */
+
+  }, 8
+  /* PROPS */
+  , ["to"])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("b", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Cursos de "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_spam, {
+    style: {
+      "color": "#184E77"
+    }
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)((0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_this.titulo), 1
+      /* TEXT */
+      )];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])]), _hoisted_10])])]);
 }
 
 /***/ }),
@@ -142,20 +241,6 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.container-fluid[data-v-2a1903a2] {\
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
-
-/***/ }),
-
-/***/ "./resources/img/desarrollo-ingenieria.png":
-/*!*************************************************!*\
-  !*** ./resources/img/desarrollo-ingenieria.png ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/desarrollo-ingenieria.png?7abe8a92732508697f3f65f412358721");
 
 /***/ }),
 

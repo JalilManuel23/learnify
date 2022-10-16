@@ -41,8 +41,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+/* harmony import */ var _categorias_categorias__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../categorias/categorias */ "./resources/js/components/categorias/categorias.js");
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "Categorias"
+  name: "Categorias",
+  data: function data() {
+    return {
+      categorias: []
+    };
+  },
+  methods: {
+    cargarCategorias: function cargarCategorias() {
+      this.categorias = _categorias_categorias__WEBPACK_IMPORTED_MODULE_0__["default"];
+    }
+  },
+  mounted: function mounted() {
+    this.cargarCategorias();
+  }
 });
 
 /***/ }),
@@ -175,22 +190,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render)
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
-/* harmony import */ var _img_desarrollo_ingenieria_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../img/desarrollo-ingenieria.png */ "./resources/img/desarrollo-ingenieria.png");
-/* harmony import */ var _img_marketing_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../img/marketing.png */ "./resources/img/marketing.png");
-/* harmony import */ var _img_english_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../img/english.png */ "./resources/img/english.png");
-/* harmony import */ var _img_diseno_ux_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../img/diseno-ux.png */ "./resources/img/diseno-ux.png");
-/* harmony import */ var _img_finanzas_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../img/finanzas.png */ "./resources/img/finanzas.png");
-/* harmony import */ var _img_videogame_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../img/videogame.png */ "./resources/img/videogame.png");
-/* harmony import */ var _img_estilo_de_vida_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../img/estilo-de-vida.png */ "./resources/img/estilo-de-vida.png");
-/* harmony import */ var _img_liderazgo_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../img/liderazgo.png */ "./resources/img/liderazgo.png");
-
-
-
-
-
-
-
-
 
 var _hoisted_1 = {
   "class": "container-fluid py-5"
@@ -218,56 +217,27 @@ var _hoisted_6 = {
   "class": "row"
 };
 var _hoisted_7 = {
-  "class": "col-xl-3 col-md-6 mb-4"
+  "class": "card"
 };
-
-var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"\" class=\"text-decoration-none\" title=\"Ver más\"><div class=\"card\"><!-- Card body --><div class=\"card-body p-3\"><div class=\"d-flex align-items-center\"><img src=\"" + _img_desarrollo_ingenieria_png__WEBPACK_IMPORTED_MODULE_1__["default"] + "\" class=\"img-fluid w-25 text-center\"><div class=\"ms-3\"><span class=\"h6 font-weight-bold mb-0\" style=\"color:black;\">Desarrollo e Ingeniería</span><h6 class=\"card-title text-capitalize text-muted text-sm mb-0\">90 Cursos</h6></div></div></div></div></a>", 1);
-
+var _hoisted_8 = {
+  "class": "card-body p-3"
+};
 var _hoisted_9 = {
-  "class": "col-xl-3 col-md-6 mb-4"
+  "class": "d-flex align-items-center"
 };
-
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"\" class=\"text-decoration-none\" title=\"Ver más\"><div class=\"card\"><!-- Card body --><div class=\"card-body p-3\"><div class=\"d-flex align-items-center\"><img src=\"" + _img_marketing_png__WEBPACK_IMPORTED_MODULE_2__["default"] + "\" class=\"img-fluid w-25 text-center\"><div class=\"ms-3\"><span class=\"h6 font-weight-bold mb-0\" style=\"color:black;\">Marketing</span><h6 class=\"card-title text-capitalize text-muted text-sm mb-0\">108 Cursos</h6></div></div></div></div></a>", 1);
-
+var _hoisted_10 = ["src"];
 var _hoisted_11 = {
-  "class": "col-xl-3 col-md-6 mb-4"
+  "class": "ms-3"
 };
-
-var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"\" class=\"text-decoration-none\" title=\"Ver más\"><div class=\"card\"><!-- Card body --><div class=\"card-body p-3\"><div class=\"d-flex align-items-center\"><img src=\"" + _img_english_png__WEBPACK_IMPORTED_MODULE_3__["default"] + "\" class=\"img-fluid w-25 text-center\"><div class=\"ms-3\"><span class=\"h6 font-weight-bold mb-0\" style=\"color:black;\">Inglés</span><h6 class=\"card-title text-capitalize text-muted text-sm mb-0\">55 Cursos</h6></div></div></div></div></a>", 1);
-
+var _hoisted_12 = {
+  "class": "h6 font-weight-bold mb-0",
+  style: {
+    "color": "black"
+  }
+};
 var _hoisted_13 = {
-  "class": "col-xl-3 col-md-6 mb-4"
+  "class": "card-title text-capitalize text-muted text-sm mb-0"
 };
-
-var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"\" class=\"text-decoration-none\" title=\"Ver más\"><div class=\"card\"><!-- Card body --><div class=\"card-body p-3\"><div class=\"d-flex align-items-center\"><img src=\"" + _img_diseno_ux_png__WEBPACK_IMPORTED_MODULE_4__["default"] + "\" class=\"img-fluid w-25 text-center\"><div class=\"ms-3\"><span class=\"h6 font-weight-bold mb-0\" style=\"color:black;\">Diseño y UX</span><h6 class=\"card-title text-capitalize text-muted text-sm mb-0\">15 Cursos</h6></div></div></div></div></a>", 1);
-
-var _hoisted_15 = {
-  "class": "row"
-};
-var _hoisted_16 = {
-  "class": "col-xl-3 col-md-6 mb-4"
-};
-
-var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"\" class=\"text-decoration-none\" title=\"Ver más\"><div class=\"card\"><!-- Card body --><div class=\"card-body p-3\"><div class=\"d-flex align-items-center\"><img src=\"" + _img_finanzas_png__WEBPACK_IMPORTED_MODULE_5__["default"] + "\" class=\"img-fluid w-25 text-center\"><div class=\"ms-3\"><span class=\"h6 font-weight-bold mb-0\" style=\"color:black;\">Finanzas e Inversiones</span><h6 class=\"card-title text-capitalize text-muted text-sm mb-0\">90 Cursos</h6></div></div></div></div></a>", 1);
-
-var _hoisted_18 = {
-  "class": "col-xl-3 col-md-6 mb-4"
-};
-
-var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"\" class=\"text-decoration-none\" title=\"Ver más\"><div class=\"card\"><!-- Card body --><div class=\"card-body\"><div class=\"d-flex align-items-center\"><img src=\"" + _img_videogame_png__WEBPACK_IMPORTED_MODULE_6__["default"] + "\" class=\"img-fluid w-25 text-center\"><div class=\"ms-3\"><span class=\"h6 font-weight-bold mb-0\" style=\"color:black;\">Videojuegos</span><h6 class=\"card-title text-capitalize text-muted text-sm mb-0\">20 Cursos</h6></div></div></div></div></a>", 1);
-
-var _hoisted_20 = {
-  "class": "col-xl-3 col-md-6 mb-4"
-};
-
-var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"\" class=\"text-decoration-none\" title=\"Ver más\"><div class=\"card py-0 px-\"><!-- Card body --><div class=\"card-body p-3\"><div class=\"d-flex align-items-center\"><img src=\"" + _img_estilo_de_vida_png__WEBPACK_IMPORTED_MODULE_7__["default"] + "\" class=\"img-fluid w-25 text-center\"><div class=\"ms-3\"><span class=\"h6 font-weight-bold mb-0\" style=\"color:black;\">Estilo de vida</span><h6 class=\"card-title text-capitalize text-muted text-sm mb-0\">89 Cursos</h6></div></div></div></div></a>", 1);
-
-var _hoisted_22 = {
-  "class": "col-xl-3 col-md-6 mb-4"
-};
-
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<a href=\"\" class=\"text-decoration-none\" title=\"Ver más\"><div class=\"card\"><!-- Card body --><div class=\"card-body p-3\"><div class=\"d-flex align-items-center\"><img src=\"" + _img_liderazgo_png__WEBPACK_IMPORTED_MODULE_8__["default"] + "\" class=\"img-fluid w-25 text-center\"><div class=\"ms-3\"><span class=\"h6 font-weight-bold mb-0\" style=\"color:black;\">Liderazgo</span><h6 class=\"card-title text-capitalize text-muted text-sm mb-0\">35 Cursos</h6></div></div></div></div></a>", 1);
-
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
 
@@ -275,23 +245,45 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     id: "categorias",
     "class": "categorias",
     style: (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeStyle)(_ctx.$route.name == 'Categorias' ? 'padding-top: 30vh;' : 'padding-top: 0;')
-  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Section description"), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: "/"
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [_hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: "/"
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [_hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: ""
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_13, [_hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: ""
-  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_15, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_16, [_hoisted_17, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: "/"
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_18, [_hoisted_19, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: "/"
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_20, [_hoisted_21, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: ""
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_22, [_hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
-    to: ""
-  })])])])])])])], 4
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [_hoisted_3, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("Section description"), _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.categorias, function (_ref, index) {
+    var titulo = _ref.titulo,
+        name = _ref.name,
+        cursos = _ref.cursos,
+        imagen = _ref.imagen;
+    return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
+      key: index,
+      "class": "col-xl-3 col-md-6 mb-4"
+    }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+      to: {
+        name: 'Categoria',
+        params: {
+          categoria: name
+        }
+      },
+      "class": "text-decoration-none",
+      title: "Ver más"
+    }, {
+      "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+        return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Card body "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+          src: imagen,
+          "class": "img-fluid w-25 text-center"
+        }, null, 8
+        /* PROPS */
+        , _hoisted_10), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("span", _hoisted_12, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(titulo), 1
+        /* TEXT */
+        ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(cursos) + " Cursos", 1
+        /* TEXT */
+        )])])])])];
+      }),
+      _: 2
+      /* DYNAMIC */
+
+    }, 1032
+    /* PROPS, DYNAMIC_SLOTS */
+    , ["to"])]);
+  }), 128
+  /* KEYED_FRAGMENT */
+  ))])])])])])], 4
   /* STYLE */
   );
 }
@@ -557,118 +549,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/bg.png?9fc2288778bf997f5c00bf670cfaf6b2");
-
-/***/ }),
-
-/***/ "./resources/img/desarrollo-ingenieria.png":
-/*!*************************************************!*\
-  !*** ./resources/img/desarrollo-ingenieria.png ***!
-  \*************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/desarrollo-ingenieria.png?7abe8a92732508697f3f65f412358721");
-
-/***/ }),
-
-/***/ "./resources/img/diseno-ux.png":
-/*!*************************************!*\
-  !*** ./resources/img/diseno-ux.png ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/diseno-ux.png?0d2027dd25a32e5da8fe9741b1a6e2f1");
-
-/***/ }),
-
-/***/ "./resources/img/english.png":
-/*!***********************************!*\
-  !*** ./resources/img/english.png ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/english.png?aa85b1eee3159a259ab803aed75e0c42");
-
-/***/ }),
-
-/***/ "./resources/img/estilo-de-vida.png":
-/*!******************************************!*\
-  !*** ./resources/img/estilo-de-vida.png ***!
-  \******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/estilo-de-vida.png?58cfad79967e00709f949f4315e35dab");
-
-/***/ }),
-
-/***/ "./resources/img/finanzas.png":
-/*!************************************!*\
-  !*** ./resources/img/finanzas.png ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/finanzas.png?391bb4b967171a7b61efbfed31539bc7");
-
-/***/ }),
-
-/***/ "./resources/img/liderazgo.png":
-/*!*************************************!*\
-  !*** ./resources/img/liderazgo.png ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/liderazgo.png?34efe75fbf95607cd2a9768eac381bd6");
-
-/***/ }),
-
-/***/ "./resources/img/marketing.png":
-/*!*************************************!*\
-  !*** ./resources/img/marketing.png ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/marketing.png?1f58ddaa6df1ae45341adc2a0fbdc2f1");
-
-/***/ }),
-
-/***/ "./resources/img/videogame.png":
-/*!*************************************!*\
-  !*** ./resources/img/videogame.png ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/videogame.png?478b5f3452dc35f887748ea2b8d266c6");
 
 /***/ }),
 
