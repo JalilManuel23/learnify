@@ -136,8 +136,6 @@
       </nav>
     <!-- End Navbar -->
     </main>
-    <div class="container-fluid py-4">
-    </div>
   </section>
 </template>
 
@@ -382,7 +380,6 @@ export default {
 .home-section{
   position: relative;
   background: #FFFFFF;
-  min-height: 100vh;
   top: 0;
   left: 78px;
   width: calc(100% - 78px);
@@ -402,6 +399,11 @@ export default {
 }
 ol, ul {
  padding-left: 0;
+}
+@media (max-width: 600px) {
+  .navbar {
+    background-color: #FFFFFF;
+  }
 }
 @media (max-width: 420px) {
   .sidebar li .tooltip{
