@@ -20635,10 +20635,6 @@ var Categoria = function Categoria() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_categorias_Categoria_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/categorias/Categoria.vue */ "./resources/js/components/categorias/Categoria.vue"));
 };
 
-var Estudiante = function Estudiante() {
-  return __webpack_require__.e(/*! import() */ "resources_js_components_auth_Estudiante_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/auth/Estudiante.vue */ "./resources/js/components/auth/Estudiante.vue"));
-};
-
 var routes = [{
   name: 'home',
   path: '/',
@@ -20679,6 +20675,10 @@ var routes = [{
   name: 'Estudiante',
   path: '/index',
   component: Estudiante
+}, {
+  name: 'InicioCliente',
+  path: '/dashboard/inicio',
+  component: InicioCliente
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(),
@@ -43644,7 +43644,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_home_Categorias_vue":1,"resources_js_components_home_Planes_vue":1,"resources_js_components_home_Contacto_vue":1,"resources_js_components_home_Footer_vue":1,"resources_js_components_login_InicioSesion_vue":1,"resources_js_components_login_Registro_vue":1,"resources_js_components_login_RecuperacionContrasena_vue":1,"resources_js_components_login_RestablecerContrasena_vue":1,"resources_js_components_categorias_Categoria_vue":1,"resources_js_components_auth_Estudiante_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_home_Categorias_vue":1,"resources_js_components_home_Planes_vue":1,"resources_js_components_home_Contacto_vue":1,"resources_js_components_home_Footer_vue":1,"resources_js_components_login_InicioSesion_vue":1,"resources_js_components_login_Registro_vue":1,"resources_js_components_login_RecuperacionContrasena_vue":1,"resources_js_components_login_RestablecerContrasena_vue":1,"resources_js_components_categorias_Categoria_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
