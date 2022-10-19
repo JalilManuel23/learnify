@@ -85,3 +85,35 @@ body::-webkit-scrollbar-thumb {
     background-color: #184E77 !important;
     border-radius: 50px;
 }
+
+/*Dashboard inicio cliente*/
+.edit-user{
+    font-size: 10px;
+    color:gray;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.edit-user:hover{
+    font-weight: bolder;
+    color: rgb(124, 119, 119);
+    cursor: pointer;
+}
+
+.location-icon{
+    font-size: 35px;
+}
+
+.icon-progress{
+    font-size: 14px;
+    vertical-align: top;
+    color: rgb(124, 119, 119);
+
+}
+
+.gradient-custom-2{
+    width: 100%;
+    height: 100%;
+}
+
+/*Fin dashboard inicio cliente*/
