@@ -12,6 +12,7 @@ const Registro = () => import('./components/login/Registro.vue')
 const RecuperacionContrasena = () => import('./components/login/RecuperacionContrasena.vue')
 const RestablecerContrasena = () => import('./components/login/RestablecerContrasena.vue')
 const Categoria = () => import('./components/categorias/Categoria.vue')
+const Estudiante = () => import('./components/auth/Estudiante.vue')
 
 const routes = [
     {
@@ -58,6 +59,11 @@ const routes = [
         name: 'Categoria',
         path: '/categoria/:categoria',
         component: Categoria
+    },
+    {
+        name: 'Estudiante',
+        path: '/index',
+        component: Estudiante
     },
 ]
 
