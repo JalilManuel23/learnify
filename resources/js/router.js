@@ -12,6 +12,7 @@ const Registro = () => import('./components/login/Registro.vue')
 const RecuperacionContrasena = () => import('./components/login/RecuperacionContrasena.vue')
 const RestablecerContrasena = () => import('./components/login/RestablecerContrasena.vue')
 const Categoria = () => import('./components/categorias/Categoria.vue')
+const InicioCliente = () => import('./components/dashboard/Inicio.vue')
 
 const routes = [
     {
