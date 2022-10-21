@@ -11,9 +11,9 @@
       <li>
         <a href="#">
           <i class="fa fa-home" aria-hidden="true"></i>
-          <span class="links_name">Dashboard</span>
+          <span class="links_name">Inicio</span>
         </a>
-         <span class="tooltip">Dashboard</span>
+         <span class="tooltip">Inicio</span>
       </li>
       <li>
        <a href="#">
@@ -52,16 +52,6 @@
         <span class="tooltip">Configuración</span>
       </li>
       <hr>
-      <!--<li class="profile">
-        <div class="profile-details">
-          <img src="profile.jpg" alt="profileImg">
-          <div class="name_job">
-            <div class="name">Jalil Manuel</div>
-              <div class="job">Estudiante</div>
-          </div>
-        </div>
-          <i class="fa fa-sign-out" aria-hidden="true" id="log_out"></i>
-      </li>-->
     </ul>
   </div>
   <section class="home-section">
@@ -72,9 +62,9 @@
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
               <li class="breadcrumb-item text-sm"><a class="opacity-5 text-dark text-decoration-none" href="#">Inicio</a></li>
-              <li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>
+              <!--<li class="breadcrumb-item text-sm text-dark active" aria-current="page">Dashboard</li>-->
             </ol>
-            <h6 class="font-weight-bolder mb-0"><strong>Dashboard</strong></h6>
+            <h6 class="font-weight-bolder mb-0"><strong>Inicio</strong></h6>
           </nav>
           <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
             <div class="ms-md-auto pe-md-3 d-flex align-items-center">
@@ -82,18 +72,16 @@
                   <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="">¡Hazte premium!</a>
               </div>
             </div>
-            <ul class="navbar-nav  justify-content-end">
+            <ul class="navbar-nav justify-content-end">
               <li class="nav-item dropdown pe-2 d-flex align-items-center">
+                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp" class="img-fluid rounded-circle avatar">
                 <a href="#" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                   <i class="fa fa-caret-down" aria-hidden="true"></i>
                 </a>
-                <ul class="dropdown-menu  dropdown-menu-end  px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
+                <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
                   <li class="mb-2">
                     <a class="dropdown-item border-radius-md" href="#">
                       <div class="d-flex py-1">
-                        <div class="my-auto">
-                          <!--<img src="../assets/img/team-2.jpg" class="avatar avatar-sm  me-3 ">-->
-                        </div>
                         <div class="d-flex flex-column justify-content-center">
                           <h6 class="text-sm font-weight-normal mb-1">
                             <span class="font-weight-bold">Mi perfil</span>
@@ -106,9 +94,6 @@
                   <li class="mb-2">
                     <a class="dropdown-item border-radius-md" href="#">
                       <div class="d-flex py-1">
-                        <div class="my-auto">
-                          <!--<img src="../assets/img/small-logos/logo-spotify.svg" class="avatar avatar-sm bg-gradient-dark  me-3 ">-->
-                        </div>
                         <div class="d-flex flex-column justify-content-center">
                           <h6 class="text-sm font-weight-normal mb-1">
                             <span class="font-weight-bold">Centro de ayuda</span>
@@ -117,7 +102,7 @@
                       </div>
                     </a>
                   </li>
-                  <li>
+                  <li class="mb-2">
                     <a class="dropdown-item border-radius-md" href="#">
                       <div class="d-flex py-1">
                         <div class="d-flex flex-column justify-content-center">
@@ -254,40 +239,6 @@ export default {
 .sidebar.open li .tooltip{
   display: none;
 }
-/*.sidebar input{
-  font-size: 15px;
-  color: #FFF;
-  font-weight: 400;
-  outline: none;
-  height: 50px;
-  width: 100%;
-  width: 50px;
-  border: none;
-  border-radius: 12px;
-  transition: all 0.5s ease;
-  background: #1d1b31;
-}
-.sidebar.open input{
-  padding: 0 20px 0 50px;
-  width: 100%;
-}
-.sidebar .bx-search{
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-  font-size: 22px;
-  background: #1d1b31;
-  color: #FFF;
-}
-.sidebar.open .bx-search:hover{
-  background: #1d1b31;
-  color: #FFF;
-}
-.sidebar .bx-search:hover{
-  background: #FFF;
-  color: #11101d;
-}*/
 .sidebar li a{
   display: flex;
   height: 100%;
@@ -399,6 +350,11 @@ export default {
 }
 ol, ul {
  padding-left: 0;
+}
+.avatar {
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
 }
 @media (max-width: 600px) {
   .navbar {
