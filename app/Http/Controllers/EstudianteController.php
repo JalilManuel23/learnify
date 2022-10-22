@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Estudiante;
-use App\Models\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class EstudianteController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return response()->json($users);
+        $estudiantes = Estudiante::all();
+        return response()->json($estudiantes);
     }
 
     /**
@@ -37,9 +36,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = User::create($request->post());
+        $estudiante = Estudiante::create($request->post());
         return response()->json([
-            'user' => $user
+            'estudiante' => $estudiante
         ]);
     }
 
@@ -49,9 +48,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Estudiante $estudiante)
     {
-        return response()->json($user);
+        return response()->json($estudiante);
     }
 
     /**
@@ -72,11 +71,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Estudiante $estudiante)
     {
-        $user->fill($request->post())->save();
+        $estudiante->fill($request->post())->save();
         return response()->json([
-            'user' => $user
+            'user' => $estudiante
         ]);
     }
 
@@ -86,16 +85,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Estudiante $estudiante)
     {
-        $user->delete();
-    }
-
-    public function traer_perfil_estudiante($id)
-    {
-        $datos = Estudiante::find($id)->usuario;
-        return response()->json([
-            'datos' => $datos
-        ]);
+        $estudiante->delete();
     }
 }
