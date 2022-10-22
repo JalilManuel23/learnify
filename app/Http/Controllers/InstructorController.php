@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Estudiante;
 use App\Models\Instructor;
-use App\Models\User;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class InstructorController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,8 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        return response()->json($users);
+        $instructores = Instructor::all();
+        return response()->json($instructores);
     }
 
     /**
@@ -38,9 +36,9 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = User::create($request->post());
+        $instructor = Instructor::create($request->post());
         return response()->json([
-            'user' => $user
+            'instructor' => $instructor
         ]);
     }
 
@@ -50,9 +48,9 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(User $user)
+    public function show(Instructor $instructor)
     {
-        return response()->json($user);
+        return response()->json($instructor);
     }
 
     /**
@@ -73,11 +71,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, Instructor $instructor)
     {
-        $user->fill($request->post())->save();
+        $instructor->fill($request->post())->save();
         return response()->json([
-            'user' => $user
+            'instructor' => $instructor
         ]);
     }
 
@@ -87,31 +85,8 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy(Instructor $instructor)
     {
-        $user->delete();
-    }
-
-    public function traer_perfil_estudiante($id)
-    {
-        $datos = Estudiante::find($id)->usuario;
-        return response()->json([
-            'datos' => $datos
-        ]);
-    }
-
-    public function traer_perfil_instructor($id)
-    {
-        $instructor = Instructor::find($id);
-
-        $usuario = $instructor->usuario;
-        $calificacion = $instructor->calificacion;
-        $especialidad = $instructor->especialidad;
-
-        return response()->json([
-            'usuario' => $usuario,
-            'calificacion' => $calificacion,
-            'especialidad' =>$especialidad,
-        ]);
+        $instructor->delete();
     }
 }
