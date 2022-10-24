@@ -14,7 +14,7 @@ class Categoria extends Model
         'titulo'
     ];
 
-    public function cursos()
+    public function curso()
     {
         return $this->hasMany(Cursos::class, 'id');
     }

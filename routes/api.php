@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\InstructorController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -31,3 +32,5 @@ Route::get('/instructor/perfil/{id}', [App\Http\Controllers\UserController::clas
 Route::resource('instructores', InstructorController::class);
 
 Route::resource('categorias', CategoriaController::class);
+
+Route::resource('videos', VideoController::class);
