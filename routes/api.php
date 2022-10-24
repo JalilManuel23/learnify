@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EstudianteController;
+use App\Http\Controllers\ExamenController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\PreguntaController;
 use App\Http\Controllers\VideoController;
@@ -37,3 +38,5 @@ Route::resource('categorias', CategoriaController::class);
 Route::resource('videos', VideoController::class);
 
 Route::resource('preguntas', PreguntaController::class);
+
+Route::resource('examenes', ExamenController::class);

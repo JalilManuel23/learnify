@@ -8,4 +8,22 @@ use Illuminate\Database\Eloquent\Model;
 class Examen extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'curso',
+        'pregunta',
+        'avance',
+        'titulo',
+        'calificacion'
+    ];
+
+    public function curso()
+    {
+        return $this->belongsTo(Cursos::class, 'id');
+    }
+
+    public function pregunta()
+    {
+        return $this->hasMany(Pregunta::class, 'id');
+    }
 }
