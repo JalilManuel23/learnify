@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\InstructorController;
@@ -28,3 +29,5 @@ Route::resource('estudiantes', EstudianteController::class);
 
 Route::get('/instructor/perfil/{id}', [App\Http\Controllers\UserController::class, 'traer_perfil_instructor']);
 Route::resource('instructores', InstructorController::class);
+
+Route::resource('categorias', CategoriaController::class);
