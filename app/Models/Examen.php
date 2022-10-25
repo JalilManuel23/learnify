@@ -19,7 +19,7 @@ class Examen extends Model
 
     public function curso()
     {
-        return $this->belongsTo(Cursos::class, 'id');
+        return $this->belongsTo(Cursos::class, 'curso');
     }
 
     public function pregunta()

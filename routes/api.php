@@ -8,6 +8,7 @@ use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\PreguntaController;
 use App\Http\Controllers\VideoController;
 use App\Models\Calificacion_curso;
+use App\Models\Curso;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -43,3 +44,5 @@ Route::resource('preguntas', PreguntaController::class);
 Route::resource('examenes', ExamenController::class);
 
 Route::resource('calificaciones', Calificacion_curso::class);
+
+Route::resource('curso', Curso::class);
