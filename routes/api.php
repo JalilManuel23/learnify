@@ -27,6 +27,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::post('/iniciar_sesion', [App\Http\Controllers\UserController::class, 'iniciar_sesion']);
 Route::resource('users', UserController::class);
 
 Route::get('/estudiante/perfil/{id}', [App\Http\Controllers\UserController::class, 'traer_perfil_estudiante']);

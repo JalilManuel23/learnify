@@ -6,6 +6,7 @@ use App\Models\Estudiante;
 use App\Models\Instructor;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -113,5 +114,20 @@ class UserController extends Controller
             'calificacion' => $calificacion,
             'especialidad' =>$especialidad,
         ]);
+    }
+
+    public function iniciar_sesion(Request $request)
+    {
+        $email = $request->input('email');
+        $password = $request->input('password');
+
+        $user = DB::table('users')
+                ->where('email', $email)
+                ->where('password', $password)
+                ->get();
+
+        $respuesta = (count($user) > 0) ? $user : 'Datos incorrectos';
+
+        return response()->json($respuesta);      
     }
 }
