@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\CategoriaController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EstudianteController;
@@ -47,3 +48,6 @@ Route::resource('examenes', ExamenController::class);
 Route::resource('calificaciones', Calificacion_curso::class);
 
 Route::resource('curso', Curso::class);
+
+Route::post('/auth/register', [AuthController::class, 'createUser']);
+Route::post('/auth/login', [AuthController::class, 'loginUser']);
