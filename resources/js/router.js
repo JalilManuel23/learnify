@@ -1,21 +1,33 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
-const Home = () => import('./components/Home.vue')
+const Home = () =>
+    import ('./components/Home.vue')
 
-const Categorias = () => import('./components/home/Categorias.vue')
-const Planes = () => import('./components/home/Planes.vue')
-const Contacto = () => import('./components/home/Contacto.vue')
-const Footer = () => import('./components/home/Footer.vue')
+const Categorias = () =>
+    import ('./components/home/Categorias.vue')
+const Planes = () =>
+    import ('./components/home/Planes.vue')
+const Contacto = () =>
+    import ('./components/home/Contacto.vue')
+const Footer = () =>
+    import ('./components/home/Footer.vue')
 
-const InicioSesion = () => import('./components/login/InicioSesion.vue')
-const Registro = () => import('./components/login/Registro.vue')
-const RecuperacionContrasena = () => import('./components/login/RecuperacionContrasena.vue')
-const RestablecerContrasena = () => import('./components/login/RestablecerContrasena.vue')
-const Categoria = () => import('./components/categorias/Categoria.vue')
-const InicioCliente = () => import('./components/dashboard/Inicio.vue')
+const InicioSesion = () =>
+    import ('./components/login/InicioSesion.vue')
+const Registro = () =>
+    import ('./components/login/Registro.vue')
+const RecuperacionContrasena = () =>
+    import ('./components/login/RecuperacionContrasena.vue')
+const RestablecerContrasena = () =>
+    import ('./components/login/RestablecerContrasena.vue')
+const Categoria = () =>
+    import ('./components/categorias/Categoria.vue')
+const InicioCliente = () =>
+    import ('./components/dashboard/Inicio.vue')
+const VideoPlayer = () =>
+    import ('./components/VideoPlayer.vue')
 
-const routes = [
-    {
+const routes = [{
         name: 'home',
         path: '/',
         component: Home
@@ -65,6 +77,11 @@ const routes = [
         path: '/dashboard/inicio',
         component: InicioCliente
     },
+    {
+        name: 'VideoPlayer',
+        path: '/video',
+        component: VideoPlayer
+    }
 ]
 
 export default createRouter({
