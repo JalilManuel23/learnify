@@ -36,25 +36,33 @@ class VideoController extends Controller
      */
     public function store(Request $request)
     {     
-        //obtenemos el campo file definido en el formulario
-        $file = $request->file('video_archivo');
-        
-        //obtenemos el nombre del archivo
-        $nombre = $file->getClientOriginalName();
+        $status = 200;
 
-        $request->merge([
-            'archivo' => $nombre
-        ]);
-        
-        $video = Video::create($request->post());
+        if($request->hasFile("video_archivo")){
+            $file = $request->file("video_archivo");
+            
+            $nombre = "video_".time().".".$file->guessExtension();
 
-        $ruta = public_path("videos/".$nombre);
+            $ruta = public_path("videos/".$nombre);
 
-        copy($file, $ruta);
+            if($file->guessExtension() == "mp4") {
+                copy($file, $ruta);
+            } else {
+                $status = 404;
+            }
+
+            $request->merge([
+                'archivo' => $nombre
+            ]);
+            
+            $video = Video::create($request->post());
+        }
+
+        $respuesta = ($status == 200) ? $video : '';
 
         return response()->json([
-            'video' => $video
-        ]);
+            'video' => $respuesta
+        ], $status);
     }
 
     /**
