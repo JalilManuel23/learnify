@@ -3,7 +3,7 @@
         <HomeNavbar v-if="pagesHome.includes($route.name)" />
         <CategoriasNavbar v-else-if="pagesCategorias.includes($route.name)" />
         <AuthNavbar v-else />
-        <router-view></router-view>
+        <router-view v-bind:class="[(pagesAuth.includes($route.name)) ? 'home-section' : '']"></router-view>
     </main>
 </template>
 
@@ -21,7 +21,7 @@
             isActive: false,
             pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena'],
             pagesCategorias: ['Categoria'],
-            pagesAuth: ['Dashboard']
+            pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer']
         };
     },
     methods: {

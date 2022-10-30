@@ -120,6 +120,8 @@
         </div>
       </nav>
     <!-- End Navbar -->
+    <div class="home-section">
+    </div>
     </main>
   </section>
 </template>
