@@ -28,7 +28,8 @@ const VideoPlayer = () =>
     import ('./components/VideoPlayer.vue')
 const TipoUsuario = () => import('./components/auth/TipoUsuario.vue')
 const Instructores = () => import('./components/auth/Instructores.vue')
-const Descripcion = () => import('./components/auth/Descripcion.vue')
+const Legal = () => import('./components/InformacionLegal.vue')
+const CentroAyuda = () => import('./components/CentroAyuda.vue')
 
 const routes = [{
         name: 'home',
@@ -94,6 +95,16 @@ const routes = [{
         name: 'Instructores',
         path: '/instructores',
         component: Instructores
+    },
+    {
+        name: 'Legal',
+        path: '/informacion-legal',
+        component: Legal
+    },
+    {
+        name: 'CentroAyuda',
+        path: '/centro-de-ayuda',
+        component: CentroAyuda
     }
 ]
 

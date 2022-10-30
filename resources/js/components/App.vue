@@ -19,7 +19,7 @@
     data() {
         return {
             isActive: false,
-            pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena'],
+            pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena', 'Legal', 'CentroAyuda'],
             pagesCategorias: ['Categoria'],
             pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer', 'Instructores']
         };
