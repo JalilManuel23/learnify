@@ -39,8 +39,6 @@ Route::resource('instructores', InstructorController::class);
 
 Route::resource('categorias', CategoriaController::class);
 
-Route::resource('videos', VideoController::class);
-
 Route::resource('preguntas', PreguntaController::class);
 
 Route::resource('examenes', ExamenController::class);
@@ -49,5 +47,9 @@ Route::resource('calificaciones', Calificacion_curso::class);
 
 Route::resource('curso', Curso::class);
 
-Route::post('/auth/register', [AuthController::class, 'createUser']);
-Route::post('/auth/login', [AuthController::class, 'loginUser']);
+Route::post('/registrarme', [UserController::class, 'createUser']);
+Route::post('/login', [UserController::class, 'loginUser']);
+
+Route::group(['middleware' => ["auth:sanctum"]], function() {
+    Route::get('videos', [VideoController::class, 'index']);
+});
