@@ -35,8 +35,23 @@ class VideoController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
+    {     
+        //obtenemos el campo file definido en el formulario
+        $file = $request->file('video_archivo');
+        
+        //obtenemos el nombre del archivo
+        $nombre = $file->getClientOriginalName();
+
+        $request->merge([
+            'archivo' => $nombre
+        ]);
+        
         $video = Video::create($request->post());
+
+        $ruta = public_path("videos/".$nombre);
+
+        copy($file, $ruta);
+
         return response()->json([
             'video' => $video
         ]);
