@@ -64,7 +64,8 @@
 </script>
 
 <template>
-    <div class="row">    
+    <div class="video-container">
+        <div class="row">    
         <div class="col-md-8">
             <div ref="player" class="w-100 p-0 player"></div>
             <h3>Título del vídeo</h3>
@@ -110,7 +111,15 @@
             </ul>
         </div>
     </div>
+    </div>
 </template>
+
+<script>
+   export default {
+    name: "VideoPlayer",
+    };
+</script>
+
 
 <style>
 .player {
@@ -131,6 +140,10 @@ ul {
     border-bottom:1px solid rgb(197, 194, 194);
     display: flex;
     flex-direction: column;
+}
+
+.video-container {
+    margin-left: 3vmin;
 }
 
 </style>
