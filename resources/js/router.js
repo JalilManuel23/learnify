@@ -27,6 +27,8 @@ const InicioCliente = () =>
 const VideoPlayer = () =>
     import ('./components/VideoPlayer.vue')
 const TipoUsuario = () => import('./components/auth/TipoUsuario.vue')
+const Instructores = () => import('./components/auth/Instructores.vue')
+const Descripcion = () => import('./components/auth/Descripcion.vue')
 
 const routes = [{
         name: 'home',
@@ -87,6 +89,11 @@ const routes = [{
         name: 'TipoUsuario',
         path: '/seleccionar-tipo-usuario',
         component: TipoUsuario
+    },
+    {
+        name: 'Instructores',
+        path: '/instructores',
+        component: Instructores
     }
 ]
 

@@ -21,7 +21,7 @@
             isActive: false,
             pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena'],
             pagesCategorias: ['Categoria'],
-            pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer']
+            pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer', 'Instructores']
         };
     },
     methods: {
