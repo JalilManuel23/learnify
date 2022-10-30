@@ -206,4 +206,18 @@ class UserController extends Controller
             ], 500);
         }
     }
+
+    public function userProfile() {
+        return response()->json([
+            "data" => auth()->user()
+        ]);
+    }
+
+    public function logout() {
+        auth()->user()->tokens()->delete();
+
+        return response()->json([
+            "data" => "Ok"
+        ]);
+    }
 }

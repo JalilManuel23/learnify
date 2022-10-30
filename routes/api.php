@@ -10,6 +10,7 @@ use App\Http\Controllers\PreguntaController;
 use App\Http\Controllers\VideoController;
 use App\Models\Calificacion_curso;
 use App\Models\Curso;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -51,5 +52,8 @@ Route::post('/registrarme', [UserController::class, 'createUser']);
 Route::post('/login', [UserController::class, 'loginUser']);
 
 Route::group(['middleware' => ["auth:sanctum"]], function() {
+    Route::get('usuario', [UserController::class, 'userProfile']);
+    Route::get('logout', [UserController::class, 'logout']);
+
     Route::get('videos', [VideoController::class, 'index']);
 });
