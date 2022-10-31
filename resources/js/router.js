@@ -30,8 +30,10 @@ const TipoUsuario = () => import('./components/auth/TipoUsuario.vue')
 const Instructores = () => import('./components/auth/Instructores.vue')
 const Legal = () => import('./components/InformacionLegal.vue')
 const CentroAyuda = () => import('./components/CentroAyuda.vue')
+const Descripcion = () => import('./components/auth/Descripcion.vue')
 
-const routes = [{
+const routes = [
+    {
         name: 'home',
         path: '/',
         component: Home
@@ -105,10 +107,15 @@ const routes = [{
         name: 'CentroAyuda',
         path: '/centro-de-ayuda',
         component: CentroAyuda
+    },
+    {
+        name: 'Descripcion',
+        path: '/descripcion-curso',
+        component: Descripcion
     }
 ]
 
-export default createRouter({
+export default createRouter ({
     history: createWebHistory(),
     routes
 })

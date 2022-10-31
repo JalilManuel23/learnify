@@ -20,7 +20,7 @@
         return {
             isActive: false,
             pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena', 'Legal', 'CentroAyuda'],
-            pagesCategorias: ['Categoria'],
+            pagesCategorias: ['Categoria', 'Descripcion',],
             pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer', 'Instructores']
         };
     },
