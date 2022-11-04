@@ -31,6 +31,7 @@ const Instructores = () => import('./components/auth/Instructores.vue')
 const Legal = () => import('./components/InformacionLegal.vue')
 const CentroAyuda = () => import('./components/CentroAyuda.vue')
 const Descripcion = () => import('./components/auth/Descripcion.vue')
+const Index = () => import('./components/auth/Index.vue')
 
 const routes = [
     {
@@ -112,6 +113,11 @@ const routes = [
         name: 'Descripcion',
         path: '/descripcion-curso',
         component: Descripcion
+    },
+    {
+        name: 'Index',
+        path: '/index',
+        component: Index
     }
 ]
 
