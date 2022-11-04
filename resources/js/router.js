@@ -32,6 +32,7 @@ const Legal = () => import('./components/InformacionLegal.vue')
 const CentroAyuda = () => import('./components/CentroAyuda.vue')
 const Descripcion = () => import('./components/auth/Descripcion.vue')
 const Index = () => import('./components/auth/Index.vue')
+const AuthFooter = () => import('./components/auth/Footer.vue')
 
 const routes = [
     {

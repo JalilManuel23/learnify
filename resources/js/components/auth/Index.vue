@@ -44,18 +44,17 @@
             </div>
         </div>
     </div>
-    <AuthFooter/>
+    <AuthFooter />
 </template>
 
 <script>
-  import AuthFooter from '../auth/Footer.vue';
+import AuthFooter from '../auth/Footer.vue';
 
 export default {
     name: "Index",
     setup() {
         
-    },
-    components: { AuthFooter },
+    }, components: { AuthFooter }
 }
 </script>
 
