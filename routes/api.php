@@ -48,7 +48,7 @@ Route::resource('calificaciones', Calificacion_curso::class);
 
 Route::resource('curso', Curso::class);
 
-Route::post('/registrarme', [UserController::class, 'createUser']);
+Route::post('/registrar', [UserController::class, 'createUser']);
 Route::post('/login', [UserController::class, 'loginUser']);
 
 Route::group(['middleware' => ["auth:sanctum"]], function() {

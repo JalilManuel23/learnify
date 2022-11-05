@@ -29,12 +29,12 @@
                 </div>
                 </div>
                 <div class="card-body">
-                    <form action="" class="text-start">
+                    <form @submit.prevent="crearCuenta" class="text-start">
                         <div class="card-body">
                     <div class="row">
                         <div class="col">
                             <div class="mt-3 form-floating">
-                                <input type="text" id="label1" class="form-control" placeholder="Nombre(s)">
+                                <input required type="text" id="label1" class="form-control" placeholder="Nombre(s)" v-model="user.name">
                                 <label for="label1">Nombre(s)</label>
                             </div>
                         </div>
@@ -42,13 +42,13 @@
                     <div class="row">
                         <div class="col">
                             <div class="mt-3 form-floating">
-                                <input type="text" id="label1" class="form-control" placeholder="Apellido Paterno">
+                                <input required type="text" id="label1" class="form-control" placeholder="Apellido Paterno" v-model="user.apellido_p">
                                 <label for="label1">Apellido paterno</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mt-3 form-floating">
-                                <input type="text" id="label1" class="form-control" placeholder="Apellido materno">
+                                <input type="text" id="label1" class="form-control" placeholder="Apellido materno" v-model="user.apellido_m">
                                 <label for="label1">Apellido materno</label>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="mt-3 form-floating">
-                                <input type="text" id="label1" class="form-control" placeholder="Correo electrónico">
+                                <input required type="text" id="label1" class="form-control" placeholder="Correo electrónico" v-model="user.email">
                                 <label for="label1">Correo electrónico</label>
                             </div>
                         </div>
@@ -64,13 +64,13 @@
                     <div class="row">
                         <div class="col">
                             <div class="mt-3 form-floating">
-                                <input type="text" id="label1" class="form-control" placeholder="Contraseña">
+                                <input required type="text" id="label1" class="form-control" placeholder="Contraseña" v-model="user.password">
                                 <label for="label1">Contraseña</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mt-3 form-floating">
-                                <input type="text" id="label1" class="form-control" placeholder="Confirmar contraseña">
+                                <input required type="text" id="label1" class="form-control" placeholder="Confirmar contraseña" v-model="user.confirm_password">
                                 <label for="label1">Confirmar contraseña</label>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="d-grid gap-2 mt-3">
-                                <button class="btn btn-primary" type="button">Regístrarse</button>
+                                <button class="btn btn-primary" type="submit">Regístrarse</button>
                             </div>
                         </div>
                     </div>
@@ -119,3 +119,36 @@
     color: #FFFFFF;
 }
 </style>
+
+<script>
+export default {
+    data(){
+        return {
+            user: {
+                name: '',
+                email: '',
+                password: '',
+                confirm_password: '',
+                apellido_p: '',
+                apellido_m: '',
+            }
+        }
+    },
+    methods:{
+        async crearCuenta(){
+            // Verifica que las contraseñas coincidan
+            if(this.user.password == this.user.confirm_password) {
+                // Hace la petición post para crear el usuario
+                await axios.post('/api/registrar/', this.user).then(response => {
+                    this.$router.push({name:"InicioCliente"})
+                }).catch(error=>{
+                    console.log(error)
+                })
+            } else {
+                alert("Las contraseñas no coinciden");
+            }
+
+        }
+    }
+}
+</script>

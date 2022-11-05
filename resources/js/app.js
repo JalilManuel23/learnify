@@ -7,7 +7,8 @@ import 'video.js/dist/video-js.css'
 import App from './components/App.vue';
 
 //importamos Axios
-import VueAxios from 'vue-axios'
+import axios from 'axios';
+import VueAxios from 'vue-axios';
 
 import router from './router.js';
 
