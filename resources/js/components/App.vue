@@ -1,29 +1,65 @@
 <template>
     <main>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <!-- llamamos al logo de Vue -->
-                    Learnify
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <router-link exact-active-class="active" to="/" class="nav-link active" aria-current="page">Inicio</router-link>
-                        </li>           
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="container mt-5">
-            <router-view></router-view>
-        </div>
+        <HomeNavbar v-if="pagesHome.includes($route.name)" />
+        <CategoriasNavbar v-else-if="pagesCategorias.includes($route.name)" />
+        <AuthNavbar v-else />
+        <router-view v-bind:class="[(pagesAuth.includes($route.name)) ? 'home-section' : '']"></router-view>
     </main>
 </template>
- 
+
 <script>
-    export default {}
+    import styles from '../../css/app.css';
+
+    import debounce from 'lodash/debounce';
+    import HomeNavbar from './home/HomeNavbar.vue';
+    import AuthNavbar from './auth/AuthNavbar.vue';
+    import CategoriasNavbar from './categorias/CategoriasNavbar.vue';
+
+    export default {
+    data() {
+        return {
+            isActive: false,
+            pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena', 'Legal', 'CentroAyuda'],
+            pagesCategorias: ['Categoria', 'Descripcion',],
+            pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer', 'Instructores', 'Index']
+        };
+    },
+    methods: {
+        handleScroll(event) {
+            this.isActive = (window.scrollY > 0) ? true : false;
+        }
+    },
+    mounted() {
+        this.handleDebouncedScroll = debounce(this.handleScroll);
+        window.addEventListener("scroll", this.handleDebouncedScroll);
+    },
+    beforeDestroy() {
+        window.removeEventListener("scroll", this.handleDebouncedScroll);
+    },
+    components: { HomeNavbar, AuthNavbar, CategoriasNavbar }
+}
 </script>
+
+<style scoped>
+    .dropdown-menu li {
+        position: relative;
+    }
+    .dropdown-menu .submenu {
+        display:none;
+        position: absolute;
+    }
+    .dropdown-menu>li:hover>.submenu {
+        display: block;
+        left: 100%;
+        top: -30%;
+    }
+    @media (max-width: 600px) {
+        .dropdown-menu .submenu {
+        display:none;
+        position: absolute;
+    }
+        .dropdown-menu>li:hover>.submenu {
+        display:block;
+    }
+    }
+</style>
