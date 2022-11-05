@@ -17,8 +17,13 @@
         "vue-loader": "^16.8.3"
     },
     "dependencies": {
+        "@videojs-player/vue": "^1.0.0",
+        "artplayer": "^4.5.8",
+        "babel-preset-es2015": "^6.24.1",
+        "video.js": "^7.20.3",
         "vue": "^3.2.40",
         "vue-axios": "^3.4.1",
-        "vue-router": "^4.0.13"
+        "vue-router": "^4.1.5",
+        "vue-video-player": "^6.0.0"
     }
 }

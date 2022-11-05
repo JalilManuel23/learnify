@@ -1,1 +1,87 @@
+/* Estilos generales */
+* {
+    font-family: 'Poppins', sans-serif;
+}
 
+p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 4vmin;
+    }
+}
+
+/* Colores */
+.btn-primary {
+    background-color: #184E77;
+}
+
+.btn-outline-primary {
+    color: #184E77;
+}
+
+.btn-primary, .btn-outline-primary {
+    border-color: #184E77;
+}
+
+.btn-light {
+    color: #184E77;
+}
+
+.btn-primary:hover, .btn-outline-primary:hover {
+    border-color: #1E6091;
+    background-color: #1E6091;
+}
+
+.btn-light:hover {
+    color: #1E6091;
+}
+
+/* Botones */
+.btn {
+    font-weight: bold;
+}
+
+/* Navbar */
+.nav-link {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar {
+    transition: background-color linear 0.3s;
+}
+
+.navactive {
+    background-color: #fff;
+    box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
+}
+
+@media (max-width: 600px) {
+    .nav-item-block {
+        width: 100%;
+    }
+
+    .navbar {
+        background-color: #184E77;
+    }
+
+    .navactive {
+        background-color: #fff;
+    }
+}
+body::-webkit-scrollbar {
+    width: 5px;
+    }
+body::-webkit-scrollbar-thumb {
+    background-color: #184E77 !important;
+    border-radius: 50px;
+}
