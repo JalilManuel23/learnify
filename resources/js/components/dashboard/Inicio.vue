@@ -173,8 +173,8 @@ export default {
   },
   async mounted() {
     await $api.get('usuario').then(response => {
-        let { data } = response.data;
-        this.userData = data;
+      let { data } = response.data;
+      this.userData = data;
     }).catch( error => {
       this.$router.push({ name:"InicioSesion" });
     });

@@ -111,30 +111,45 @@ export default {
     },
     methods:{
         // Método que se ejecuta al dar clic en botón de -Iniciar Sesión-
-        async iniciarSesion(){
-            // Hace petición al backend a la ruta 'api/login' y manda como body el objeto user
-            await $api.post('login', this.user).then(response => {
-              // En caso de que las credenciales sean correctas, se muestra una alerta con sweetalert del tipo 'toast'
+        async iniciarSesion() {
+          // Hace petición al backend a la ruta 'api/login' y manda como body el objeto user
+          await $api.post('login', this.user).then(response => {
+            // En caso de que las credenciales sean correctas, se muestra una alerta con sweetalert del tipo 'toast'
 
-              Toast.fire({
-                icon: 'success',
-                title: '¡Bienvenido!'
-              });
+            Toast.fire({
+              icon: 'success',
+              title: '¡Bienvenido!'
+            });
 
-              // Crea el token y muestra alerta
-              localStorage.setItem('token', response.data.token);  
+            // Crea el token y muestra alerta
+            localStorage.setItem('token', response.data.token);  
 
-              // Después hace una redirección al inicio
-              this.$router.push({name:"InicioCliente"})
-            }).catch(error=>{
-              // En caso de que los datos sean incorrectos se muestra una alerta
-              Swal.fire({
-                title: '¡Credenciales incorrectas!',
-                text: 'El correo electrónico o la contraseña ingresados no  son correctos',
-                icon: 'error',
-                confirmButtonText: 'Cerrar'
-              })
+            // Después hace una redirección al inicio
+            this.redireccionUsuario();
+          }).catch(error=>{
+            // En caso de que los datos sean incorrectos se muestra una alerta
+            Swal.fire({
+              title: '¡Credenciales incorrectas!',
+              text: 'El correo electrónico o la contraseña ingresados no  son correctos',
+              icon: 'error',
+              confirmButtonText: 'Cerrar'
             })
+          })
+        },
+        async redireccionUsuario() {
+          await $api.get('usuario').then(response => {
+            let { data } = response.data;
+
+            this.buscarEstudiante(data.id);
+          });
+        },
+        async buscarEstudiante(idUsuario) {
+          await $api.get(`estudiantes/buscar_perfil/${ idUsuario }`).then(response => {
+            let perfil = response.data.estudiante;
+
+            let redireccion = (perfil) ? 'InicioCliente' : 'InicioInstructor';
+            this.$router.push({ name: redireccion });
+          });
         }
     }
 }
