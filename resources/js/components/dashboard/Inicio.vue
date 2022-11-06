@@ -10,7 +10,7 @@
             >
               <div class="ms-4 mt-5 d-flex flex-column" style="width: 150px">
                 <img
-                  src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                  v-bind:src="`../../../images/${this.userData.fotografia}`"
                   alt="Generic placeholder image"
                   class="img-fluid img-thumbnail mt-4 mb-2"
                   style="width: 200px; z-index: 1; border-radius: 50%"
@@ -25,7 +25,7 @@
                 </button>
               </div>
               <div class="ms-3 d-flex" style="margin-top: 140px">
-                <h5 style="font-size: 25px">Jalil López</h5>
+                <h5 style="font-size: 25px">{{ `${ this.userData.name } ${ this.userData.apellido_p }` }}</h5>
                 <a class="edit-user mx-3"
                   >EDITAR <i class="fas fa-edit mx-1"></i
                 ></a>
@@ -162,7 +162,22 @@
 </template>
 
 <script>
+import $api from '../../store/api';
+
 export default {
   name: "InicioCliente",
+  data() {
+    return {
+      userData: {}
+    }
+  },
+  async mounted() {
+    await $api.get('usuario').then(response => {
+        let { data } = response.data;
+        this.userData = data;
+    }).catch( error => {
+      this.$router.push({ name:"InicioSesion" });
+    });
+  }
 };
 </script>
