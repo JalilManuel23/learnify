@@ -56,7 +56,7 @@ export default {
             let { data } = response.data;
             this.userData.usuario = data.id;
         }).catch(error=>{
-            console.log(error)
+            this.$router.push({ name:"InicioSesion" });
         });
     }
 }
