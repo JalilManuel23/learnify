@@ -97,6 +97,9 @@
 </style>
 
 <script>
+import $api from '../../store/api';
+import { Toast } from '../helpers/Toast';
+
 export default {
     data(){
         return {
@@ -110,24 +113,16 @@ export default {
         // Método que se ejecuta al dar clic en botón de -Iniciar Sesión-
         async iniciarSesion(){
             // Hace petición al backend a la ruta 'api/login' y manda como body el objeto user
-            await axios.post('/api/login', this.user).then(response => {
+            await $api.post('login', this.user).then(response => {
               // En caso de que las credenciales sean correctas, se muestra una alerta con sweetalert del tipo 'toast'
-              const Toast = Swal.mixin({
-                toast: true,
-                position: 'top-end',
-                showConfirmButton: false,
-                timer: 3000,
-                timerProgressBar: true,
-                didOpen: (toast) => {
-                  toast.addEventListener('mouseenter', Swal.stopTimer)
-                  toast.addEventListener('mouseleave', Swal.resumeTimer)
-                }
-              })
 
               Toast.fire({
                 icon: 'success',
                 title: '¡Bienvenido!'
-              })
+              });
+
+              // Crea el token y muestra alerta
+              localStorage.setItem('token', response.data.token);  
 
               // Después hace una redirección al inicio
               this.$router.push({name:"InicioCliente"})

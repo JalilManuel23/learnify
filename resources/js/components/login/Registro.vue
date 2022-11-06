@@ -64,13 +64,13 @@
                     <div class="row">
                         <div class="col">
                             <div class="mt-3 form-floating">
-                                <input required type="text" id="label1" class="form-control" placeholder="Contraseña" v-model="user.password">
+                                <input required type="password" id="label1" class="form-control" placeholder="Contraseña" v-model="user.password">
                                 <label for="label1">Contraseña</label>
                             </div>
                         </div>
                         <div class="col">
                             <div class="mt-3 form-floating">
-                                <input required type="text" id="label1" class="form-control" placeholder="Confirmar contraseña" v-model="user.confirm_password">
+                                <input required type="password" id="label1" class="form-control" placeholder="Confirmar contraseña" v-model="user.confirm_password">
                                 <label for="label1">Confirmar contraseña</label>
                             </div>
                         </div>
@@ -121,6 +121,9 @@
 </style>
 
 <script>
+import $api from '../../store/api';
+import { Toast } from '../helpers/Toast';
+
 export default {
     data(){
         return {
@@ -135,19 +138,46 @@ export default {
         }
     },
     methods:{
+        // Método que se ejecuta al dar clic en botón -Regístrarse-
         async crearCuenta(){
+            let { password, confirm_password } = this.user; 
+
             // Verifica que las contraseñas coincidan
-            if(this.user.password == this.user.confirm_password) {
-                // Hace la petición post para crear el usuario
-                await axios.post('/api/registrar/', this.user).then(response => {
-                    this.$router.push({name:"InicioCliente"})
+            if(password == confirm_password) {
+
+                // Verifica que la contraseña sea segura
+                if(this.verificarPasswordSegura(password)) {
+
+                    // Hace la petición post para crear el usuario
+                await $api.post('registrar', this.user).then(response => {
+                    // Crea el token y muestra alerta
+                    localStorage.setItem('token', response.data.token);  
+
+                    Toast.fire({
+                        icon: 'success',
+                        title: 'Termina de configurar tu cuenta'
+                    });
+
+                    // Hace la redirección al la selección de tipo de usuario
+                    this.$router.push({ name:"TipoUsuario" })
                 }).catch(error=>{
                     console.log(error)
                 })
+                }
             } else {
-                alert("Las contraseñas no coinciden");
+                Swal.fire({
+                    title: '¡Las contraseñas no coinciden!',
+                    text: 'Intente de nuevo',
+                    icon: 'error',
+                    confirmButtonText: 'Cerrar'
+                })
             }
 
+        },
+        verificarPasswordSegura(password) {
+            // TODO: Remplazar este código, por uno que compruebe que la contraseña es segura
+
+            return true;
         }
     }
 }
