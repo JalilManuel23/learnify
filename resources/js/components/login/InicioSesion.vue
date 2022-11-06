@@ -107,11 +107,38 @@ export default {
         }
     },
     methods:{
+        // Método que se ejecuta al dar clic en botón de -Iniciar Sesión-
         async iniciarSesion(){
-            await axios.post('/api/login/', this.user).then(response => {
-                this.$router.push({name:"InicioCliente"})
+            // Hace petición al backend a la ruta 'api/login' y manda como body el objeto user
+            await axios.post('/api/login', this.user).then(response => {
+              // En caso de que las credenciales sean correctas, se muestra una alerta con sweetalert del tipo 'toast'
+              const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                didOpen: (toast) => {
+                  toast.addEventListener('mouseenter', Swal.stopTimer)
+                  toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+              })
+
+              Toast.fire({
+                icon: 'success',
+                title: '¡Bienvenido!'
+              })
+
+              // Después hace una redirección al inicio
+              this.$router.push({name:"InicioCliente"})
             }).catch(error=>{
-                console.log(error)
+              // En caso de que los datos sean incorrectos se muestra una alerta
+              Swal.fire({
+                title: '¡Credenciales incorrectas!',
+                text: 'El correo electrónico o la contraseña ingresados no  son correctos',
+                icon: 'error',
+                confirmButtonText: 'Cerrar'
+              })
             })
         }
     }
