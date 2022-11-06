@@ -6,13 +6,13 @@
                     <h2 class="pt-5">¿Qué quieres hacer en Learnify?</h2>
                 </div>
                 <div class="col-12 d-flex flex-md-row flex-column justify-content-center">
-                    <a href="#" class="tipo-usuario_enlace d-flex flex-column align-items-center">
+                    <a href="#" v-on:click="this.crearPerfil('estudiantes')" class="tipo-usuario_enlace d-flex flex-column align-items-center">
                         <div class="tipo-usuario_icono d-flex flex-column align-items-center justify-content-center">
                             <i class="fa fa-address-book" aria-hidden="true"></i>
                         </div>
                         <p>Quiero enseñar</p>
                     </a>
-                    <a href="#" class="tipo-usuario_enlace d-flex flex-column align-items-center">
+                    <a href="#" v-on:click="this.crearPerfil('instructores')" class="tipo-usuario_enlace d-flex flex-column align-items-center">
                         <div class="tipo-usuario_icono d-flex flex-column align-items-center justify-content-center">
                             <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                         </div>
@@ -25,7 +25,41 @@
 </template>
 
 <script>
+import $api from '../../store/api';
 
+export default {
+    data(){
+        return {
+            userData: {
+                usuario: ''
+            }
+        }
+    },
+    methods: {
+        async crearPerfil(tipo) {
+            await $api.post(tipo, this.userData).then(response => {
+                Swal.fire({
+                    title: '¡Cuenta creada!',
+                    text: 'Da clic en continuar',
+                    icon: 'success',
+                    confirmButtonText: 'Continuar'
+                });
+
+                this.$router.push({ name:"InicioCliente" })
+            }).catch(error=>{
+                console.log(error)
+            });
+        }
+    },
+    async mounted() {
+        await $api.get('usuario').then(response => {
+            let { data } = response.data;
+            this.userData.usuario = data.id;
+        }).catch(error=>{
+            console.log(error)
+        });
+    }
+}
 </script>
 
 <style>

@@ -2,7 +2,7 @@
     <main>
         <HomeNavbar v-if="pagesHome.includes($route.name)" />
         <CategoriasNavbar v-else-if="pagesCategorias.includes($route.name)" />
-        <AuthNavbar v-else />
+        <AuthNavbar v-else-if="pagesAuth.includes($route.name)" />
         <router-view v-bind:class="[(pagesAuth.includes($route.name)) ? 'home-section' : '']"></router-view>
     </main>
 </template>
