@@ -25679,9 +25679,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       isActive: false,
-      pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena'],
-      pagesCategorias: ['Categoria'],
-      pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer', 'Instructores']
+      pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena', 'Legal', 'CentroAyuda'],
+      pagesCategorias: ['Categoria', 'Descripcion'],
+      pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer', 'Instructores', 'Index']
     };
   },
   methods: {
@@ -25842,9 +25842,9 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     key: 0
   })) : $data.pagesCategorias.includes(_ctx.$route.name) ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_CategoriasNavbar, {
     key: 1
-  })) : ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_AuthNavbar, {
+  })) : $data.pagesAuth.includes(_ctx.$route.name) ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_AuthNavbar, {
     key: 2
-  })), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view, {
+  })) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view, {
     "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)([$data.pagesAuth.includes(_ctx.$route.name) ? 'home-section' : ''])
   }, null, 8
   /* PROPS */
@@ -26346,8 +26346,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _videojs_player_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @videojs-player/vue */ "./node_modules/@videojs-player/vue/dist/videojs-player.esm.js");
 /* harmony import */ var video_js_dist_video_js_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! video.js/dist/video-js.css */ "./node_modules/video.js/dist/video-js.css");
 /* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
-/* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.esm.min.js");
-/* harmony import */ var _router_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./router.js */ "./resources/js/router.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var vue_axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.esm.min.js");
+/* harmony import */ var _router_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./router.js */ "./resources/js/router.js");
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
@@ -26357,7 +26359,8 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 
 
-(0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_components_App_vue__WEBPACK_IMPORTED_MODULE_3__["default"]).use(_router_js__WEBPACK_IMPORTED_MODULE_5__["default"], vue_axios__WEBPACK_IMPORTED_MODULE_4__["default"], axios, _videojs_player_vue__WEBPACK_IMPORTED_MODULE_1__["default"]).mount('#app');
+
+(0,vue__WEBPACK_IMPORTED_MODULE_0__.createApp)(_components_App_vue__WEBPACK_IMPORTED_MODULE_3__["default"]).use(_router_js__WEBPACK_IMPORTED_MODULE_6__["default"], vue_axios__WEBPACK_IMPORTED_MODULE_5__["default"], (axios__WEBPACK_IMPORTED_MODULE_4___default()), _videojs_player_vue__WEBPACK_IMPORTED_MODULE_1__["default"]).mount('#app');
 
 /***/ }),
 
@@ -26534,8 +26537,28 @@ var Instructores = function Instructores() {
   return __webpack_require__.e(/*! import() */ "resources_js_components_auth_Instructores_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/auth/Instructores.vue */ "./resources/js/components/auth/Instructores.vue"));
 };
 
+var Legal = function Legal() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_InformacionLegal_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/InformacionLegal.vue */ "./resources/js/components/InformacionLegal.vue"));
+};
+
+var CentroAyuda = function CentroAyuda() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_CentroAyuda_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/CentroAyuda.vue */ "./resources/js/components/CentroAyuda.vue"));
+};
+
 var Descripcion = function Descripcion() {
-  return Promise.resolve().then(function webpackMissingModule() { var e = new Error("Cannot find module './components/auth/Descripcion.vue'"); e.code = 'MODULE_NOT_FOUND'; throw e; });
+  return __webpack_require__.e(/*! import() */ "resources_js_components_auth_Descripcion_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/auth/Descripcion.vue */ "./resources/js/components/auth/Descripcion.vue"));
+};
+
+var Index = function Index() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_auth_Index_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/auth/Index.vue */ "./resources/js/components/auth/Index.vue"));
+};
+
+var AuthFooter = function AuthFooter() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_auth_Footer_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/auth/Footer.vue */ "./resources/js/components/auth/Footer.vue"));
+};
+
+var InicioInstructor = function InicioInstructor() {
+  return __webpack_require__.e(/*! import() */ "resources_js_components_dashboard_InicioInstructor_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./components/dashboard/InicioInstructor.vue */ "./resources/js/components/dashboard/InicioInstructor.vue"));
 };
 
 var routes = [{
@@ -26590,6 +26613,26 @@ var routes = [{
   name: 'Instructores',
   path: '/instructores',
   component: Instructores
+}, {
+  name: 'Legal',
+  path: '/informacion-legal',
+  component: Legal
+}, {
+  name: 'CentroAyuda',
+  path: '/centro-de-ayuda',
+  component: CentroAyuda
+}, {
+  name: 'Descripcion',
+  path: '/descripcion-curso',
+  component: Descripcion
+}, {
+  name: 'Index',
+  path: '/index',
+  component: Index
+}, {
+  name: 'InicioInstructor',
+  path: '/dashboard/instructor',
+  component: InicioInstructor
 }];
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(),
@@ -114068,7 +114111,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_home_Categorias_vue":1,"resources_js_components_home_Planes_vue":1,"resources_js_components_home_Contacto_vue":1,"resources_js_components_home_Footer_vue":1,"resources_js_components_login_InicioSesion_vue":1,"resources_js_components_login_Registro_vue":1,"resources_js_components_login_RecuperacionContrasena_vue":1,"resources_js_components_login_RestablecerContrasena_vue":1,"resources_js_components_categorias_Categoria_vue":1,"resources_js_components_dashboard_Inicio_vue":1,"resources_js_components_VideoPlayer_vue":1,"resources_js_components_auth_TipoUsuario_vue":1,"resources_js_components_auth_Instructores_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_components_Home_vue":1,"resources_js_components_home_Categorias_vue":1,"resources_js_components_home_Planes_vue":1,"resources_js_components_home_Contacto_vue":1,"resources_js_components_home_Footer_vue":1,"resources_js_components_login_InicioSesion_vue":1,"resources_js_components_login_Registro_vue":1,"resources_js_components_login_RecuperacionContrasena_vue":1,"resources_js_components_login_RestablecerContrasena_vue":1,"resources_js_components_categorias_Categoria_vue":1,"resources_js_components_dashboard_Inicio_vue":1,"resources_js_components_VideoPlayer_vue":1,"resources_js_components_auth_TipoUsuario_vue":1,"resources_js_components_auth_Instructores_vue":1,"resources_js_components_InformacionLegal_vue":1,"resources_js_components_CentroAyuda_vue":1,"resources_js_components_auth_Descripcion_vue":1,"resources_js_components_auth_Index_vue":1,"resources_js_components_auth_Footer_vue":1,"resources_js_components_dashboard_InicioInstructor_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

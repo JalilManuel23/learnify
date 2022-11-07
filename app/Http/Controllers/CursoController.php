@@ -89,4 +89,13 @@ class CursoController extends Controller
     {
         $curso->delete();
     }
+
+    public function traer_cursos_por_instructor($id_instructor)
+    {
+        $cursos = Curso::where('instructor', $id_instructor)->first();
+
+        return response()->json([
+            'cursos' => $cursos
+        ]);
+    }
 }
