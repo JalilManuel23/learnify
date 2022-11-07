@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\CursoController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\ExamenController;
@@ -49,7 +50,7 @@ Route::resource('examenes', ExamenController::class);
 Route::resource('calificaciones', Calificacion_curso::class);
 
 Route::get('/cursos/por_instructor/{id}', [App\Http\Controllers\CursoController::class, 'traer_cursos_por_instructor']);
-Route::resource('curso', Curso::class);
+Route::resource('curso', CursoController::class);
 
 Route::post('/registrar', [UserController::class, 'createUser']);
 Route::post('/login', [UserController::class, 'loginUser']);
