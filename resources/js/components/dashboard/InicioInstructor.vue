@@ -2,22 +2,37 @@
   <InstructorNavbar></InstructorNavbar>
 
   <div class="container">
-    <div class="row mt-5">
-      <div class="col-md-12 d-flex justify-content-left">
-        <router-link to="/" class="card w-25" style="margin-right: 15px; margin-left: 15px; text-decoration: none; color: #000">
-            <div class="view overlay">
-                <img class="card-img-top p-5" src="https://cdn-icons-png.flaticon.com/512/2921/2921226.png"
-                    alt="Card image cap">
-                <a href="#!">
-                    <div class="mask rgba-white-slight"></div>
-                </a>
-            </div>
-        
-            <div class="card-body">
-                <h4 class="card-title text-center">Crear curso</h4>
-            </div>
-        </router-link>
-        <CardCurso></CardCurso>
+    <div class="d-flex row flew-wrap justify-content-start mt-4">
+      <!-- Enlace para agregar nuevo curso -->
+      <router-link to="/" class="card col-12 col-md-2 bg-light" style="margin: 10px; text-decoration: none; color: #000">
+          <div class="view overlay">
+              <img class="card-img-top p-5" src="https://cdn-icons-png.flaticon.com/512/2921/2921226.png"
+                  alt="Card image cap">
+              <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+              </a>
+          </div>
+      
+          <div class="card-body">
+              <h4 class="card-title text-center">Crear curso</h4>
+          </div>
+      </router-link>
+
+      <!-- Tarjetas de cada curso -->
+      <div v-for="curso in this.cursos" :key="curso.id" class="card col-12 col-md-2" style="margin: 10px">
+        <div class="view overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
+                alt="Card image cap">
+            <a href="#!">
+                <div class="mask rgba-white-slight"></div>
+            </a>
+        </div>
+    
+        <div class="card-body">
+            <h4 class="card-title">{{ curso.titulo }}</h4>
+            <p class="card-text mb-5">{{ curso.descripcion }}</p>
+            <a href="#" class="btn btn-primary">Button</a>
+        </div>
       </div>
     </div>
   </div>
@@ -32,7 +47,15 @@
     name: "InicioInstructor",
     data() {
       return {
-        userData: {}
+        userData: {},
+        cursos: []
+      }
+    },
+    methods: {
+      async traer_cursos() {
+        await $api.get(`cursos/por_instructor/${ this.userData.id }`).then(response => {
+          this.cursos = response.data.cursos;
+        });
       }
     },
     async mounted() {
@@ -42,6 +65,8 @@
       }).catch( error => {
         this.$router.push({ name:"InicioSesion" });
       });
+
+      this.traer_cursos();
     },
     components: {
       InstructorNavbar,

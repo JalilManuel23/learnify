@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Curso;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CursoController extends Controller
 {
@@ -92,7 +93,7 @@ class CursoController extends Controller
 
     public function traer_cursos_por_instructor($id_instructor)
     {
-        $cursos = Curso::where('instructor', $id_instructor)->first();
+        $cursos = DB::table('cursos')->where('instructor', $id_instructor)->get();
 
         return response()->json([
             'cursos' => $cursos
