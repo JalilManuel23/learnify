@@ -33,6 +33,8 @@ Route::post('/iniciar_sesion', [App\Http\Controllers\UserController::class, 'ini
 Route::resource('users', UserController::class);
 
 Route::get('/estudiante/perfil/{id}', [App\Http\Controllers\UserController::class, 'traer_perfil_estudiante']);
+
+Route::get('/estudiantes/buscar_perfil/{id}', [App\Http\Controllers\EstudianteController::class, 'buscar_perfil']);
 Route::resource('estudiantes', EstudianteController::class);
 
 Route::get('/instructor/perfil/{id}', [App\Http\Controllers\UserController::class, 'traer_perfil_instructor']);
@@ -46,6 +48,7 @@ Route::resource('examenes', ExamenController::class);
 
 Route::resource('calificaciones', Calificacion_curso::class);
 
+Route::get('/cursos/por_instructor/{id}', [App\Http\Controllers\CursoController::class, 'traer_cursos_por_instructor']);
 Route::resource('curso', Curso::class);
 
 Route::post('/registrar', [UserController::class, 'createUser']);

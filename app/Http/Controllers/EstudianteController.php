@@ -89,4 +89,13 @@ class EstudianteController extends Controller
     {
         $estudiante->delete();
     }
+
+    public function buscar_perfil($id_usuario)
+    {
+        $estudiante = Estudiante::where('usuario', $id_usuario)->first();
+
+        return response()->json([
+            'estudiante' => $estudiante
+        ]);
+    }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Curso;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CursoController extends Controller
 {
@@ -88,5 +89,14 @@ class CursoController extends Controller
     public function destroy(Curso $curso)
     {
         $curso->delete();
+    }
+
+    public function traer_cursos_por_instructor($id_instructor)
+    {
+        $cursos = DB::table('cursos')->where('instructor', $id_instructor)->get();
+
+        return response()->json([
+            'cursos' => $cursos
+        ]);
     }
 }

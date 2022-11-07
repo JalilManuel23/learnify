@@ -33,6 +33,8 @@ const CentroAyuda = () => import('./components/CentroAyuda.vue')
 const Descripcion = () => import('./components/auth/Descripcion.vue')
 const Index = () => import('./components/auth/Index.vue')
 const AuthFooter = () => import('./components/auth/Footer.vue')
+const InicioInstructor = () =>
+    import ('./components/dashboard/InicioInstructor.vue')
 
 const routes = [
     {
@@ -119,6 +121,11 @@ const routes = [
         name: 'Index',
         path: '/index',
         component: Index
+    },
+    {
+        name: 'InicioInstructor',
+        path: '/dashboard/instructor',
+        component: InicioInstructor
     }
 ]
 
