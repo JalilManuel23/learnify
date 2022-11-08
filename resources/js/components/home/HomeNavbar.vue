@@ -99,6 +99,10 @@
         left: 100%;
         top: -30%;
     }
+    .dropdown-toggle::after {
+        margin-top: .6em;
+        margin-left: .4em;
+    }
     @media (max-width: 600px) {
         .dropdown-menu .submenu {
         display:none;
