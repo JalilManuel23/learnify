@@ -35,6 +35,8 @@ const Index = () => import('./components/auth/Index.vue')
 const AuthFooter = () => import('./components/auth/Footer.vue')
 const InicioInstructor = () =>
     import ('./components/dashboard/InicioInstructor.vue')
+const CrearCurso = () =>
+    import ('./components/auth/cursos/CrearCurso.vue');
 
 const routes = [
     {
@@ -126,7 +128,12 @@ const routes = [
         name: 'InicioInstructor',
         path: '/dashboard/instructor',
         component: InicioInstructor
-    }
+    },
+    {
+        name: 'CrearCurso',
+        path: '/crear-curso',
+        component: CrearCurso
+    },
 ]
 
 export default createRouter ({

@@ -4,7 +4,7 @@
   <div class="container">
     <div class="d-flex row flew-wrap justify-content-start mt-4">
       <!-- Enlace para agregar nuevo curso -->
-      <router-link to="/" class="card col-12 col-md-2 bg-light" style="margin: 10px; text-decoration: none; color: #000">
+      <router-link to="/crear-curso" class="card col-12 col-md-2 bg-light" style="margin: 10px; text-decoration: none; color: #000">
           <div class="view overlay">
               <img class="card-img-top p-5" src="https://cdn-icons-png.flaticon.com/512/2921/2921226.png"
                   alt="Card image cap">
