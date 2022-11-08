@@ -39,7 +39,7 @@
               <p class="text-muted desc">{{ duracion }}mins.</p>
             </div>
 
-            <router-link to='/' class="btn btn-primary">Ver</router-link>
+            <router-link :to="`/curso/${ id }`" class="btn btn-primary">Ver</router-link>
         </div>
       </div>
     </div>
