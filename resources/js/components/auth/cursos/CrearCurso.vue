@@ -20,7 +20,7 @@
                     <div class="mb-3">
                         <label for="categoria" class="form-label mr-5">Categoría:</label>
                         <select v-model="nuevoCurso.categoria" class="form-select" name="categoria" id="categoria">
-                            <option v-for="{ id, titulo } in this.categorias" :key="id" :value="id">{{ titulo }}</option>
+                            <option v-for="{ id, titulo } in this.categorias" :key="id" :value="titulo">{{ titulo }}</option>
                         </select>
                     </div>
                     <div class="mb-3">
