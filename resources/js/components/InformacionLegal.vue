@@ -2,19 +2,19 @@
     <section id="header" class="inicio">
       <div class="container d-flex align-items-center">
         <div class="row">
-          <div class="col-md-6 col-12 text-center d-flex flex-column align-md-items-start justify-md-content-start justify-content-center align-items-center">
+          <div class="col-md-6 col text-center d-flex flex-column align-md-items-start justify-md-content-start justify-content-center align-items-center">
             <div class="title-container text-md-start text-center mb-4">
               <h1 class="display-6">Información Legal</h1>
               <nav class="mt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><router-link to="/" class="text-decoration-none" style="color:#184E77">Inicio</router-link></li>
-                    <li class="breadcrumb-item active" aria-current="page">Información Legal</li>
+                    <li class="breadcrumb-item active" aria-current="page"><strong>Información Legal</strong></li>
                 </ol>
             </nav>
             </div>
           </div>
-          <div class="col-md-6 d-flex align-md-items-end justify-md-content-center justify-content-center pt-md-5 mt-5">
-            <img src="../../img/documents.png" class="img-fluid w-75 text-center" />
+          <div class="col-md-6 col d-flex align-md-items-end justify-md-content-center justify-content-center pt-md-5 mt-5">
+            <img src="../../img/documents.png" class="img img-fluid w-75 text-center" />
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
                                 <small class="text-muted">
                                     Fecha de última actualización :
                                 </small>
-                                <p class="py-5">
+                                <p class="info py-5">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim facilisis gravida neque convallis a cras semper auctor. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Vulputate eu scelerisque felis imperdiet. Amet risus nullam eget felis eget nunc lobortis mattis aliquam. Nullam eget felis eget nunc lobortis mattis. Adipiscing commodo elit at imperdiet. Ac tincidunt vitae semper quis lectus nulla at volutpat. Pulvinar mattis nunc sed blandit libero. Enim praesent elementum facilisis leo vel fringilla est. Et magnis dis parturient montes nascetur ridiculus. Duis ultricies lacus sed turpis. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Donec ac odio tempor orci dapibus ultrices in iaculis. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique.
 
                                     Amet justo donec enim diam vulputate ut pharetra sit. Massa enim nec dui nunc mattis enim ut tellus. Sed libero enim sed faucibus turpis in eu mi bibendum. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Sit amet tellus cras adipiscing enim eu turpis egestas. Semper risus in hendrerit gravida. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Egestas quis ipsum suspendisse ultrices. Imperdiet proin fermentum leo vel orci porta non pulvinar neque. Nisi lacus sed viverra tellus in hac habitasse. Ornare arcu odio ut sem nulla pharetra diam sit. Nunc consequat interdum varius sit amet mattis vulputate. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Gravida cum sociis natoque penatibus et magnis dis parturient montes.
@@ -58,7 +58,7 @@
                                 <small class="text-muted">
                                     Fecha de última actualización :
                                 </small>
-                                <p class="py-5">
+                                <p class="info py-5">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim facilisis gravida neque convallis a cras semper auctor. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Vulputate eu scelerisque felis imperdiet. Amet risus nullam eget felis eget nunc lobortis mattis aliquam. Nullam eget felis eget nunc lobortis mattis. Adipiscing commodo elit at imperdiet. Ac tincidunt vitae semper quis lectus nulla at volutpat. Pulvinar mattis nunc sed blandit libero. Enim praesent elementum facilisis leo vel fringilla est. Et magnis dis parturient montes nascetur ridiculus. Duis ultricies lacus sed turpis. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Donec ac odio tempor orci dapibus ultrices in iaculis. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique.
 
                                     Amet justo donec enim diam vulputate ut pharetra sit. Massa enim nec dui nunc mattis enim ut tellus. Sed libero enim sed faucibus turpis in eu mi bibendum. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Sit amet tellus cras adipiscing enim eu turpis egestas. Semper risus in hendrerit gravida. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Egestas quis ipsum suspendisse ultrices. Imperdiet proin fermentum leo vel orci porta non pulvinar neque. Nisi lacus sed viverra tellus in hac habitasse. Ornare arcu odio ut sem nulla pharetra diam sit. Nunc consequat interdum varius sit amet mattis vulputate. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Gravida cum sociis natoque penatibus et magnis dis parturient montes.
@@ -76,7 +76,7 @@
                                 <small class="text-muted">
                                     Fecha de última actualización :
                                 </small>
-                                <p class="py-5">
+                                <p class="info py-5">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim facilisis gravida neque convallis a cras semper auctor. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Vulputate eu scelerisque felis imperdiet. Amet risus nullam eget felis eget nunc lobortis mattis aliquam. Nullam eget felis eget nunc lobortis mattis. Adipiscing commodo elit at imperdiet. Ac tincidunt vitae semper quis lectus nulla at volutpat. Pulvinar mattis nunc sed blandit libero. Enim praesent elementum facilisis leo vel fringilla est. Et magnis dis parturient montes nascetur ridiculus. Duis ultricies lacus sed turpis. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Donec ac odio tempor orci dapibus ultrices in iaculis. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique.
 
                                     Amet justo donec enim diam vulputate ut pharetra sit. Massa enim nec dui nunc mattis enim ut tellus. Sed libero enim sed faucibus turpis in eu mi bibendum. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Sit amet tellus cras adipiscing enim eu turpis egestas. Semper risus in hendrerit gravida. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Egestas quis ipsum suspendisse ultrices. Imperdiet proin fermentum leo vel orci porta non pulvinar neque. Nisi lacus sed viverra tellus in hac habitasse. Ornare arcu odio ut sem nulla pharetra diam sit. Nunc consequat interdum varius sit amet mattis vulputate. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Gravida cum sociis natoque penatibus et magnis dis parturient montes.
@@ -94,7 +94,7 @@
                                 <small class="text-muted">
                                     Fecha de última actualización :
                                 </small>
-                                <p class="py-5">
+                                <p class="info py-5">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim facilisis gravida neque convallis a cras semper auctor. Ac feugiat sed lectus vestibulum mattis ullamcorper velit sed. Vulputate eu scelerisque felis imperdiet. Amet risus nullam eget felis eget nunc lobortis mattis aliquam. Nullam eget felis eget nunc lobortis mattis. Adipiscing commodo elit at imperdiet. Ac tincidunt vitae semper quis lectus nulla at volutpat. Pulvinar mattis nunc sed blandit libero. Enim praesent elementum facilisis leo vel fringilla est. Et magnis dis parturient montes nascetur ridiculus. Duis ultricies lacus sed turpis. Pellentesque diam volutpat commodo sed egestas egestas fringilla. Donec ac odio tempor orci dapibus ultrices in iaculis. Sit amet consectetur adipiscing elit pellentesque habitant morbi tristique.
 
                                     Amet justo donec enim diam vulputate ut pharetra sit. Massa enim nec dui nunc mattis enim ut tellus. Sed libero enim sed faucibus turpis in eu mi bibendum. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Sit amet tellus cras adipiscing enim eu turpis egestas. Semper risus in hendrerit gravida. In egestas erat imperdiet sed euismod nisi porta lorem mollis. Egestas quis ipsum suspendisse ultrices. Imperdiet proin fermentum leo vel orci porta non pulvinar neque. Nisi lacus sed viverra tellus in hac habitasse. Ornare arcu odio ut sem nulla pharetra diam sit. Nunc consequat interdum varius sit amet mattis vulputate. Neque laoreet suspendisse interdum consectetur libero id faucibus nisl. Gravida cum sociis natoque penatibus et magnis dis parturient montes.
@@ -155,5 +155,24 @@
         border-radius: 0px;
         border-left: 5px solid #184E77;
         border-bottom: 1px solid rgba(0,0,0,.125);
+    }
+    @media (min-width: 300px) {
+        .inicio .container .row {
+            margin-top: 10vh !important;
+            margin-bottom: 10vh !important;
+        }
+        .title-container {
+            margin-top: 15vh;
+            text-align: left !important;
+        }
+         .title-container .display-6 {
+            font-size: 8vmin !important;
+        }
+        .info {
+            font-size: 10px !important;
+        }
+        .list-group {
+            font-size: 12px;
+        }
     }
 </style>

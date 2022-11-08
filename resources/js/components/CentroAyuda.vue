@@ -2,18 +2,18 @@
     <section id="header" class="inicio">
       <div class="container d-flex align-items-center">
         <div class="row">
-          <div class="col-md-6 col-12 text-center d-flex flex-column align-md-items-start justify-md-content-start justify-content-center align-items-center">
+          <div class="col-md-6 col text-center d-flex flex-column align-md-items-start justify-md-content-start justify-content-center align-items-center">
             <div class="title-container text-md-start text-center mb-4">
               <h1 class="display-6">Centro de Ayuda</h1>
               <nav class="mt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><router-link to="/" class="text-decoration-none" style="color:#184E77">Inicio</router-link></li>
-                    <li class="breadcrumb-item active" aria-current="page">Centro de Ayuda</li>
+                    <li class="breadcrumb-item active" aria-current="page"><strong>Centro de Ayuda</strong></li>
                 </ol>
             </nav>
             </div>
           </div>
-          <div class="col-md-6 d-flex align-md-items-end justify-md-content-center justify-content-center pt-md-5 mt-5">
+          <div class="col-md-6 col d-flex align-md-items-end justify-md-content-center justify-content-center pt-md-5 mt-5">
             <img src="../../img/questions.png" class="img-fluid w-75 text-center" />
           </div>
         </div>
@@ -61,7 +61,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Pregunta 4
+                        Pregunta 3
                     </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -73,7 +73,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Pregunta 5
+                        Pregunta 4
                     </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
@@ -127,8 +127,21 @@
     .accordion-body {
         background-color: #FFFFFF;
     }
-    /* .accordion-button:after {
-         color: #184E77;
-         font-weight: bold !important;
-    } */
+    @media (min-width: 300px) {
+        .inicio .container .row {
+            margin-top: 10vh !important;
+            margin-bottom: 10vh !important;
+        }
+        .title-container {
+            margin-top: 15vh;
+            text-align: left !important;
+        }
+         .title-container .display-6 {
+            font-size: 8vmin !important;
+        }
+        .accordion-body {
+            padding-bottom: 25px;
+            font-size: 12px !important;
+        }
+    }
 </style>
