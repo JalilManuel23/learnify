@@ -16,7 +16,8 @@ class Curso extends Model
         'titulo',
         'calificacion',
         'descripcion',
-        'precio'
+        'precio',
+        'imagen'
     ];
 
     public function instructor()

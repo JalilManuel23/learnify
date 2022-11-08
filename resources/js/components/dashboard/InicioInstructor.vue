@@ -39,7 +39,7 @@
               <p class="text-muted desc">{{ duracion }}mins.</p>
             </div>
 
-            <a href="#" class="btn btn-primary">Ver</a>
+            <router-link to='/' class="btn btn-primary">Ver</router-link>
         </div>
       </div>
     </div>
