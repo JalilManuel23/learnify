@@ -46,6 +46,8 @@ const CrearCurso = () =>
     import ('./components/auth/cursos/CrearCurso.vue');
 const Curso = () =>
     import ('./components/auth/cursos/Curso.vue');
+const EditarCurso = () =>
+    import ('./components/auth/cursos/EditarCurso.vue');
 
 const routes = [{
         name: 'home',
@@ -146,6 +148,11 @@ const routes = [{
         name: 'Curso',
         path: '/curso/:curso',
         component: Curso
+    },
+    {
+        name: 'EditarCurso',
+        path: '/editar-curso/:curso',
+        component: EditarCurso
     },
 ]
 

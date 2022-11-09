@@ -25,7 +25,7 @@
                     </div>
                     <div class="mt-3 d-flex justify-content-end">
                         <button type="button" class="btn btn-danger" style="margin-right: 8px;">Eliminar</button>
-                        <button type="button" class="btn btn-warning">Editar</button>
+                        <router-link :to="`/editar-curso/${ this.cursoData.id }`" type="button" class="btn btn-warning">Editar</router-link>
                     </div>
                 </div>
             </div>
