@@ -6,52 +6,52 @@
             <i class="fa fa-bars" aria-hidden="true"></i>
         </div>
     </div>
-    <hr>
+    <hr style="color:#F2F2F2;">
     <ul class="nav-list">
       <li>
-        <a href="#">
-          <i class="fa fa-home" aria-hidden="true"></i>
+        <router-link to="">
+          <i class="fas fa-home" aria-hidden="true"></i>
           <span class="links_name">Inicio</span>
-        </a>
+        </router-link>
          <span class="tooltip">Inicio</span>
       </li>
       <li>
-       <a href="#">
-        <i class="fa fa-folder" aria-hidden="true"></i>
+       <router-link to="">
+        <i class="fas fa-folder" aria-hidden="true"></i>
         <span class="links_name">Mis cursos</span>
-       </a>
+       </router-link>>
        <span class="tooltip">Mis cursos</span>
       </li>
       <li>
-        <a href="#">
-         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-         <span class="links_name">Mis diplomas</span>
-        </a>
+        <router-link to="">
+          <i class="fas fa-medal icon-progress" aria-hidden="true"></i>
+          <span class="links_name">Mis diplomas</span>
+        </router-link>
         <span class="tooltip">Mis diplomas</span>
       </li>
       <li>
-        <a href="#">
-          <i class="fa fa-book" aria-hidden="true"></i>
+        <router-link to="">
+          <i class="fas fa-file" aria-hidden="true"></i>
           <span class="links_name">Mis apuntes</span>
-        </a>
+        </router-link>
         <span class="tooltip">Mis apuntes</span>
       </li>
       <li>
-        <a href="#">
-          <i class="fa fa-credit-card" aria-hidden="true"></i>
-          <span class="links_name">Plan de estudios</span>
-        </a>
-        <span class="tooltip">Plan de estudios</span>
+        <router-link to="">
+          <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+          <span class="links_name">Mi plan de estudio</span>
+        </router-link>
+        <span class="tooltip">Mi plan de estudio</span>
       </li>
-      <hr>
+      <hr style="color:#F2F2F2;">
       <li>
-        <a href="#">
-          <i class="fa fa-cog" aria-hidden="true"></i>
-          <span class="links_name">Configuración</span>
-        </a>
-        <span class="tooltip">Configuración</span>
+        <router-link to="">
+          <i class="fas fa-info-circle" aria-hidden="true"></i>
+          <span class="links_name">Centro de Ayuda</span>
+        </router-link>
+        <span class="tooltip">Centro de Ayuda</span>
       </li>
-      <hr>
+      <hr style="color:#F2F2F2;">
     </ul>
   </div>
   <section class="home-section">
@@ -66,80 +66,95 @@
             </ol>
             <h6 class="font-weight-bolder mb-0"><strong>Inicio</strong></h6>
           </nav>
-          <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
+          <div class="mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
             <div class="ms-md-auto pe-md-3 d-flex align-items-center">
-              <div class="input-group">
-                  <a class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" href="">¡Hazte premium!</a>
-              </div>
             </div>
             <ul class="navbar-nav justify-content-end">
               <li class="nav-item dropdown pe-2 d-flex align-items-center">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp" class="img-fluid rounded-circle avatar">
-                <a href="#" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa fa-caret-down" aria-hidden="true"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
-                  <li class="mb-2">
-                    <a class="dropdown-item border-radius-md" href="#">
-                      <div class="d-flex py-1">
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            <span class="font-weight-bold">Mi perfil</span>
-                          </h6>
+                <div class="input-group">
+                  <router-link class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" to="">¡Hazte premium!</router-link>
+                </div>
+                  <img v-bind:src="`../../../images/${this.userData.fotografia}`" class="img-fluid rounded-circle avatar">
+                  <a href="#" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa fa-caret-down" aria-hidden="true"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n5" aria-labelledby="dropdownMenuButton">
+                    <li class="">
+                      <router-link class="dropdown-item border-radius-md" to="/dashboard/inicio">
+                        <div class="d-flex">
+                          <div class="d-flex flex-column justify-content-center mt-2">
+                            <h6 class="text-sm font-weight-normal">
+                              <span class="font-weight-bold">Mi perfil</span>
+                            </h6>
+                          </div>
+                          <hr>
                         </div>
-                        <hr>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a class="dropdown-item border-radius-md" href="#">
-                      <div class="d-flex py-1">
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            <span class="font-weight-bold">Centro de ayuda</span>
-                          </h6>
+                      </router-link>
+                    </li>
+                    <li class="">
+                      <router-link class="dropdown-item border-radius-md" to="/centro-de-ayuda">
+                        <div class="d-flex">
+                          <div class="d-flex flex-column justify-content-center mt-2">
+                            <h6 class="text-sm font-weight-normal">
+                              <span class="font-weight-bold">Centro de ayuda</span>
+                            </h6>
+                          </div>
+                          <hr>
                         </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="mb-2">
-                    <a class="dropdown-item border-radius-md" href="#">
-                      <div class="d-flex py-1">
-                        <div class="d-flex flex-column justify-content-center">
-                          <h6 class="text-sm font-weight-normal mb-1">
-                            Cerrar Sesión
-                          </h6>
+                      </router-link>
+                    </li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="">
+                      <router-link class="dropdown-item border-radius-md" to="/">
+                        <div class="d-flex">
+                          <div class="d-flex flex-column justify-content-center mt-2">
+                            <h6 class="text-sm font-weight-normal">
+                              <span class="font-weight-bold">Cerrar Sesión</span>
+                            </h6>
+                          </div>
+                          <hr>
                         </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
+                      </router-link>
+                    </li>
+                  </ul>
               </li>
             </ul>
           </div>
         </div>
       </nav>
+      <hr>
     <!-- End Navbar -->
     <div class="home-section">
+
     </div>
     </main>
   </section>
 </template>
 
 <script>
+import $api from '../../store/api';
 
 export default {
-    data() {
-        return {
-            isOpen: false
-        }
-    },
+  name: "AuthNavbar",
+  data() {
+    return {
+      userData: {}, isOpen: false,
+    }
+  },
+  async mounted() {
+    await $api.get('usuario').then(response => {
+      let { data } = response.data;
+      this.userData = data;
+    }).catch( error => {
+      this.$router.push({ name:"InicioSesion" });
+    });
+  },
     methods:{
         toggleCloseButton() {
             this.isOpen = !this.isOpen;
         }
     }
-}
+};
 </script>
 
 <style>
@@ -343,13 +358,13 @@ export default {
   left: 250px;
   width: calc(100% - 250px);
 }
-.home-section .text{
+/* .home-section .text{
   display: inline-block;
   color: #184E77;
   font-size: 25px;
   font-weight: 500;
   margin: 18px
-}
+} */
 ol, ul {
  padding-left: 0;
 }
@@ -357,6 +372,17 @@ ol, ul {
   height: 35px;
   width: 35px;
   margin-right: 10px;
+}
+.dropdown-item.active, .dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: #696969;
+  border-radius: 10px;
+}
+.dropdown-item:hover{
+  text-decoration: none;
+  background-color: #F2F3F4;
+  border-radius: 10px;
 }
 @media (max-width: 600px) {
   .navbar {
