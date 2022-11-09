@@ -24,7 +24,7 @@
                         <p><span class="badge bg-primary">Categoría:</span> {{ this.cursoData.categoria }}</p>
                     </div>
                     <div class="mt-3 d-flex justify-content-end">
-                        <button type="button" class="btn btn-danger" style="margin-right: 8px;">Eliminar</button>
+                        <button v-on:click="this.eliminarCurso" type="button" class="btn btn-danger" style="margin-right: 8px;">Eliminar</button>
                         <router-link :to="`/editar-curso/${ this.cursoData.id }`" type="button" class="btn btn-warning">Editar</router-link>
                     </div>
                 </div>
@@ -36,6 +36,7 @@
 <script>
 import $api from '../../../store/api';
 import InstructorNavbar from '../../auth/InstructorNavbar.vue';
+import { Toast } from '../../helpers/Toast';
 
 export default {
     name: "CrearCurso",
@@ -51,6 +52,16 @@ export default {
                 this.cursoData = response.data;
                 console.log(this.cursoData);
             });
+        },
+        async eliminarCurso() {
+            await $api.delete(`curso/${ this.cursoData.id }`).then(response => {
+                Toast.fire({
+                    icon: 'success',
+                    title: '¡Curso eliminado correctamente!'
+                });
+            });
+
+            this.$router.push({ name:"InicioInstructor" });
         }
     },
     async mounted() {
