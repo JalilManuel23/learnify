@@ -20,13 +20,13 @@
             </div>
             <div class="row align-items-center">
                 <div class="col">
-                    <div class="card" style="width: 18rem;">
+                    <div v-for="{ titulo, instructor, precio, duracion } in this.cursosData" class="card" style="width: 18rem;">
                         <img src="../../../img/desarrollo-ingenieria.png" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Título del curso</h5>
-                            <p class="card-text">Nombre del instructor</p>
-                            <p class="card-text">Precio</p>
-                            <p class="card-text">duración</p>
+                            <h5 class="card-title">{{ titulo }}</h5>
+                            <p class="card-text">{{ instructor }}</p>
+                            <p class="card-text">${{ precio }}</p>
+                            <p class="card-text">{{ duracion }}mins</p>
                             <div class="clearfix">
                                 <a href="#" class="btn btn-primary float-start">Comprar ahora</a>
                                 <a href="#" class="btn btn-primary float-end" style="color:white"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
@@ -44,6 +44,7 @@
 <script>
     import Footer from '../home/Footer.vue';
     import categorias from './categorias';
+    import $api from '../../store/api';
 
     export default {
         name: "Categoria",
@@ -54,12 +55,14 @@
                 titulo: "",
                 descripcion: "",
                 cursos: null,
-                imagen: ""
+                imagen: "",
+                cursosData: {}
             }
         },
         components: { Footer },
         mounted() {
-            this.cargarCategoriaData()
+            this.cargarCategoriaData();
+            this.cargarCursosData();
         },
         methods: {
             cargarCategoriaData() {
@@ -74,6 +77,11 @@
                         this.cursos = cursos;
                         this.imagen = imagen;
                     }
+                });
+            },
+            async cargarCursosData() {
+                await $api.get(`cursos/por_categoria/${ this.titulo }`).then(response => {
+                    this.cursosData = response.data.cursos;
                 });
             }
         }

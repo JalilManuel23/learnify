@@ -99,4 +99,13 @@ class CursoController extends Controller
             'cursos' => $cursos
         ]);
     }
+
+    public function traer_cursos_por_categoria($categoria)
+    {
+        $cursos = DB::table('cursos')->where('categoria', $categoria)->get();
+
+        return response()->json([
+            'cursos' => $cursos
+        ]);
+    }
 }
