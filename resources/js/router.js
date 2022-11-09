@@ -26,18 +26,30 @@ const InicioCliente = () =>
     import ('./components/dashboard/Inicio.vue')
 const VideoPlayer = () =>
     import ('./components/VideoPlayer.vue')
-const TipoUsuario = () => import('./components/auth/TipoUsuario.vue')
-const Instructores = () => import('./components/auth/Instructores.vue')
-const Legal = () => import('./components/InformacionLegal.vue')
-const CentroAyuda = () => import('./components/CentroAyuda.vue')
-const Descripcion = () => import('./components/auth/Descripcion.vue')
-const Index = () => import('./components/auth/Index.vue')
-const AuthFooter = () => import('./components/auth/Footer.vue')
+const TipoUsuario = () =>
+    import ('./components/auth/TipoUsuario.vue')
+const Instructores = () =>
+    import ('./components/auth/Instructores.vue')
+const Legal = () =>
+    import ('./components/InformacionLegal.vue')
+const CentroAyuda = () =>
+    import ('./components/CentroAyuda.vue')
+const Descripcion = () =>
+    import ('./components/auth/Descripcion.vue')
+const Index = () =>
+    import ('./components/auth/Index.vue')
+const AuthFooter = () =>
+    import ('./components/auth/Footer.vue')
 const InicioInstructor = () =>
     import ('./components/dashboard/InicioInstructor.vue')
+const CrearCurso = () =>
+    import ('./components/auth/cursos/CrearCurso.vue');
+const Curso = () =>
+    import ('./components/auth/cursos/Curso.vue');
+const EditarCurso = () =>
+    import ('./components/auth/cursos/EditarCurso.vue');
 
-const routes = [
-    {
+const routes = [{
         name: 'home',
         path: '/',
         component: Home
@@ -126,10 +138,25 @@ const routes = [
         name: 'InicioInstructor',
         path: '/dashboard/instructor',
         component: InicioInstructor
-    }
+    },
+    {
+        name: 'CrearCurso',
+        path: '/crear-curso',
+        component: CrearCurso
+    },
+    {
+        name: 'Curso',
+        path: '/curso/:curso',
+        component: Curso
+    },
+    {
+        name: 'EditarCurso',
+        path: '/editar-curso/:curso',
+        component: EditarCurso
+    },
 ]
 
-export default createRouter ({
+export default createRouter({
     history: createWebHistory(),
     routes
 })

@@ -4,7 +4,7 @@
   <div class="container">
     <div class="d-flex row flew-wrap justify-content-start mt-4">
       <!-- Enlace para agregar nuevo curso -->
-      <router-link to="/" class="card col-12 col-md-2 bg-light" style="margin: 10px; text-decoration: none; color: #000">
+      <router-link to="/crear-curso" class="card col-12 col-md-2 bg-light" style="margin: 10px; text-decoration: none; color: #000">
           <div class="view overlay">
               <img class="card-img-top p-5" src="https://cdn-icons-png.flaticon.com/512/2921/2921226.png"
                   alt="Card image cap">
@@ -19,7 +19,7 @@
       </router-link>
 
       <!-- Tarjetas de cada curso -->
-      <div v-for="curso in this.cursos" :key="curso.id" class="card col-12 col-md-2" style="margin: 10px">
+      <div v-for="{ id, titulo, descripcion, precio, categoria, duracion } in this.cursos" :key="id" class="card col-12 col-md-2" style="margin: 10px">
         <div class="view overlay">
             <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
                 alt="Card image cap">
@@ -29,9 +29,17 @@
         </div>
     
         <div class="card-body">
-            <h4 class="card-title">{{ curso.titulo }}</h4>
-            <p class="card-text mb-5">{{ curso.descripcion }}</p>
-            <a href="#" class="btn btn-primary">Button</a>
+            <h4 class="card-title">{{ titulo }}</h4>
+            <p class="card-text mb-2">{{ descripcion }}</p>
+            
+            <p class="text-muted desc mb-2">{{ categoria }}</p> 
+
+            <div class="d-flex justify-content-between mb-2">
+              <p class="text-muted desc">${{ precio }}</p>
+              <p class="text-muted desc">{{ duracion }}mins.</p>
+            </div>
+
+            <router-link :to="`/curso/${ id }`" class="btn btn-primary">Ver</router-link>
         </div>
       </div>
     </div>
@@ -41,7 +49,6 @@
 <script>
   import $api from '../../store/api';
   import InstructorNavbar from '../auth/InstructorNavbar.vue';
-  import CardCurso from '../auth/cursos/cardCurso/CardCurso.vue';
   
   export default {
     name: "InicioInstructor",
@@ -69,8 +76,13 @@
       this.traer_cursos();
     },
     components: {
-      InstructorNavbar,
-      CardCurso
+      InstructorNavbar
     }
   };
 </script>
+
+<style>
+.desc {
+  font-size: 10px;
+}
+</style>
