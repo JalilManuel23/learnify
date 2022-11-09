@@ -5,7 +5,6 @@
         <AuthNavbar v-else-if="pagesAuth.includes($route.name)" />
         <InstructorNavbar v-else-if="pagesInstructor.includes($route.name)" />
         <router-view v-bind:class="[(pagesAuth.includes($route.name)) ? 'home-section' : '']"></router-view>
-        <router-view v-bind:class="[(pagesInstructor.includes($route.name)) ? 'home-section' : '']"></router-view>
     </main>
 </template>
 
@@ -16,7 +15,7 @@
     import HomeNavbar from './home/HomeNavbar.vue';
     import AuthNavbar from './auth/AuthNavbar.vue';
     import CategoriasNavbar from './categorias/CategoriasNavbar.vue';
-    import InstructorNavbar from './auth/InstructorNavbar.vue';
+
 
     export default {
     data() {
@@ -25,7 +24,7 @@
             pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena', 'Legal', 'CentroAyuda'],
             pagesCategorias: ['Categoria', 'Descripcion',],
             pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer', 'Instructores', 'Index'],
-            pagesInstructor: ['CrearCurso']
+
         };
     },
     methods: {
@@ -40,7 +39,7 @@
     beforeDestroy() {
         window.removeEventListener("scroll", this.handleDebouncedScroll);
     },
-    components: { HomeNavbar, AuthNavbar, CategoriasNavbar, InstructorNavbar }
+    components: { HomeNavbar, AuthNavbar, CategoriasNavbar, }
 }
 </script>
 
