@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Curso;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\DB;
 
 class CursoController extends Controller
@@ -97,6 +98,25 @@ class CursoController extends Controller
 
         return response()->json([
             'cursos' => $cursos
+        ]);
+    }
+
+    public function traer_cursos_por_categoria($categoria)
+    {
+        $cursos = DB::table('cursos')->where('categoria', $categoria)->get();
+
+        $cursos_devolver = array();
+
+        foreach($cursos as $curso) 
+        {
+            $instructor = DB::table('users')->where('id', $curso->instructor)->get();
+            $curso->instructor = $instructor;
+
+            $cursos_devolver[] = $curso;
+        }
+
+        return response()->json([
+            'cursos' => $cursos_devolver
         ]);
     }
 }

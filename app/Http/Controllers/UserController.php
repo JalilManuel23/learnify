@@ -108,15 +108,20 @@ class UserController extends Controller
     public function traer_perfil_instructor($id)
     {
         $instructor = Instructor::find($id);
+        
+        $id_usuario = $instructor->usuario;
+        $usuario = User::find($id_usuario);
 
-        $usuario = $instructor->usuario;
+        $nombre = $usuario->name .' '. $usuario->apellido_p;
+
         $calificacion = $instructor->calificacion;
         $especialidad = $instructor->especialidad;
 
         return response()->json([
-            'usuario' => $usuario,
+            'usuario' => $id_usuario,
             'calificacion' => $calificacion,
-            'especialidad' =>$especialidad,
+            'especialidad' => $especialidad,
+            'nombre_completo' => $nombre
         ]);
     }
 

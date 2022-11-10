@@ -50,6 +50,7 @@ Route::resource('examenes', ExamenController::class);
 Route::resource('calificaciones', Calificacion_curso::class);
 
 Route::get('/cursos/por_instructor/{id}', [App\Http\Controllers\CursoController::class, 'traer_cursos_por_instructor']);
+Route::get('/cursos/por_categoria/{categoria}', [App\Http\Controllers\CursoController::class, 'traer_cursos_por_categoria']);
 Route::resource('curso', CursoController::class);
 
 Route::post('/registrar', [UserController::class, 'createUser']);
