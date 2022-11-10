@@ -20,11 +20,11 @@
             </div>
             <div class="row align-items-center">
                 <div class="col">
-                    <div v-for="{ titulo, instructor, precio, duracion } in this.cursosData" class="card" style="width: 18rem;">
+                    <div v-for="{ titulo, nombreInstructor, precio, duracion } in this.cursosData" class="card" style="width: 18rem;">
                         <img src="../../../img/desarrollo-ingenieria.png" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">{{ titulo }}</h5>
-                            <p class="card-text">{{ instructor }}</p>
+                            <p class="card-text">{{ nombreInstructor }}</p>
                             <p class="card-text">${{ precio }}</p>
                             <p class="card-text">{{ duracion }}mins</p>
                             <div class="clearfix">
@@ -56,7 +56,7 @@
                 descripcion: "",
                 cursos: null,
                 imagen: "",
-                cursosData: {}
+                cursosData: []
             }
         },
         components: { Footer },
@@ -81,8 +81,17 @@
             },
             async cargarCursosData() {
                 await $api.get(`cursos/por_categoria/${ this.titulo }`).then(response => {
-                    this.cursosData = response.data.cursos;
+                    let cursos = response.data.cursos;
+
+                    cursos.map(curso => {
+                        let { name, apellido_p } = curso.instructor[0];
+                        
+                        curso.nombreInstructor = name + ' ' + apellido_p;
+
+                        this.cursosData.push(curso);
+                    });
                 });
+                
             }
         }
     }
