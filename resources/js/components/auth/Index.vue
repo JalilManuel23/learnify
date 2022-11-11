@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <h2 class="h1-responsive font-weight-bold text-left mb-3 mt-4">
-            Hola, <b>Jalil M. López</b>. ¡Te damos la bienvenida a Learnify!
+            Hola, <b>{{ `${ this.userData.name } ${ this.userData.apellido_p }` }}</b>. ¡Te damos la bienvenida a Learnify!
         </h2>
         <div class="mt-5">
             <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -16,7 +16,33 @@
                 </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">...</div>
+                <div class="tab-pane fade show active container d-flex flex-wrap justify-content-start" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+
+                    <!-- Tarjetas de cada curso -->
+                    <div v-for="{ id, titulo, descripcion, precio, categoria, duracion } in this.cursos" :key="id" class="card col-12 col-md-2" style="margin: 20px">
+                        <div class="view overlay">
+                            <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
+                                alt="Card image cap">
+                            <a href="#!">
+                                <div class="mask rgba-white-slight"></div>
+                            </a>
+                        </div>
+                    
+                        <div class="card-body">
+                            <h4 class="card-title">{{ titulo }}</h4>
+                            <p class="card-text mb-2">{{ descripcion }}</p>
+                            
+                            <p class="text-muted desc mb-2">{{ categoria }}</p> 
+
+                            <div class="d-flex justify-content-between mb-2">
+                            <p class="text-muted desc">${{ precio }}</p>
+                            <p class="text-muted desc">{{ duracion }}mins.</p>
+                            </div>
+
+                            <router-link :to="`/descripcion-curso/${ id }`" class="btn btn-primary">Ver</router-link>
+                        </div>
+                    </div>
+                </div>
                 <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
                 <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
                 <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
@@ -48,13 +74,38 @@
 </template>
 
 <script>
+import $api from '../../store/api';
 import AuthFooter from '../auth/Footer.vue';
 
 export default {
     name: "Index",
-    setup() {
-        
-    }, components: { AuthFooter }
+    data() {
+      return {
+        userData: {},
+        cursos: []
+      }
+    },
+    methods: {
+      async traer_cursos() {
+        await $api.get('curso').then(response => {
+          this.cursos = response.data;
+        });
+      },
+      showCursos(){
+        console.log(this.cursos);
+      }
+    },
+    async mounted() {
+      await $api.get('usuario').then(response => {
+          let { data } = response.data;
+          this.userData = data;
+      }).catch( error => {
+        this.$router.push({ name:"InicioSesion" });
+      });
+
+      this.traer_cursos();
+    }, 
+    components: { AuthFooter }
 }
 </script>
 
