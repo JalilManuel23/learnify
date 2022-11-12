@@ -47,6 +47,7 @@
     <Planes />
     <Contacto />
 
+    <BurbujaWhatsapp />
     <Footer />
 
   </div>
@@ -57,6 +58,7 @@
   import Planes from './home/Planes.vue';
   import Contacto from './home/Contacto.vue';
   import Footer from './home/Footer.vue';
+  import BurbujaWhatsapp from './BurbujaWhatsapp.vue';
 
   export default {
     name: "Home",
@@ -64,7 +66,8 @@
       Categorias,
       Planes,
       Contacto,
-      Footer
+      Footer,
+      BurbujaWhatsapp
     }
   }
 </script>
