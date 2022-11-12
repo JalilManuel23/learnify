@@ -48,7 +48,8 @@ const Curso = () =>
     import ('./components/auth/cursos/Curso.vue');
 const EditarCurso = () =>
     import ('./components/auth/cursos/EditarCurso.vue');
-const BurbujaWhatsapp = () => import('./components/BurbujaWhatsapp.vue')
+const BurbujaWhatsapp = () =>
+    import ('./components/BurbujaWhatsapp.vue')
 
 const routes = [{
         name: 'home',
@@ -127,7 +128,7 @@ const routes = [{
     },
     {
         name: 'Descripcion',
-        path: '/descripcion-curso',
+        path: '/descripcion-curso/:id',
         component: Descripcion
     },
     {

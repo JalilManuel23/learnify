@@ -5,17 +5,14 @@
                 <div class="col-md-9">
                     <div class="">
                         <h2 class="h1-responsive font-weight-bold text-left mb-3 mt-4">
-                            <b style="color:#184E77">Introducción a Unity</b>
+                            <b style="color:#184E77">{{ this.cursoData.titulo }}</b>
                         </h2>
                         <div>
                             <h5 class="font-weight-bold text-left mt-5 mb-3">
                                 <strong>Descripción</strong>
                             </h5>
                             <p class="text-justify w-responsive mx-auto mb-5">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                                {{ this.cursoData.descripcion }}
                             </p>
                         </div>
                         <div class="card">
@@ -31,10 +28,13 @@
                                             />
                                         </div>
                                         <div class="ms-1 d-flex flex-column">
-                                            <p><span class="ml-3 font-weight-bold d-block"><strong>Alejandra Barbosa</strong></span> <span class="font-weight-light font-italic">Developer</span></p>
+                                            <p><span class="ml-3 font-weight-bold d-block"><strong>{{ this.cursoData.instructor }}</strong></span> <span class="font-weight-light font-italic">Developer</span></p>
                                         </div>
                                         
                                     </div>
+                                </div>
+                                <div class="col-9">
+                                    <button class="btn btn-primary mt-4" v-on:click="inscribirse">Inscribirme</button>
                                 </div>
                                 <div class="col-3">
                                     <div class="justify-content-enda">
@@ -163,10 +163,52 @@
 
 <script>
     import Footer from '../home/Footer.vue';
+    import $api from '../../store/api';
+    import { Toast } from '../helpers/Toast';
+    
     export default {
         name: "Descripcion",
-        setup() {
+        data() {
+            return {
+                userData: {},
+                cursoData: {}
+            }
         },
+        async mounted() {
+            await $api.get('usuario').then(response => {
+                let { data } = response.data;
+                this.userData = data;
+            }).catch( error => {
+                this.$router.push({ name:"InicioSesion" });
+            });
+
+            this.cargarCursoData();
+        },  
+        methods: {
+            async cargarCursoData() {
+                await $api.get(`curso/${ this.$route.params.id }`).then(response => {
+                    this.cursoData = response.data;
+                });
+                await $api.get(`instructor/perfil/${ this.cursoData.instructor }`).then(response => {
+                    this.cursoData.instructor = response.data.nombre_completo;
+                });                
+            },
+            async inscribirse() {
+                let inscripcion = {
+                    estudiante: this.userData.id,
+                    curso: this.cursoData.id,
+                }
+
+                await $api.post('inscripciones', inscripcion).then(response => {
+                    this.cursoData = response.data;
+
+                    Toast.fire({
+                        icon: 'success',
+                        title: '¡Te has inscrito a este curso!'
+                    });
+                });
+            }
+        },  
         components: { Footer },
     }
 </script>
