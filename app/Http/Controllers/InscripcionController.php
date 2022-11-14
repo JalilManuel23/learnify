@@ -89,4 +89,16 @@ class InscripcionController extends Controller
     {
         $inscripcion->delete();
     }
+
+    public function comprobar_inscripcion(Request $request)
+    {
+        $estudiante = $request->estudiante;
+        $curso = $request->curso;
+
+        $inscripcion = Inscripcion::where('estudiante', $estudiante)->where('curso', $curso)->first();
+
+        return response()->json([
+            'inscripcion' => $inscripcion
+        ]);
+    }
 }

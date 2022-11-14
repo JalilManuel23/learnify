@@ -34,7 +34,8 @@
                                     </div>
                                 </div>
                                 <div class="col-9">
-                                    <button class="btn btn-primary mt-4" v-on:click="inscribirse">Inscribirme</button>
+                                    <button class="btn btn-primary mt-4" v-on:click="inscribirse" v-if="!this.inscripcion">Inscribirme</button>
+                                    <span v-else class="badge bg-success">Estás inscrito a este curso</span>
                                 </div>
                                 <div class="col-3">
                                     <div class="justify-content-enda">
@@ -171,7 +172,8 @@
         data() {
             return {
                 userData: {},
-                cursoData: {}
+                cursoData: {},
+                inscripcion: null
             }
         },
         async mounted() {
@@ -183,6 +185,7 @@
             });
 
             this.cargarCursoData();
+            this.comprobarInscripcion();
         },  
         methods: {
             async cargarCursoData() {
@@ -206,6 +209,21 @@
                         icon: 'success',
                         title: '¡Te has inscrito a este curso!'
                     });
+                });
+
+                this.comprobarInscripcion();
+            },
+            async comprobarInscripcion() {
+                let data = {
+                    estudiante: this.userData.id,
+                    curso: this.$route.params.id
+                };
+                console.log(data);
+
+                await $api.post('/inscripcion/comprobar', data).then(response => {
+                    if(response.data.inscripcion) {
+                        this.inscripcion = true;
+                    }
                 });
             }
         },  
