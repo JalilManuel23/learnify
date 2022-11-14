@@ -6,6 +6,7 @@ use App\Http\Controllers\CursoController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\EstudianteController;
 use App\Http\Controllers\ExamenController;
+use App\Http\Controllers\InscripcionController;
 use App\Http\Controllers\InstructorController;
 use App\Http\Controllers\PreguntaController;
 use App\Http\Controllers\VideoController;
@@ -48,6 +49,8 @@ Route::resource('preguntas', PreguntaController::class);
 Route::resource('examenes', ExamenController::class);
 
 Route::resource('calificaciones', Calificacion_curso::class);
+
+Route::resource('inscripciones', InscripcionController::class);
 
 Route::get('/cursos/por_instructor/{id}', [App\Http\Controllers\CursoController::class, 'traer_cursos_por_instructor']);
 Route::get('/cursos/por_categoria/{categoria}', [App\Http\Controllers\CursoController::class, 'traer_cursos_por_categoria']);
