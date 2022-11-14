@@ -189,8 +189,8 @@
                 await $api.get(`curso/${ this.$route.params.id }`).then(response => {
                     this.cursoData = response.data;
                 });
-                await $api.get(`instructor/perfil/${ this.cursoData.instructor }`).then(response => {
-                    this.cursoData.instructor = response.data.nombre_completo;
+                await $api.get(`users/${ this.cursoData.instructor }`).then(response => {
+                    this.cursoData.instructor = `${response.data.name} ${response.data.apellido_p}`;
                 });                
             },
             async inscribirse() {
