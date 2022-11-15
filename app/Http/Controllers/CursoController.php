@@ -114,6 +114,7 @@ class CursoController extends Controller
 
             $cursos_devolver[] = $curso;
         }
+        
 
         return response()->json([
             'cursos' => $cursos_devolver

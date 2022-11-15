@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Inscripcion;
+use App\Models\Curso;
 use Illuminate\Http\Request;
 
 class InscripcionController extends Controller
@@ -99,6 +100,29 @@ class InscripcionController extends Controller
 
         return response()->json([
             'inscripcion' => $inscripcion
+        ]);
+    }
+
+    public function traer_cursos_estudiante(Request $request)
+    {
+        $estudiante = $request->estudiante;
+
+        $inscripciones = Inscripcion::where('estudiante', $estudiante)->get();
+
+        $inscripciones_completas = array();
+
+        foreach($inscripciones as $inscripcion)
+        {
+            $curso = Inscripcion::find($inscripcion->id)->curso_datos;
+            
+            $nueva_inscripcion = $inscripcion;
+            $nueva_inscripcion->info_curso = $curso;
+
+            $inscripciones_completas[] = $nueva_inscripcion;
+        }
+
+        return response()->json([
+            'inscripciones' => $inscripciones
         ]);
     }
 }

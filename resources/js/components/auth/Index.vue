@@ -9,43 +9,62 @@
                     <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">Recomendaciones</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">Comunidad</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">Tu actividad</button>
+                    <button class="nav-link" id="pills-mis-cursos-tab" data-bs-toggle="pill" data-bs-target="#pills-mis-cursos" type="button" role="tab" aria-controls="pills-mis-cursos" aria-selected="false">Mis cursos</button>
                 </li>
             </ul>
             <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active container d-flex flex-wrap justify-content-start" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
-
-                    <!-- Tarjetas de cada curso -->
-                    <div v-for="{ id, titulo, descripcion, precio, categoria, duracion } in this.cursos" :key="id" class="card col-12 col-md-2" style="margin: 20px">
-                        <div class="view overlay">
-                            <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
-                                alt="Card image cap">
-                            <a href="#!">
-                                <div class="mask rgba-white-slight"></div>
-                            </a>
-                        </div>
-                    
-                        <div class="card-body">
-                            <h4 class="card-title">{{ titulo }}</h4>
-                            <p class="card-text mb-2">{{ descripcion }}</p>
-                            
-                            <p class="text-muted desc mb-2">{{ categoria }}</p> 
-
-                            <div class="d-flex justify-content-between mb-2">
-                            <p class="text-muted desc">${{ precio }}</p>
-                            <p class="text-muted desc">{{ duracion }}mins.</p>
+                <div class="tab-pane fade show active container" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                    <div class="d-flex flex-wrap">
+                        <!-- Tarjetas de cada curso -->
+                        <div v-for="{ id, titulo, descripcion, precio, categoria, duracion } in this.cursos" :key="id" class="card col-12 col-md-2" style="margin: 20px">
+                            <div class="view overlay">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
+                                    alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
                             </div>
-
-                            <router-link :to="`/descripcion-curso/${ id }`" class="btn btn-primary">Ver</router-link>
+                        
+                            <div class="card-body">
+                                <h4 class="card-title">{{ titulo }}</h4>
+                                <p class="card-text mb-2">{{ descripcion }}</p>
+                        
+                                <p class="text-muted desc mb-2">{{ categoria }}</p>
+                                <div class="d-flex justify-content-between mb-2">
+                                <p class="text-muted desc">${{ precio }}</p>
+                                <p class="text-muted desc">{{ duracion }}mins.</p>
+                                </div>
+                                <router-link :to="`/descripcion-curso/${ id }`" class="btn btn-primary">Ver</router-link>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">...</div>
-                <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">...</div>
-                <div class="tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">...</div>
+                <div class="tab-pane fade" id="pills-mis-cursos" role="tabpanel" aria-labelledby="pills-mis-cursos-tab" tabindex="0">
+                    <div class="d-flex flex-wrap">
+                        <!-- Tarjetas de cada curso -->
+                        <div v-for="{ id, titulo, descripcion, precio, categoria, duracion } in this.cursosComprados" :key="id" class="card col-12 col-md-2" style="margin: 20px">
+                            <div class="view overlay">
+                                <img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
+                                    alt="Card image cap">
+                                <a href="#!">
+                                    <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        
+                            <div class="card-body">
+                                <h4 class="card-title">{{ titulo }}</h4>
+                                <p class="card-text mb-2">{{ descripcion }}</p>
+                        
+                                <p class="text-muted desc mb-2">{{ categoria }}</p>
+                                <div class="d-flex justify-content-between mb-2">
+                                <p class="text-muted desc">${{ precio }}</p>
+                                <p class="text-muted desc">{{ duracion }}mins.</p>
+                                </div>
+                                <router-link :to="`/descripcion-curso/${ id }`" class="btn btn-primary">Ver</router-link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="pt-5">
@@ -82,7 +101,8 @@ export default {
     data() {
       return {
         userData: {},
-        cursos: []
+        cursos: [],
+        cursosComprados: []
       }
     },
     methods: {
@@ -91,8 +111,21 @@ export default {
           this.cursos = response.data;
         });
       },
-      showCursos(){
-        console.log(this.cursos);
+      async traer_cursos_comprados() {
+        let estudiante = {
+            'estudiante': this.userData.id
+        }
+
+        await $api.post('inscripciones/estudiante', estudiante).then(response => {
+            let inscripciones = response.data.inscripciones;
+            let cursos = [];
+
+            inscripciones.map(inscripcion => {
+                cursos.push(inscripcion.info_curso);
+            });
+            
+            this.cursosComprados = cursos;
+        });
       }
     },
     async mounted() {
@@ -104,6 +137,7 @@ export default {
       });
 
       this.traer_cursos();
+      this.traer_cursos_comprados();
     }, 
     components: { AuthFooter }
 }

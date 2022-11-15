@@ -23,7 +23,7 @@ class Inscripcion extends Model
         return $this->belongsTo(Estudiante::class, 'estudiante');
     }
 
-    public function curso(){
-        return $this->belongsTo(Curso::class, 'curso');
+    public function curso_datos(){
+        return $this->hasOne(Curso::class, 'id', 'curso');
     }
 }
