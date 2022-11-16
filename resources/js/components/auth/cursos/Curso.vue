@@ -7,7 +7,7 @@
                 <h1>{{ this.cursoData.titulo }}</h1>
             </div>
         </div>
-        <div class="row d-flex flex-column align-items-center">
+        <div class="row d-flex flex-column align-items-center mb-3">
             <div class="card col-md-5 col-12 mt-4">
                 <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp" class="card-img-top" alt="curso">
                 <div class="card-body">
@@ -29,6 +29,30 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <h4>Vídeos</h4>
+            <div class="col-3">
+                <button class="btn btn-primary" v-on:click="agregarVideo">Agregar</button> 
+            </div>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Vídeo</th>
+                    <th scope="col">Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Mark</td>
+                    <td>
+                        <button class="btn btn-danger">Eliminar</button>
+                    </td>
+                  </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </template>
@@ -62,6 +86,41 @@ export default {
             });
 
             this.$router.push({ name:"InicioInstructor" });
+        },
+        async agregarVideo() {
+            const { value: titulo } = await Swal.fire({
+                title: 'Agrega el título del vídeo',
+                input: 'text',
+                inputLabel: 'Título del vídeo',
+                showCancelButton: true,
+                inputValidator: (value) => {
+                    if (!value) {
+                        return 'Este campo es obligatorio'
+                    }
+                }
+            })
+
+            if (titulo) {
+                const { value: file } = await Swal.fire({
+                title: 'Seleccionar vídeo',
+                input: 'file',
+                inputAttributes: {
+                    'accept': '*',
+                    'aria-label': 'Agrega el archivo del vídeo'
+                }
+                })
+
+                if (file) {
+                    const reader = new FileReader()
+                    reader.onload = (e) => {
+                        Swal.fire({
+                            title: 'Vídeo agregado correctamente',
+                            imageUrl: e.target.result
+                        })
+                    }
+                    reader.readAsDataURL(file)
+                }
+            }
         }
     },
     async mounted() {
