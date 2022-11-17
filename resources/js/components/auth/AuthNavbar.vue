@@ -19,7 +19,7 @@
        <router-link to="">
         <i class="fas fa-folder" aria-hidden="true"></i>
         <span class="links_name">Mis cursos</span>
-       </router-link>>
+       </router-link>
        <span class="tooltip">Mis cursos</span>
       </li>
       <li>
