@@ -36,8 +36,6 @@ const CentroAyuda = () =>
     import ('./components/CentroAyuda.vue')
 const Descripcion = () =>
     import ('./components/auth/Descripcion.vue')
-const Index = () =>
-    import ('./components/auth/Index.vue')
 const AuthFooter = () =>
     import ('./components/auth/Footer.vue')
 const InicioInstructor = () =>
@@ -51,7 +49,9 @@ const EditarCurso = () =>
 const BurbujaWhatsapp = () =>
     import ('./components/BurbujaWhatsapp.vue')
 
-const routes = [{
+const routes = [
+    // Landing Page
+    {
         name: 'home',
         path: '/',
         component: Home
@@ -130,11 +130,6 @@ const routes = [{
         name: 'Descripcion',
         path: '/descripcion-curso/:id',
         component: Descripcion
-    },
-    {
-        name: 'Index',
-        path: '/index',
-        component: Index
     },
     {
         name: 'InicioInstructor',
