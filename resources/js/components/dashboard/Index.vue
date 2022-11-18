@@ -4,7 +4,7 @@
             <div class="row d-flex justify-content-center align-items-center">
                 <div class="col col-lg-9 col-xl-12">
                     <h2 class="h1-responsive font-weight-bold text-left mb-3 mt-4">
-                        Hola, <b>{{ `${ this.userData.name } ${ this.userData.apellido_p }` }}</b>. ¡Te damos la bienvenida a Learnify!
+                        Hola, <b>{{ `${ this.userData.name } ${ this.userData.apellido_p }  ${ this.userData.apellido_m }` }}</b>. ¡Te damos la bienvenida a Learnify!
                     </h2>
                     <div class="mt-5">
                         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">

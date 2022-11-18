@@ -9,35 +9,35 @@
     <hr style="color:#F2F2F2;">
     <ul class="nav-list">
       <li>
-        <router-link to="">
+        <router-link to="/dashboard/Index">
           <i class="fas fa-home" aria-hidden="true"></i>
           <span class="links_name">Inicio</span>
         </router-link>
          <span class="tooltip">Inicio</span>
       </li>
       <li>
-       <router-link to="">
+       <router-link to="/dashboard/Mis-cursos">
         <i class="fas fa-folder" aria-hidden="true"></i>
         <span class="links_name">Mis cursos</span>
        </router-link>
        <span class="tooltip">Mis cursos</span>
       </li>
       <li>
-        <router-link to="">
+        <router-link to="/dashboard/Mis-diplomas">
           <i class="fas fa-medal icon-progress" aria-hidden="true"></i>
           <span class="links_name">Mis diplomas</span>
         </router-link>
         <span class="tooltip">Mis diplomas</span>
       </li>
       <li>
-        <router-link to="">
+        <router-link to="/dashboard/Mis-apuntes">
           <i class="fas fa-file" aria-hidden="true"></i>
           <span class="links_name">Mis apuntes</span>
         </router-link>
         <span class="tooltip">Mis apuntes</span>
       </li>
       <li>
-        <router-link to="">
+        <router-link to="/dashboard/Plan-de-estudio">
           <i class="fas fa-calendar-alt" aria-hidden="true"></i>
           <span class="links_name">Mi plan de estudio</span>
         </router-link>
@@ -45,7 +45,7 @@
       </li>
       <hr style="color:#F2F2F2;">
       <li>
-        <router-link to="">
+        <router-link to="/dashboard/centro-de-ayuda">
           <i class="fas fa-info-circle" aria-hidden="true"></i>
           <span class="links_name">Centro de Ayuda</span>
         </router-link>
@@ -92,7 +92,7 @@
                       </router-link>
                     </li>
                     <li class="">
-                      <router-link class="dropdown-item border-radius-md" to="/centro-de-ayuda">
+                      <router-link class="dropdown-item border-radius-md" to="/dashboard/centro-de-ayuda">
                         <div class="d-flex">
                           <div class="d-flex flex-column justify-content-center mt-2">
                             <h6 class="text-sm font-weight-normal">

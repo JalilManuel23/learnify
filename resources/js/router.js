@@ -156,6 +156,33 @@ const routes = [{
         path: '/editar-curso/:curso',
         component: EditarCurso
     },
+
+    // Dashboard Estudiante
+    {
+        name: 'Index',
+        path: '/dashboard/Index',
+        component: () => import('./components/dashboard/Index.vue')
+    },
+    {
+        name: 'MisCursos',
+        path: '/dashboard/Mis-cursos',
+        component: () => import('./components/dashboard/MisCursos.vue')
+    },
+    {
+        name: 'MisDiplomas',
+        path: '/dashboard/Mis-diplomas',
+        component: () => import('./components/dashboard/MisDiplomas.vue')
+    },
+    {
+        name: 'MisApuntes',
+        path: '/dashboard/Mis-apuntes',
+        component: () => import('./components/dashboard/MisApuntes.vue')
+    },
+    {
+        name: 'MiPlanEstudio',
+        path: '/dashboard/Plan-de-estudio',
+        component: () => import('./components/dashboard/MiPlanEstudio.vue')
+    },
 ]
 
 export default createRouter({

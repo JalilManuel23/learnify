@@ -22,7 +22,7 @@
             isActive: false,
             pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena', 'Legal', 'CentroAyuda'],
             pagesCategorias: ['Categoria', 'Descripcion',],
-            pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer', 'Instructores', 'Index'],
+            pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer', 'Instructores', 'Index', 'MisCursos', 'MisDiplomas', 'MisApuntes', 'MiPlanEstudio'],
 
         };
     },
