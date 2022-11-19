@@ -1,7 +1,7 @@
 <template>
     <main>
         <HomeNavbar v-if="pagesHome.includes($route.name)" />
-        <CategoriasNavbar v-else-if="pagesCategorias.includes($route.name)" />
+        <!-- <CategoriasNavbar v-else-if="pagesCategorias.includes($route.name)" /> -->
         <AuthNavbar v-else-if="pagesAuth.includes($route.name)" />
         <router-view v-bind:class="[(pagesAuth.includes($route.name)) ? 'home-section' : '']"></router-view>
     </main>
@@ -13,15 +13,15 @@
     import debounce from 'lodash/debounce';
     import HomeNavbar from './home/HomeNavbar.vue';
     import AuthNavbar from './auth/AuthNavbar.vue';
-    import CategoriasNavbar from './categorias/CategoriasNavbar.vue';
+    // import CategoriasNavbar from './categorias/CategoriasNavbar.vue';
 
 
     export default {
     data() {
         return {
             isActive: false,
-            pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena', 'Legal', 'CentroAyuda'],
-            pagesCategorias: ['Categoria', 'Descripcion',],
+            pagesHome: ['home', 'Categorias', 'Planes', 'Contacto', 'Footer', 'InicioSesion', 'Registro', 'RecuperarContrasena', 'Legal', 'CentroAyuda', 'Categoria', 'Descripcion'],
+            // pagesCategorias: ['Categoria', 'Descripcion',],
             pagesAuth: ['Dashboard', 'InicioCliente', 'VideoPlayer', 'Instructores', 'Index', 'MisCursos', 'MisDiplomas', 'MisApuntes', 'MiPlanEstudio'],
 
         };
@@ -38,7 +38,7 @@
     beforeDestroy() {
         window.removeEventListener("scroll", this.handleDebouncedScroll);
     },
-    components: { HomeNavbar, AuthNavbar, CategoriasNavbar, }
+    components: { HomeNavbar, AuthNavbar, }
 }
 </script>
 
