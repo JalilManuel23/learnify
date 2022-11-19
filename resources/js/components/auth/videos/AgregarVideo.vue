@@ -43,7 +43,7 @@ export default {
     methods: {
         async cargarCursoData() {
             await $api.get(`curso/${ this.cursoData.id }`).then(response => {
-                console.log(this.cursoData);
+                this.cursoData = response.data
             });
         },
         async eliminarCurso() {

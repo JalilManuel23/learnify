@@ -35,19 +35,22 @@
             <div class="col-3">
                 <router-link :to="`/agregar-video/${this.cursoData.id}`" class="btn btn-primary">Agregar</router-link> 
             </div>
-            <table class="table">
+            <table v-if="this.videos.length > 0" class="table mt-4">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Vídeo</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Nombre del archivo</th>
                     <th scope="col">Acciones</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody v-for="({ id, titulo, archivo }, index) in this.videos" :key="id">
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
+                    <th scope="row">{{ (index + 1) }}</th>
+                    <td>{{ titulo }}</td>
+                    <td>{{ archivo }}</td>
                     <td>
+                        <button class="btn btn-success" style="margin-right: 8px;">Ver</button>
                         <button class="btn btn-danger">Eliminar</button>
                     </td>
                   </tr>
@@ -67,14 +70,14 @@ export default {
     data() {
         return {
             userData: {},
-            cursoData: {}
+            cursoData: {},
+            videos: []
         }
     },
     methods: {
         async cargarCursoData() {
             await $api.get(`curso/${ this.cursoData.id }`).then(response => {
                 this.cursoData = response.data;
-                console.log(this.cursoData);
             });
         },
         async eliminarCurso() {
@@ -86,6 +89,11 @@ export default {
             });
 
             this.$router.push({ name:"InicioInstructor" });
+        },
+        async cargarVideos() {
+            await $api.get(`traer_videos/curso/${this.cursoData.id}`).then(response => {
+                this.videos = response.data.videos;
+            });
         }
     },
     async mounted() {
@@ -99,6 +107,7 @@ export default {
         this.cursoData.id = this.$route.params.curso;
 
         this.cargarCursoData();
+        this.cargarVideos();
     },
     components: {
         InstructorNavbar
