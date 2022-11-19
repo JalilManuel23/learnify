@@ -60,10 +60,10 @@ Route::resource('curso', CursoController::class);
 
 Route::post('/registrar', [UserController::class, 'createUser']);
 Route::post('/login', [UserController::class, 'loginUser']);
+Route::resource('videos', VideoController::class);
 
 Route::group(['middleware' => ["auth:sanctum"]], function() {
     Route::get('usuario', [UserController::class, 'userProfile']);
     Route::get('logout', [UserController::class, 'logout']);
 
-    Route::get('videos', [VideoController::class, 'index']);
 });

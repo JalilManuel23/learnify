@@ -50,6 +50,8 @@ const EditarCurso = () =>
     import ('./components/auth/cursos/EditarCurso.vue');
 const BurbujaWhatsapp = () =>
     import ('./components/BurbujaWhatsapp.vue')
+const AgregarVideo = () =>
+    import ('./components/auth/videos/AgregarVideo.vue')
 
 const routes = [{
         name: 'home',
@@ -155,6 +157,11 @@ const routes = [{
         name: 'EditarCurso',
         path: '/editar-curso/:curso',
         component: EditarCurso
+    },
+    {
+        name: 'AgregarVideo',
+        path: '/agregar-video/:curso',
+        component: AgregarVideo
     },
 ]
 

@@ -33,7 +33,7 @@
         <div class="row">
             <h4>Vídeos</h4>
             <div class="col-3">
-                <button class="btn btn-primary" v-on:click="agregarVideo">Agregar</button> 
+                <router-link to="/agregar-video/14" class="btn btn-primary">Agregar</router-link> 
             </div>
             <table class="table">
                 <thead>
@@ -86,41 +86,6 @@ export default {
             });
 
             this.$router.push({ name:"InicioInstructor" });
-        },
-        async agregarVideo() {
-            const { value: titulo } = await Swal.fire({
-                title: 'Agrega el título del vídeo',
-                input: 'text',
-                inputLabel: 'Título del vídeo',
-                showCancelButton: true,
-                inputValidator: (value) => {
-                    if (!value) {
-                        return 'Este campo es obligatorio'
-                    }
-                }
-            })
-
-            if (titulo) {
-                const { value: file } = await Swal.fire({
-                title: 'Seleccionar vídeo',
-                input: 'file',
-                inputAttributes: {
-                    'accept': '*',
-                    'aria-label': 'Agrega el archivo del vídeo'
-                }
-                })
-
-                if (file) {
-                    const reader = new FileReader()
-                    reader.onload = (e) => {
-                        Swal.fire({
-                            title: 'Vídeo agregado correctamente',
-                            imageUrl: e.target.result
-                        })
-                    }
-                    reader.readAsDataURL(file)
-                }
-            }
         }
     },
     async mounted() {
