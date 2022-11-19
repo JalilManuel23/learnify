@@ -61,6 +61,7 @@ Route::resource('curso', CursoController::class);
 Route::post('/registrar', [UserController::class, 'createUser']);
 Route::post('/login', [UserController::class, 'loginUser']);
 Route::resource('videos', VideoController::class);
+Route::get('/traer_videos/curso/{id}', [App\Http\Controllers\VideoController::class, 'traer_videos_por_curso']);
 
 Route::group(['middleware' => ["auth:sanctum"]], function() {
     Route::get('usuario', [UserController::class, 'userProfile']);

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VideoController extends Controller
 {
@@ -111,5 +112,14 @@ class VideoController extends Controller
     public function destroy(Video $video)
     {
         $video->delete();
+    }
+
+    public function traer_videos_por_curso($id_curso)
+    {
+        $videos = DB::table('videos')->where('curso', $id_curso)->get();
+
+        return response()->json([
+            'videos' => $videos
+        ]);
     }
 }

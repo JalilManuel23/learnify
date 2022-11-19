@@ -33,7 +33,7 @@
         <div class="row">
             <h4>Vídeos</h4>
             <div class="col-3">
-                <router-link to="/agregar-video/14" class="btn btn-primary">Agregar</router-link> 
+                <router-link :to="`/agregar-video/${this.cursoData.id}`" class="btn btn-primary">Agregar</router-link> 
             </div>
             <table class="table">
                 <thead>

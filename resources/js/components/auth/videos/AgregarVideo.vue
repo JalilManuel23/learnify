@@ -34,7 +34,8 @@ export default {
             cursoData: {},
             fields: {
                 titulo: '',
-                archivo: 'ejemplo.mp4',
+                archivo: '',
+                avance: null,
                 video_archivo: null
             }
         }
@@ -54,12 +55,18 @@ export default {
             this.$router.push({ name:"InicioInstructor" });
         },
         async agregarVideo() {
+            
+            await $api.get(`traer_videos/curso/${this.cursoData.id}`).then(response => {
+                this.fields.avance = response.data.videos.length + 1;
+            });
+
             var form = document.getElementById("formulario");
             var formdata = new FormData(form);
 
             formdata.append("curso", this.cursoData.id);
             formdata.append("titulo", this.fields.titulo);
             formdata.append("archivo", this.fields.archivo);
+            formdata.append("avance", this.fields.avance);
             formdata.append("video_archivo", this.fields.video_archivo);
 
             await $api.post('videos', formdata).then(response => {
