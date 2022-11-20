@@ -52,12 +52,20 @@
                     <td>{{ archivo }}</td>
                     <td>{{ duracion }}</td>
                     <td>
-                        <button class="btn btn-success" style="margin-right: 8px;">Ver</button>
+                        <button class="btn btn-success" v-on:click="setSrcVideo(archivo)" style="margin-right: 8px;" data-bs-toggle="modal" data-bs-target="#verVideo" :data-id="`${archivo}`">Ver</button>
                         <button class="btn btn-danger" v-on:click="eliminarVideo(id)">Eliminar</button>
                     </td>
                   </tr>
                 </tbody>
             </table>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="verVideo" tabindex="-1" aria-labelledby="verVideo" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content" style="width: 900px; margin-left: -200px;">
+                    <VideoPlayer v-if="this.srcVideo!=''" :srcVideo="this.srcVideo" style="width: 100%" />
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -65,6 +73,7 @@
 <script>
 import $api from '../../../store/api';
 import InstructorNavbar from '../../auth/InstructorNavbar.vue';
+import VideoPlayer from '../../VideoPlayer.vue';
 import { Toast } from '../../helpers/Toast';
 
 export default {
@@ -73,7 +82,8 @@ export default {
         return {
             userData: {},
             cursoData: {},
-            videos: []
+            videos: [],
+            srcVideo: ''
         }
     },
     methods: {
@@ -106,6 +116,15 @@ export default {
                     title: '¡Vídeo eliminado correctamente!'
                 });
             });
+        },
+        async setSrcVideo(archivo) {
+            this.srcVideo = '';
+
+            await setTimeout(() => {
+                console.log('Cambiando URL del vídeo...');
+            }, 500);
+
+            this.srcVideo = archivo;
         }
     },
     async mounted() {
@@ -122,7 +141,8 @@ export default {
         this.cargarVideos();
     },
     components: {
-        InstructorNavbar
+        InstructorNavbar,
+        VideoPlayer
     }
 };
 </script>
