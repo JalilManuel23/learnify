@@ -36,8 +36,6 @@ const CentroAyuda = () =>
     import ('./components/CentroAyuda.vue')
 const Descripcion = () =>
     import ('./components/auth/Descripcion.vue')
-const Index = () =>
-    import ('./components/auth/Index.vue')
 const AuthFooter = () =>
     import ('./components/auth/Footer.vue')
 const InicioInstructor = () =>
@@ -53,7 +51,9 @@ const BurbujaWhatsapp = () =>
 const AgregarVideo = () =>
     import ('./components/auth/videos/AgregarVideo.vue')
 
-const routes = [{
+const routes = [
+    // Landing Page
+    {
         name: 'home',
         path: '/',
         component: Home
@@ -134,11 +134,6 @@ const routes = [{
         component: Descripcion
     },
     {
-        name: 'Index',
-        path: '/index',
-        component: Index
-    },
-    {
         name: 'InicioInstructor',
         path: '/dashboard/instructor',
         component: InicioInstructor
@@ -162,6 +157,32 @@ const routes = [{
         name: 'AgregarVideo',
         path: '/agregar-video/:curso',
         component: AgregarVideo
+    }
+
+    // Dashboard Estudiante
+    {
+        name: 'Index',
+        path: '/dashboard/Index',
+        component: () => import('./components/dashboard/Index.vue')
+    },
+    {
+        name: 'MisCursos',
+        path: '/dashboard/Mis-cursos',
+        component: () => import('./components/dashboard/MisCursos.vue')
+    },
+    {
+        name: 'MisDiplomas',
+        path: '/dashboard/Mis-diplomas',
+        component: () => import('./components/dashboard/MisDiplomas.vue')
+    },
+    {
+        name: 'MisApuntes',
+        path: '/dashboard/Mis-apuntes',
+        component: () => import('./components/dashboard/MisApuntes.vue')
+    },
+    {
+        name: 'MiPlanEstudio',
+        path: '/dashboard/Plan-de-estudio',
     },
 ]
 

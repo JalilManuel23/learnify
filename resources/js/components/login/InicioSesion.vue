@@ -147,7 +147,7 @@ export default {
           await $api.get(`estudiantes/buscar_perfil/${ idUsuario }`).then(response => {
             let perfil = response.data.estudiante;
 
-            let redireccion = (perfil) ? 'InicioCliente' : 'InicioInstructor';
+            let redireccion = (perfil) ? 'Index' : 'InicioInstructor';
             this.$router.push({ name: redireccion });
           });
         }
