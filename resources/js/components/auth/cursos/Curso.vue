@@ -58,7 +58,11 @@
                   </tr>
                 </tbody>
             </table>
+            <div class="col-12 alert alert-primary mt-4 text-center" role="alert" v-else>
+                <p>No hay vídeos en este curso. <router-link :to="`/agregar-video/${this.cursoData.id}`">Agrega</router-link> uno aquí.</p>
+            </div>
         </div>
+
         <!-- Modal -->
         <div class="modal fade" id="verVideo" tabindex="-1" aria-labelledby="verVideo" aria-hidden="true">
             <div class="modal-dialog">

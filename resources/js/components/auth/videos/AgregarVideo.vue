@@ -69,6 +69,14 @@ export default {
             formdata.append("avance", this.fields.avance);
             formdata.append("video_archivo", this.fields.video_archivo);
 
+            Swal.fire({
+                title: 'El vídeo se está subiendo... por favor espera.',
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading()
+                }
+            });
+
             await $api.post('videos', formdata).then(response => {
                 Toast.fire({
                     icon: 'success',
