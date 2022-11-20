@@ -157,7 +157,7 @@ const routes = [
         name: 'AgregarVideo',
         path: '/agregar-video/:curso',
         component: AgregarVideo
-    }
+    },
 
     // Dashboard Estudiante
     {
