@@ -78,7 +78,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="mt-3 form-check">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" v-on:click="aceptarCondiciones">
                                 <label class="form-check-label" for="flexCheckDefault">
                                     He leído y acepto los <a href="">términos y condiciones</a>.
                                 </label>
@@ -134,12 +134,22 @@ export default {
                 confirm_password: '',
                 apellido_p: '',
                 apellido_m: '',
-            }
+            },
+            condiciones: false
         }
     },
     methods:{
         // Método que se ejecuta al dar clic en botón -Regístrarse-
         async crearCuenta(){
+            // Debe de aceptar terminos y condiciones
+            if(!this.condiciones){
+                Swal.fire({
+                    // title: 'Correo electrónico ya registrado',
+                    text: 'Para continuar debe aceptar los terminos y condiciones',
+                    icon: 'warning',
+                    confirmButtonText: 'Cerrar'
+                })
+            }
             let { password, confirm_password } = this.user; 
 
             // Verifica que las contraseñas coincidan
@@ -182,8 +192,11 @@ export default {
         },
         verificarPasswordSegura(password) {
             // TODO: Remplazar este código, por uno que compruebe que la contraseña es segura
-
+           
             return true;
+        },
+        aceptarCondiciones () {
+            this.condiciones = !this.condiciones
         }
     }
 }
