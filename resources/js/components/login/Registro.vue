@@ -162,6 +162,12 @@ export default {
                     this.$router.push({ name:"TipoUsuario" })
                 }).catch(error=>{
                     console.log(error)
+                    Swal.fire({
+                    title: 'Correo electrónico ya registrado',
+                    text: 'Intente de nuevo',
+                    icon: 'warning',
+                    confirmButtonText: 'Cerrar'
+                })
                 })
                 }
             } else {
