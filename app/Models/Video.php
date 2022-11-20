@@ -13,7 +13,8 @@ class Video extends Model
         'curso',
         'avance',
         'archivo',
-        'titulo'
+        'titulo',
+        'duracion'
     ];
 
     public function curso()

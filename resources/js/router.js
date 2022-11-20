@@ -48,6 +48,8 @@ const EditarCurso = () =>
     import ('./components/auth/cursos/EditarCurso.vue');
 const BurbujaWhatsapp = () =>
     import ('./components/BurbujaWhatsapp.vue')
+const AgregarVideo = () =>
+    import ('./components/auth/videos/AgregarVideo.vue')
 
 const routes = [
     // Landing Page
@@ -151,6 +153,11 @@ const routes = [
         path: '/editar-curso/:curso',
         component: EditarCurso
     },
+    {
+        name: 'AgregarVideo',
+        path: '/agregar-video/:curso',
+        component: AgregarVideo
+    }
 
     // Dashboard Estudiante
     {
@@ -176,7 +183,6 @@ const routes = [
     {
         name: 'MiPlanEstudio',
         path: '/dashboard/Plan-de-estudio',
-        component: () => import('./components/dashboard/MiPlanEstudio.vue')
     },
 ]
 

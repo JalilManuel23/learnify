@@ -18,7 +18,7 @@
                         <p><span class="badge bg-primary">Precio:</span> ${{ this.cursoData.precio }}</p>
                     </div>
                     <div class="mt-3">
-                        <p><span class="badge bg-primary">Duración:</span> {{ this.cursoData.duracion }}mins.</p>
+                        <p><span class="badge bg-primary">Duración:</span> {{ this.cursoData.duracion }}</p>
                     </div>
                     <div class="mt-3">
                         <p><span class="badge bg-primary">Categoría:</span> {{ this.cursoData.categoria }}</p>
@@ -33,22 +33,27 @@
         <div class="row">
             <h4>Vídeos</h4>
             <div class="col-3">
-                <button class="btn btn-primary" v-on:click="agregarVideo">Agregar</button> 
+                <router-link :to="`/agregar-video/${this.cursoData.id}`" class="btn btn-primary">Agregar</router-link> 
             </div>
-            <table class="table">
+            <table v-if="this.videos.length > 0" class="table mt-4">
                 <thead>
                   <tr>
                     <th scope="col">#</th>
-                    <th scope="col">Vídeo</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Nombre del archivo</th>
+                    <th scope="col">Duración</th>
                     <th scope="col">Acciones</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody v-for="{ id, titulo, archivo, avance, duracion } in this.videos" :key="id">
                   <tr>
-                    <th scope="row">1</th>
-                    <td>Mark</td>
+                    <th scope="row">{{ avance }}</th>
+                    <td>{{ titulo }}</td>
+                    <td>{{ archivo }}</td>
+                    <td>{{ duracion }}</td>
                     <td>
-                        <button class="btn btn-danger">Eliminar</button>
+                        <button class="btn btn-success" style="margin-right: 8px;">Ver</button>
+                        <button class="btn btn-danger" v-on:click="eliminarVideo(id)">Eliminar</button>
                     </td>
                   </tr>
                 </tbody>
@@ -67,14 +72,14 @@ export default {
     data() {
         return {
             userData: {},
-            cursoData: {}
+            cursoData: {},
+            videos: []
         }
     },
     methods: {
         async cargarCursoData() {
             await $api.get(`curso/${ this.cursoData.id }`).then(response => {
                 this.cursoData = response.data;
-                console.log(this.cursoData);
             });
         },
         async eliminarCurso() {
@@ -87,40 +92,20 @@ export default {
 
             this.$router.push({ name:"InicioInstructor" });
         },
-        async agregarVideo() {
-            const { value: titulo } = await Swal.fire({
-                title: 'Agrega el título del vídeo',
-                input: 'text',
-                inputLabel: 'Título del vídeo',
-                showCancelButton: true,
-                inputValidator: (value) => {
-                    if (!value) {
-                        return 'Este campo es obligatorio'
-                    }
-                }
-            })
+        async cargarVideos() {
+            await $api.get(`traer_videos/curso/${this.cursoData.id}`).then(response => {
+                this.videos = response.data.videos;
+            });
+        },
+        async eliminarVideo(idVideo) {
+            await $api.delete(`videos/${idVideo}`).then(response => {
+                this.videos = response.data.videos;
 
-            if (titulo) {
-                const { value: file } = await Swal.fire({
-                title: 'Seleccionar vídeo',
-                input: 'file',
-                inputAttributes: {
-                    'accept': '*',
-                    'aria-label': 'Agrega el archivo del vídeo'
-                }
-                })
-
-                if (file) {
-                    const reader = new FileReader()
-                    reader.onload = (e) => {
-                        Swal.fire({
-                            title: 'Vídeo agregado correctamente',
-                            imageUrl: e.target.result
-                        })
-                    }
-                    reader.readAsDataURL(file)
-                }
-            }
+                Toast.fire({
+                    icon: 'success',
+                    title: '¡Vídeo eliminado correctamente!'
+                });
+            });
         }
     },
     async mounted() {
@@ -134,6 +119,7 @@ export default {
         this.cursoData.id = this.$route.params.curso;
 
         this.cargarCursoData();
+        this.cargarVideos();
     },
     components: {
         InstructorNavbar

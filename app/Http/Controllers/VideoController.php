@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Video;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class VideoController extends Controller
 {
@@ -47,12 +48,18 @@ class VideoController extends Controller
 
             if($file->guessExtension() == "mp4") {
                 copy($file, $ruta);
+
+                $getID3 = new \getID3;
+                $video_file = $getID3->analyze($ruta);
+                $duration_seconds = $video_file['playtime_seconds'];
+                $duracion_str = $this->convertir_segundos_minutos($duration_seconds);
             } else {
                 $status = 404;
             }
 
             $request->merge([
-                'archivo' => $nombre
+                'archivo' => $nombre,
+                'duracion' => $duracion_str
             ]);
             
             $video = Video::create($request->post());
@@ -111,5 +118,36 @@ class VideoController extends Controller
     public function destroy(Video $video)
     {
         $video->delete();
+
+        $videos =  Video::where('curso', $video->curso)->get();
+
+        foreach($videos as $index => $video)
+        {
+            $video->avance = $index + 1;
+            $video->save();
+        }
+
+        $lista_nueva_videos = Video::where('curso', $video->curso)->get();
+    
+        return response()->json([
+            'videos' => $lista_nueva_videos
+        ]);
+    }
+
+    public function traer_videos_por_curso($id_curso)
+    {
+        $videos = DB::table('videos')->where('curso', $id_curso)->get();
+
+        return response()->json([
+            'videos' => $videos
+        ]);
+    }
+
+    public function convertir_segundos_minutos($duration_seconds)
+    {
+        $minutos = intdiv($duration_seconds, 60);
+        $segundos_restantes = (int)$duration_seconds - (60 * $minutos);
+
+        return "{$minutos}:{$segundos_restantes}";
     }
 }

@@ -19,6 +19,7 @@ class CreateVideosTable extends Migration
             $table->string('avance');
             $table->string('archivo');
             $table->string('titulo');
+            $table->string('duracion');
             $table->timestamps();
         });
     }
