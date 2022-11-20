@@ -18,7 +18,7 @@
                         <p><span class="badge bg-primary">Precio:</span> ${{ this.cursoData.precio }}</p>
                     </div>
                     <div class="mt-3">
-                        <p><span class="badge bg-primary">Duración:</span> {{ this.cursoData.duracion }}mins.</p>
+                        <p><span class="badge bg-primary">Duración:</span> {{ this.cursoData.duracion }}</p>
                     </div>
                     <div class="mt-3">
                         <p><span class="badge bg-primary">Categoría:</span> {{ this.cursoData.categoria }}</p>
@@ -41,14 +41,16 @@
                     <th scope="col">#</th>
                     <th scope="col">Título</th>
                     <th scope="col">Nombre del archivo</th>
+                    <th scope="col">Duración</th>
                     <th scope="col">Acciones</th>
                   </tr>
                 </thead>
-                <tbody v-for="{ id, titulo, archivo, avance } in this.videos" :key="id">
+                <tbody v-for="{ id, titulo, archivo, avance, duracion } in this.videos" :key="id">
                   <tr>
                     <th scope="row">{{ avance }}</th>
                     <td>{{ titulo }}</td>
                     <td>{{ archivo }}</td>
+                    <td>{{ duracion }}</td>
                     <td>
                         <button class="btn btn-success" style="margin-right: 8px;">Ver</button>
                         <button class="btn btn-danger" v-on:click="eliminarVideo(id)">Eliminar</button>
