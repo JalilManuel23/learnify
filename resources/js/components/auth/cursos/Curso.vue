@@ -44,14 +44,14 @@
                     <th scope="col">Acciones</th>
                   </tr>
                 </thead>
-                <tbody v-for="({ id, titulo, archivo }, index) in this.videos" :key="id">
+                <tbody v-for="{ id, titulo, archivo, avance } in this.videos" :key="id">
                   <tr>
-                    <th scope="row">{{ (index + 1) }}</th>
+                    <th scope="row">{{ avance }}</th>
                     <td>{{ titulo }}</td>
                     <td>{{ archivo }}</td>
                     <td>
                         <button class="btn btn-success" style="margin-right: 8px;">Ver</button>
-                        <button class="btn btn-danger">Eliminar</button>
+                        <button class="btn btn-danger" v-on:click="eliminarVideo(id)">Eliminar</button>
                     </td>
                   </tr>
                 </tbody>
@@ -93,6 +93,16 @@ export default {
         async cargarVideos() {
             await $api.get(`traer_videos/curso/${this.cursoData.id}`).then(response => {
                 this.videos = response.data.videos;
+            });
+        },
+        async eliminarVideo(idVideo) {
+            await $api.delete(`videos/${idVideo}`).then(response => {
+                this.videos = response.data.videos;
+
+                Toast.fire({
+                    icon: 'success',
+                    title: '¡Vídeo eliminado correctamente!'
+                });
             });
         }
     },

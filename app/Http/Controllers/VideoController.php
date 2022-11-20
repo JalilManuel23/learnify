@@ -112,6 +112,20 @@ class VideoController extends Controller
     public function destroy(Video $video)
     {
         $video->delete();
+
+        $videos =  Video::where('curso', $video->curso)->get();
+
+        foreach($videos as $index => $video)
+        {
+            $video->avance = $index + 1;
+            $video->save();
+        }
+
+        $lista_nueva_videos = Video::where('curso', $video->curso)->get();
+    
+        return response()->json([
+            'videos' => $lista_nueva_videos
+        ]);
     }
 
     public function traer_videos_por_curso($id_curso)
