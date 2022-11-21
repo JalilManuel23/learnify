@@ -16,9 +16,12 @@
                         :key="id" 
                         class="enlace-video" 
                         v-bind:class="[(this.tituloVideo == titulo)  && 'video-active']"
-                        v-on:click="cambiarVideo(archivo, titulo)"
+                        v-on:click="cambiarVideo(archivo, titulo, avance)"
                     >
-                        <p>{{ `${ avance }.- ${ titulo }` }}</p> 
+                        <div class="d-flex align-items-center">
+                            <p style="margin-right: 5px;">{{ `${ avance }.- ${ titulo }` }}</p>
+                            <span class="badge bg-success" v-if="avance < this.inscripcionData.avance" style="font-size: 8px;"><i class="fa fa-check"></i></span>
+                        </div>
                         <div class="d-flex align-items-center">
                             <i class="fa fa-play-circle mr-2" aria-hidden="true"></i> 
                             <p style="margin-left: 3px;" v-on:click="verVideos">{{ duracion }}</p>
@@ -42,7 +45,8 @@ export default {
             cursoData: {},
             videos: [],
             srcVideo: '',
-            tituloVideo: ''
+            tituloVideo: '',
+            inscripcionData: {}
         }
     },
     methods: {
@@ -55,10 +59,13 @@ export default {
             await $api.get(`traer_videos/curso/${this.cursoData.id}`).then(response => {
                 this.videos = response.data.videos;
             });
-            this.srcVideo = this.videos[0].archivo;
-            this.tituloVideo = this.videos[0].titulo;
+
+            let avanceInscripcion = this.inscripcionData.avance - 1;
+
+            this.srcVideo = this.videos[avanceInscripcion].archivo;
+            this.tituloVideo = this.videos[avanceInscripcion].titulo;
         },
-        async cambiarVideo(archivo, titulo) {
+        async cambiarVideo(archivo, titulo, avance) {
             this.srcVideo = '';
 
             await setTimeout(() => {
@@ -67,6 +74,23 @@ export default {
 
             this.srcVideo = archivo;
             this.tituloVideo = titulo;
+
+            this.setAvance(avance);
+        },
+        async traerInscripcion() {
+            let data = {
+                estudiante: this.userData.id,
+                curso: this.$route.params.curso
+            };
+
+            await $api.post('/inscripcion/comprobar', data).then(response => {
+                this.inscripcionData = response.data.inscripcion;
+            });
+        },
+        async setAvance(avance) {
+            await $api.put(`/inscripcion/editar_avance/${this.inscripcionData.id}`, { avance }).then(response => {
+                this.traerInscripcion();
+            });
         }
     },
     async mounted() {
@@ -81,6 +105,7 @@ export default {
 
         this.cargarCursoData();
         this.cargarVideos();
+        this.traerInscripcion();
     },
     components: {
         VideoPlayer

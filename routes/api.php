@@ -53,6 +53,7 @@ Route::resource('calificaciones', Calificacion_curso::class);
 Route::post('/inscripcion/comprobar', [App\Http\Controllers\InscripcionController::class, 'comprobar_inscripcion']);
 Route::post('/inscripciones/estudiante', [App\Http\Controllers\InscripcionController::class, 'traer_cursos_estudiante']);
 Route::resource('inscripciones', InscripcionController::class);
+Route::put('inscripcion/editar_avance/{avance}', [App\Http\Controllers\InscripcionController::class, 'set_avance']);
 
 Route::get('/cursos/por_instructor/{id}', [App\Http\Controllers\CursoController::class, 'traer_cursos_por_instructor']);
 Route::get('/cursos/por_categoria/{categoria}', [App\Http\Controllers\CursoController::class, 'traer_cursos_por_categoria']);

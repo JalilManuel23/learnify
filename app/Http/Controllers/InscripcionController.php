@@ -72,9 +72,12 @@ class InscripcionController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Inscripcion $inscripcion)
+    public function set_avance(Request $request, $id)
     {
-        $inscripcion->fill($request->post())->save();
+        $inscripcion = Inscripcion::where('id', $id)->first();
+        $inscripcion->avance = $request->avance;
+        $inscripcion->save();
+
         return response()->json([
             'inscripcion' => $inscripcion
         ]);
