@@ -78,6 +78,15 @@ h1 {
         background-color: #fff;
     }
 }
+
+.modal .modal-dialog .modal-content {
+    border: none;
+    border-radius: 1rem !important;
+  }
+
+router-link {
+    text-decoration: none !important;
+}
 body::-webkit-scrollbar {
     width: 5px;
     }
