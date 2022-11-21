@@ -68,6 +68,8 @@ export default {
             });
             this.cursosComprados = cursos;
         });
+
+        console.log(this.cursosComprados);
       }
     },
     async mounted() {

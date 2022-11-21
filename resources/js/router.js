@@ -42,6 +42,8 @@ const CrearCurso = () =>
     import ('./components/auth/cursos/CrearCurso.vue');
 const Curso = () =>
     import ('./components/auth/cursos/Curso.vue');
+const VerCurso = () =>
+    import ('./components/auth/cursos/VerCurso.vue');
 const EditarCurso = () =>
     import ('./components/auth/cursos/EditarCurso.vue');
 const BurbujaWhatsapp = () =>
@@ -142,6 +144,11 @@ const routes = [
         component: Curso
     },
     {
+        name: 'VerCurso',
+        path: '/ver-curso/:curso',
+        component: VerCurso
+    },
+    {
         name: 'EditarCurso',
         path: '/editar-curso/:curso',
         component: EditarCurso
@@ -155,27 +162,27 @@ const routes = [
     // Dashboard Estudiante
     {
         name: 'Index',
-        path: '/dashboard/Index',
+        path: '/dashboard/index',
         component: () => import('./components/dashboard/Index.vue')
     },
     {
         name: 'MisCursos',
-        path: '/dashboard/Mis-cursos',
+        path: '/dashboard/mis-cursos',
         component: () => import('./components/dashboard/MisCursos.vue')
     },
     {
         name: 'MisDiplomas',
-        path: '/dashboard/Mis-diplomas',
+        path: '/dashboard/mis-diplomas',
         component: () => import('./components/dashboard/MisDiplomas.vue')
     },
     {
         name: 'MisApuntes',
-        path: '/dashboard/Mis-apuntes',
+        path: '/dashboard/mis-apuntes',
         component: () => import('./components/dashboard/MisApuntes.vue')
     },
     {
         name: 'MiPlanEstudio',
-        path: '/dashboard/Plan-de-estudio',
+        path: '/dashboard/plan-de-estudio',
         component: () => import('./components/dashboard/MiPlanEstudio.vue')
     },
     // Dashboard Instructor
