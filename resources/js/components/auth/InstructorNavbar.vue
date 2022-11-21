@@ -9,14 +9,14 @@
     <hr style="color:#F2F2F2;">
     <ul class="nav-list">
       <li>
-        <router-link to="">
+        <router-link to="/auth/Index">
           <i class="fa fa-home" aria-hidden="true"></i>
           <span class="links_name">Inicio</span>
         </router-link>
          <span class="tooltip">Inicio</span>
       </li>
       <li>
-       <router-link to="">
+       <router-link to="/auth/crear-curso">
         <i class="fas fa-folder" aria-hidden="true"></i>
         <span class="links_name">Mis cursos</span>
        </router-link>
@@ -30,7 +30,7 @@
         <span class="tooltip">Crear curso</span>
       </li>
       <li>
-        <router-link to="">
+        <router-link to="/auth/calificaciones">
           <i class="fas fa-star" aria-hidden="true"></i>
           <span class="links_name">Mis calificaciones</span>
         </router-link>

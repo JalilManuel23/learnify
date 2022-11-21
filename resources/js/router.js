@@ -38,8 +38,6 @@ const Descripcion = () =>
     import ('./components/auth/Descripcion.vue')
 const AuthFooter = () =>
     import ('./components/auth/Footer.vue')
-const InicioInstructor = () =>
-    import ('./components/dashboard/InicioInstructor.vue')
 const CrearCurso = () =>
     import ('./components/auth/cursos/CrearCurso.vue');
 const Curso = () =>
@@ -134,11 +132,6 @@ const routes = [
         component: Descripcion
     },
     {
-        name: 'InicioInstructor',
-        path: '/dashboard/instructor',
-        component: InicioInstructor
-    },
-    {
         name: 'CrearCurso',
         path: '/crear-curso',
         component: CrearCurso
@@ -183,6 +176,23 @@ const routes = [
     {
         name: 'MiPlanEstudio',
         path: '/dashboard/Plan-de-estudio',
+        component: () => import('./components/dashboard/MiPlanEstudio.vue')
+    },
+    // Dashboard Instructor
+    {
+        name: 'IndexInstructor',
+        path: '/auth/Index',
+        component: () => import('./components/auth/Index.vue')
+    },
+    {
+        name: 'BotonCrearCurso',
+        path: '/auth/crear-curso',
+        component: () => import ('./components/auth/InicioInstructor.vue')
+    },
+    {
+        name: 'CalificacionesInstructor',
+        path: '/auth/calificaciones',
+        component: () => import ('./components/auth/Calificaciones.vue')
     },
 ]
 
