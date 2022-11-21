@@ -70,7 +70,7 @@
         </div>
         <div class="modal-footer">
           <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"></button> -->
-          <button type="button" class="btn btn-primary">Guardar</button>
+          <a type="button" class="btn btn-primary">Guardar</a>
         </div>
       </div>
     </div>
@@ -97,15 +97,18 @@ export default {
     font-size: 10vmin;
     margin-bottom: 10px;
 }
-select:focus, textarea:focus, button:focus {
+select:focus, textarea:focus, a:focus {
     border: 2px solid #184E77 !important;
     box-shadow: none !important;
 }
-
+button:focus {
+  box-shadow: none !important;
+}
 router-link:focus {
   box-shadow: none !important;
 }
-button:active {
-  background: #184E77 !important;
-}
+.modal .modal-dialog .modal-content {
+    border: none;
+    border-radius: 1rem !important;
+  }
 </style>
