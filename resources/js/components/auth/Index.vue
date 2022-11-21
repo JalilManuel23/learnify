@@ -1,6 +1,11 @@
 <template>
     <InstructorNavbar></InstructorNavbar>
     <div class="container">
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>¡Aún no haz completado tu perfil!</strong> 
+          Haz click <router-link class="text-decoration-none" to="">aquí</router-link> para terminar esta tarea.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
         <h2 class="h1-responsive font-weight-bold text-left mb-3 mt-4">
             Hola, <b>{{ `${ this.userData.name } ${ this.userData.apellido_p } ${ this.userData.apellido_m }` }}</b>. ¡Te damos la bienvenida a Learnify!
         </h2>

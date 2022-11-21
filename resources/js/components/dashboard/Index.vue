@@ -1,5 +1,10 @@
 <template>
     <div class="container">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>¡Aún no haz completado tu perfil!</strong> 
+            Haz click <router-link class="text-decoration-none" to="/dashboard/inicio">aquí</router-link> para terminar esta tarea.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
         <h2 class="h1-responsive font-weight-bold text-left mb-3 mt-4">
             Hola, <b>{{ `${ this.userData.name } ${ this.userData.apellido_p }` }}</b>. ¡Te damos la bienvenida a Learnify!
         </h2>
@@ -34,7 +39,7 @@
                                 <p class="text-muted desc">${{ precio }}</p>
                                 <p class="text-muted desc">{{ duracion }}mins.</p>
                                 </div>
-                                <router-link :to="`/descripcion-curso/${ id }`" class="btn btn-primary">Ver</router-link>
+                                <router-link :to="`/descripcion-curso/${ id }`" class="btn btn-primary w-100">Descripción</router-link>
                             </div>
                         </div>
                     </div>
