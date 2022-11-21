@@ -18,23 +18,25 @@
                 <p class="float-start fw-light" style="font-size:12px;">Resultados</p>
                 <p class="float-end fw-light" style="font-size:12px;">Ordenar por</p>
             </div>
-            <div class="row align-items-center">
-                <div class="col">
-                    <div v-for="{ titulo, nombreInstructor, precio, duracion } in this.cursosData" class="card" style="width: 18rem;">
-                        <img src="../../../img/desarrollo-ingenieria.png" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ titulo }}</h5>
-                            <p class="card-text">{{ nombreInstructor }}</p>
-                            <p class="card-text">${{ precio }}</p>
-                            <p class="card-text">{{ duracion }}mins</p>
-                            <div class="clearfix">
-                                <a href="#" class="btn btn-primary float-start">Comprar ahora</a>
-                                <a href="#" class="btn btn-primary float-end" style="color:white"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row">
+              <div class="d-flex flex-wrap">
+              <div v-for="{ titulo, nombreInstructor, precio, duracion } in this.cursosData" style="width: 18rem;" class="card col-xl-4 col-md-6 mb-4">
+                <img src="../../../img/desarrollo-ingenieria.png" class="card-img-top" alt="">
+                <div class="card-body">
+                  <h5 class="card-title">{{ titulo }}</h5>
+                  <p class="card-text">{{ nombreInstructor }}</p>
+                  <p class="card-text">${{ precio }}</p>
+                  <p class="card-text">{{ duracion }}mins</p>
                 </div>
+                <div class="card-footer">
+                  <div class="clearfix">
+                    <router-link :to="`/descripcion-curso/${ id }`" class="btn btn-primary float-start">Descripción</router-link>
+                    <router-link to="" class="btn btn-primary float-end" style="color:white"><i class="fa fa-shopping-basket" aria-hidden="true"></i></router-link>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
         <Footer/>
       </div>
@@ -85,13 +87,11 @@
 
                     cursos.map(curso => {
                         let { name, apellido_p } = curso.instructor[0];
-                        
                         curso.nombreInstructor = name + ' ' + apellido_p;
 
                         this.cursosData.push(curso);
                     });
                 });
-                
             }
         }
     }
@@ -106,15 +106,19 @@
     .container {
         padding-top: 6rem;
     }
-    .row .card {
+    .card {
         border: none;
+        margin: .5rem;
         border-radius: 1rem;
         transition: all 0.2s;
         box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
     }
-    .row .card:hover {
+    /* .card:hover {
         margin-top: -.25rem;
         margin-bottom: .25rem;
         box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+    } */
+    .card-footer {
+      background: #FFF;
     }
 </style>

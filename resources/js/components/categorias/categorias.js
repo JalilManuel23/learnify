@@ -2,7 +2,7 @@ const categorias = [
     {
         "id": 1,
         "name": "ingenieria-desarrollo",
-        "titulo": "Ingenieria y Desarrollo",
+        "titulo": "Ingeniería y Desarrollo",
         "descripcion": "Cursos de ingeniería y desarrollo",
         "cursos": 90,
         "imagen": require("../../../img/desarrollo-ingenieria.png").default
@@ -26,7 +26,7 @@ const categorias = [
     {
         "id": 4,
         "name": "diseno-ux",
-        "titulo": "Diseño y UX",
+        "titulo": "Diseño UX/UI",
         "descripcion": "Cursos de de diseño",
         "cursos": 15,
         "imagen": require("../../../img/diseno-ux.png").default
