@@ -137,20 +137,27 @@ export default {
     methods:{
         // Método que se ejecuta al dar clic en botón de -Iniciar Sesión-
         async iniciarSesion() {
+          Swal.fire({
+                title: 'Cargando ...',
+                timerProgressBar: true,
+                didOpen: () => {
+                    Swal.showLoading()
+                }
+            });
           // Hace petición al backend a la ruta 'api/login' y manda como body el objeto user
           await $api.post('login', this.user).then(response => {
             // En caso de que las credenciales sean correctas, se muestra una alerta con sweetalert del tipo 'toast'
-
-            Toast.fire({
-              icon: 'success',
-              title: '¡Bienvenido!'
-            });
 
             // Crea el token y muestra alerta
             localStorage.setItem('token', response.data.token);  
 
             // Después hace una redirección al inicio
             this.redireccionUsuario();
+            Toast.fire({
+              icon: 'success',
+              title: '¡Bienvenido!'
+            });
+
           }).catch(error=>{
             // En caso de que los datos sean incorrectos se muestra una alerta
             Swal.fire({
