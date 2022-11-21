@@ -45,7 +45,7 @@ export default {
                     confirmButtonText: 'Continuar'
                 });
 
-                let redireccion = (tipo == 'estudiantes') ? 'InicioCliente' : 'InicioInstructor';
+                let redireccion = (tipo == 'estudiantes') ? 'Index' : 'IndexInstructor';
                 this.$router.push({ name: redireccion })
             }).catch(error=>{
                 console.log(error)
