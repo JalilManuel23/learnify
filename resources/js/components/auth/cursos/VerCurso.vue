@@ -1,23 +1,32 @@
 <template>
     <div class="video-container">
-        <div class="row">    
-        <div class="col-md-8">
-            <VideoPlayer v-if="this.srcVideo" :srcVideo="this.srcVideo" />
-            <h3>Título del vídeo</h3>
-        </div>
-        <div class="col-md-4 mt-5">
-            <h6 class="text-bold">Contenido del curso</h6>
-            <ul>
-                <li v-for="{ id, titulo, archivo, avance, duracion } in this.videos" :key="id" class="enlace-video">
-                    <a href="#">{{ `${ avance }.- ${ titulo }` }}</a> 
-                    <div class="d-flex align-items-center">
+        <div class="row">
+            <div class="col-12">
+                <h4>Curso: <span class="badge bg-warning">{{ this.cursoData.titulo }}</span></h4>
+            </div>    
+            <div class="col-md-8">
+                <VideoPlayer v-if="this.srcVideo" :srcVideo="this.srcVideo" />
+                <h3>{{ this.tituloVideo }}</h3>
+            </div>
+            <div class="col-md-4 mt-5">
+                <h6 class="text-bold">Contenido del curso</h6>
+                <ul>
+                    <li 
+                        v-for="{ id, titulo, archivo, avance, duracion } in this.videos" 
+                        :key="id" 
+                        class="enlace-video" 
+                        v-bind:class="[(this.tituloVideo == titulo)  && 'video-active']"
+                        v-on:click="cambiarVideo(archivo, titulo)"
+                    >
+                        <p>{{ `${ avance }.- ${ titulo }` }}</p> 
+                        <div class="d-flex align-items-center">
                             <i class="fa fa-play-circle mr-2" aria-hidden="true"></i> 
                             <p style="margin-left: 3px;" v-on:click="verVideos">{{ duracion }}</p>
-                    </div>
-                </li>
-            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
     </div>
 </template>
 
@@ -32,7 +41,8 @@ export default {
             userData: {},
             cursoData: {},
             videos: [],
-            srcVideo: ''
+            srcVideo: '',
+            tituloVideo: ''
         }
     },
     methods: {
@@ -46,9 +56,9 @@ export default {
                 this.videos = response.data.videos;
             });
             this.srcVideo = this.videos[0].archivo;
-            console.log(this.videos[0].archivo);
+            this.tituloVideo = this.videos[0].titulo;
         },
-        async setSrcVideo(archivo) {
+        async cambiarVideo(archivo, titulo) {
             this.srcVideo = '';
 
             await setTimeout(() => {
@@ -56,6 +66,7 @@ export default {
             }, 500);
 
             this.srcVideo = archivo;
+            this.tituloVideo = titulo;
         }
     },
     async mounted() {
@@ -80,7 +91,7 @@ export default {
 
 <style>
 .player {
-    height: 80vh;
+    height: 70vh;
 }
 
 ul {
@@ -99,8 +110,18 @@ ul {
     flex-direction: column;
 }
 
+.enlace-video:hover {
+    cursor: pointer;
+    background-color: rgb(245, 245, 245);
+}
+
 .video-container {
     margin-left: 3vmin;
+}
+
+.video-active {
+    background-color: rgb(241, 241, 241);
+    color: rgb(10, 118, 206);
 }
 
 </style>
