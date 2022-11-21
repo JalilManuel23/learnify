@@ -74,7 +74,9 @@ export default {
                 timerProgressBar: true,
                 didOpen: () => {
                     Swal.showLoading()
-                }
+                },
+                allowOutsideClick: false,
+                allowEscapeKey: false
             });
 
             await $api.post('videos', formdata).then(response => {
