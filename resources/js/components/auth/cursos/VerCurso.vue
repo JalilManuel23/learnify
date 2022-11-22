@@ -4,11 +4,11 @@
             <div class="col-12">
                 <h4>Curso: <span class="badge bg-warning">{{ this.cursoData.titulo }}</span></h4>
             </div>    
-            <div class="col-md-8">
+            <div class="col-md-8" v-if="this.videos.length > 0">
                 <VideoPlayer v-if="this.srcVideo" :srcVideo="this.srcVideo" />
                 <h3>{{ this.tituloVideo }}</h3>
             </div>
-            <div class="col-md-4 mt-5">
+            <div class="col-md-4 mt-5" v-if="this.videos.length > 0">
                 <h6 class="text-bold">Contenido del curso</h6>
                 <ul>
                     <li 
@@ -28,6 +28,9 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+            <div v-if="this.videos.length == 0" class="alert alert-primary col-8 mt-4" role="alert">
+                Aún no hay vídeos en este curso, el instructor está trabajando en esto :)
             </div>
         </div>
     </div>
