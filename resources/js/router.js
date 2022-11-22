@@ -158,6 +158,11 @@ const routes = [
         path: '/agregar-video/:curso',
         component: AgregarVideo
     },
+    {
+        name: 'PagoTarjeta',
+        path: '/Pago-tarjeta',
+        component: () => import('./components/auth/PagoTarjeta.vue')
+    },
 
     // Dashboard Estudiante
     {
