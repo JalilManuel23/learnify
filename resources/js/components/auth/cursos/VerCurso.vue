@@ -1,9 +1,13 @@
 <template>
     <div class="video-container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-10 d-flex justify-content-between">
                 <h4>Curso: <span class="badge bg-warning">{{ this.cursoData.titulo }}</span></h4>
-            </div>    
+
+                <div class="alert alert-secondary" role="alert">
+                    <p>Tu progreso: {{ parseInt((this.inscripcionData.avance / this.videos.length) * 100) }}%</p>
+                </div>
+            </div>   
             <div class="col-md-8" v-if="this.videos.length > 0">
                 <VideoPlayer v-if="this.srcVideo" :srcVideo="this.srcVideo" />
                 <h3>{{ this.tituloVideo }}</h3>
