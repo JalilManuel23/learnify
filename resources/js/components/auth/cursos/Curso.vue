@@ -9,7 +9,7 @@
         </div>
         <div class="row d-flex flex-column align-items-center mb-3">
             <div class="card col-md-5 col-12 mt-4">
-                <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp" class="card-img-top" alt="curso">
+                <img :src="'/img/'+`${this.cursoData.imagen}`" class="card-img-top" alt="curso">
                 <div class="card-body">
                     <div>
                         <p><span class="badge bg-primary">Descripción:</span> {{ this.cursoData.descripcion }}</p>

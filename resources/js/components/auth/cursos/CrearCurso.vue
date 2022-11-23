@@ -76,8 +76,8 @@ export default {
             formdata.append("categoria", this.fields.categoria);
             formdata.append("titulo", this.fields.titulo);
             formdata.append("precio", this.fields.precio);
-            formdata.append("imagen", this.fields.portada);
-            formdata.append("imagen_portada", this.fields.imagen_portada);
+            formdata.append("imagen", this.fields.archivo);
+            formdata.append("imagen_portada", this.fields.portada_archivo);
             formdata.append("descripcion", this.fields.descripcion);
             
             await $api.post('curso', formdata).then(response => {

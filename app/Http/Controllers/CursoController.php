@@ -45,19 +45,16 @@ class CursoController extends Controller
 
             $nombre = "img_" . time() . "." . $file->guessExtension();
 
-            $ruta = public_path("portadaCurso/" . $nombre);
+            $ruta = public_path("img/" . $nombre);
 
             if ($file->guessExtension() == "png" || $file->guessExtension() == "jpg" || $file->guessExtension() == "jpeg") {
                 copy($file, $ruta);
-
-                $getID3 = new \getID3;
-                $portada_file = $getID3->analyze($ruta);
             } else {
                 $status = 404;
             }
 
             $request->merge([
-                'archivo' => $nombre
+                'imagen' => $nombre
             ]);
 
             $curso = Curso::create($request->post());
