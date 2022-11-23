@@ -65,7 +65,7 @@
                                 <p class="text-muted desc">${{ precio }}</p>
                                 <p class="text-muted desc">{{ duracion }}mins.</p>
                                 </div>
-                                <router-link :to="`/descripcion-curso/${ id }`" class="btn btn-primary">Ver</router-link>
+                                <router-link :to="`/ver-curso/${ id }`" class="btn btn-primary">Ver</router-link>
                             </div>
                         </div>
                     </div>
