@@ -72,7 +72,7 @@
             <ul class="navbar-nav justify-content-end">
               <li class="nav-item dropdown pe-2 d-flex align-items-center">
                 <div class="input-group">
-                  <router-link class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" to="">¡Hazte premium!</router-link>
+                  <router-link class="btn btn-outline-primary btn-sm mb-0 me-3" target="_blank" to="/planes">¡Hazte premium!</router-link>
                 </div>
                   <img v-bind:src="`../../../images/${this.userData.fotografia}`" class="img-fluid rounded-circle avatar">
                   <a href="#" class="nav-link text-body p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
