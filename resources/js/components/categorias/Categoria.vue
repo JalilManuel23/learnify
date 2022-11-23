@@ -20,8 +20,8 @@
             </div>
             <div class="row">
               <div class="d-flex flex-wrap">
-              <div v-for="{ titulo, nombreInstructor, precio, duracion } in this.cursosData" style="width: 18rem;" class="card col-xl-4 col-md-6 mb-4">
-                <img src="../../../img/desarrollo-ingenieria.png" class="card-img-top" alt="">
+              <div v-for="{ titulo, nombreInstructor, precio, duracion, imagen } in this.cursosData" style="width: 18rem;" class="card col-xl-4 col-md-6 mb-4">
+                <img :src="'/img/'+`${ imagen }`" class="card-img-top" alt="">
                 <div class="card-body">
                   <h5 class="card-title">{{ titulo }}</h5>
                   <p class="card-text">{{ nombreInstructor }}</p>
