@@ -1,6 +1,40 @@
 "use strict";
 (self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_components_Home_vue"],{
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=script&lang=js":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=script&lang=js ***!
+  \*********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: 'BurbujaWhatsapp',
+  data: function data() {
+    return {
+      abierto: false
+    };
+  },
+  methods: {
+    abrir: function abrir() {
+      this.abierto = true;
+    },
+    cerrar: function cerrar() {
+      this.abierto = false;
+    },
+    enviarMensaje: function enviarMensaje() {
+      var msg = document.getElementById('whats-in').value;
+      var relmsg = msg.replace(/ /g, "%20");
+      window.open('https://wa.me/5216181179153?text=' + relmsg, '_blank');
+    }
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Home.vue?vue&type=script&lang=js":
 /*!**********************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Home.vue?vue&type=script&lang=js ***!
@@ -15,6 +49,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _home_Planes_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./home/Planes.vue */ "./resources/js/components/home/Planes.vue");
 /* harmony import */ var _home_Contacto_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./home/Contacto.vue */ "./resources/js/components/home/Contacto.vue");
 /* harmony import */ var _home_Footer_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./home/Footer.vue */ "./resources/js/components/home/Footer.vue");
+/* harmony import */ var _BurbujaWhatsapp_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./BurbujaWhatsapp.vue */ "./resources/js/components/BurbujaWhatsapp.vue");
+
 
 
 
@@ -25,7 +61,8 @@ __webpack_require__.r(__webpack_exports__);
     Categorias: _home_Categorias_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
     Planes: _home_Planes_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
     Contacto: _home_Contacto_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
-    Footer: _home_Footer_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    Footer: _home_Footer_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+    BurbujaWhatsapp: _BurbujaWhatsapp_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
   }
 });
 
@@ -110,6 +147,139 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=template&id=5cea7940&scoped=true":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=template&id=5cea7940&scoped=true ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render)
+/* harmony export */ });
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
+/* harmony import */ var _img_Asistente_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../img/Asistente.png */ "./resources/img/Asistente.png");
+
+
+
+var _withScopeId = function _withScopeId(n) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-5cea7940"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
+};
+
+var _hoisted_1 = {
+  "class": "nav-bottom"
+};
+var _hoisted_2 = {
+  "class": "content-whatsapp-top"
+};
+
+var _hoisted_3 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "fa fa-times",
+    style: {
+      "color": "#FFFFFF"
+    },
+    "aria-hidden": "true"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_4 = [_hoisted_3];
+
+var _hoisted_5 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", {
+    "class": "texto"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    src: _img_Asistente_png__WEBPACK_IMPORTED_MODULE_1__["default"],
+    width: "50",
+    "class": "asistente"
+  }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Bienvenido a "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("strong", null, "Learnify"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(", ¿En que podemos ayudarle? ")], -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_6 = {
+  "class": "content-whatsapp -bottom"
+};
+
+var _hoisted_7 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    "class": "whats-input",
+    id: "whats-in",
+    type: "text",
+    Placeholder: "Enviar mensaje..."
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_8 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "fa fa-paper-plane",
+    style: {
+      "color": "#C5C5C5"
+    },
+    "aria-hidden": "true"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_9 = [_hoisted_8];
+
+var _hoisted_10 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "float"
+  }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("i", {
+    "class": "fa fa-whatsapp my-float"
+  })], -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_11 = [_hoisted_10];
+
+var _hoisted_12 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": "circle-anime"
+  }, null, -1
+  /* HOISTED */
+  );
+});
+
+function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _this = this;
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["popup-whatsapp fadeIn", [this.abierto ? 'is-active-whatsapp-popup' : '']])
+  }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    type: "button",
+    "class": "closePopup",
+    onClick: _cache[0] || (_cache[0] = function ($event) {
+      return _this.cerrar();
+    })
+  }, _hoisted_4), _hoisted_5]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    "class": "send-msPopup",
+    id: "send-btn",
+    type: "button",
+    onClick: _cache[1] || (_cache[1] = function ($event) {
+      return _this.enviarMensaje();
+    })
+  }, _hoisted_9)])], 2
+  /* CLASS */
+  ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[2] || (_cache[2] = function ($event) {
+      return _this.abrir();
+    }),
+    type: "button",
+    id: "whats-openPopup",
+    "class": "whatsapp-button"
+  }, _hoisted_11), _hoisted_12]);
+}
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Home.vue?vue&type=template&id=f2b6376c":
 /*!**************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/Home.vue?vue&type=template&id=f2b6376c ***!
@@ -162,6 +332,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   var _component_Contacto = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Contacto");
 
+  var _component_BurbujaWhatsapp = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("BurbujaWhatsapp");
+
   var _component_Footer = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("Footer");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
@@ -174,7 +346,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })])]), _hoisted_6])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Categorias), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Planes), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Contacto), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)]);
+  })])]), _hoisted_6])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Categorias), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Planes), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Contacto), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_BurbujaWhatsapp), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_Footer)]);
 }
 
 /***/ }),
@@ -417,10 +589,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70 ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70&scoped=true":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70&scoped=true ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
@@ -429,14 +601,110 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+
+var _withScopeId = function _withScopeId(n) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.pushScopeId)("data-v-4eb0fa70"), n = n(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.popScopeId)(), n;
+};
+
 var _hoisted_1 = {
   "class": "footer"
 };
+var _hoisted_2 = {
+  "class": "text-center text-lg-start bg-white text-muted"
+};
+var _hoisted_3 = {
+  "class": ""
+};
+var _hoisted_4 = {
+  "class": "container text-center text-md-start mt-5"
+};
 
-var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<footer class=\"text-center text-lg-start bg-white text-muted\"><!-- Section: Links  --><section class=\"\"><div class=\"container text-center text-md-start mt-5\"><hr><!-- Grid row --><div class=\"row mt-3\"><!-- Grid column --><div class=\"col-md-3 col-lg-4 col-xl-5 mx-auto mb-4\"><!-- Content --><h6 class=\"text-uppercase fw-bold mb-4\">Learnify </h6><form action=\"\"><!--Grid row--><div class=\"row\"><!--Grid column--><div class=\"col-auto mb-4 mb-md-0\"><p class=\"pt-2 pb-4\"><strong>Suscribete a nuestro boletín de noticias</strong></p></div><!--Grid column--><!--Grid column--><div class=\"col-md-7 col-12 mb-4 mb-md-0\"><!-- Email input --><div class=\"form-outline mb-4 form-floating\"><input type=\"email\" id=\"label\" class=\"form-control form-control-sm\" placeholder=\"Correo electrónico\"><label class=\"form-label col-form-label col-form-label-sm\" for=\"label\">Correo electrónico</label></div></div><!--Grid column--><!--Grid column--><div class=\"col-auto mb-4 mb-md-0\"><!-- Submit button --><button type=\"submit\" class=\"btn btn-primary mb-4\"> Subscribe </button></div><!--Grid column--></div><!--Grid row--></form></div><!-- Grid column --><!-- Grid column --><div class=\"col-md-3 col-lg-2 col-xl-2 mx-auto mb-4\"><!-- Links --><h6 class=\"text-uppercase fw-bold mb-4\"> Categorías </h6><p class=\"mb-1\"><a href=\"#!\" class=\"text-reset text-decoration-none\">Desarrollo e Ingeniería</a></p><p class=\"mb-1\"><a href=\"#!\" class=\"text-reset text-decoration-none\">Marketing</a></p><p class=\"mb-1\"><a href=\"#!\" class=\"text-reset text-decoration-none\">Inglés</a></p><p class=\"mb-1\"><a href=\"#!\" class=\"text-reset text-decoration-none\">Diseño UX/UI</a></p></div><!-- Grid column --><!-- Grid column --><div class=\"col-md-3 col-lg-2 col-xl-2 mx-auto mb-4\"><!-- Links --><h6 class=\"text-uppercase fw-bold mb-4\" style=\"color:#FFF;\"> Categorías </h6><p class=\"mb-1\"><a href=\"#!\" class=\"text-reset text-decoration-none\">Negocios y Finanzas</a></p><p class=\"mb-1\"><a href=\"#!\" class=\"text-reset text-decoration-none\">Videojuegos</a></p><p class=\"mb-1\"><a href=\"#!\" class=\"text-reset text-decoration-none\">Estilo de vida</a></p><p class=\"mb-1\"><a href=\"#!\" class=\"text-reset text-decoration-none\">Liderazgo</a></p></div><!-- Grid column --><!-- Grid column --><div class=\"col-md-3 col-lg-4 col-xl-3 mx-auto mb-md-0 mb-4\"><!-- Links --><h6 class=\"text-uppercase fw-bold mb-4\">Enlaces de ayuda</h6><p><a href=\"#!\" class=\"text-reset text-decoration-none\">Sobre Learnify</a></p><p><a href=\"#!\" class=\"text-reset text-decoration-none\">Centro de ayuda</a></p><p><a href=\"#!\" class=\"text-reset text-decoration-none\">Aviso de privacidad</a></p><p><a href=\"#!\" class=\"text-reset text-decoration-none\">Términos y condiciones</a></p><p><a href=\"#!\" class=\"text-reset text-decoration-none\">Políticas de calidad</a></p><p><a href=\"#!\" class=\"text-reset text-decoration-none\">Derechos ARCO</a></p></div><!-- Grid column --></div><!-- Grid row --></div></section><!-- Section: Links  --><div class=\"container justify-content-lg-between p-4 border-top\"><div class=\"row\"><!-- Left --><div class=\"col text-left\"> Todos los derechos reservados © 2022 <a class=\"text-reset fw-bold text-decoration-none\" href=\"\">Learnify</a></div><!-- Left --><!-- Right --><div class=\"col text-end\"><a href=\"\" class=\"me-4 link-secondary\"><i class=\"fab fa-facebook-f\"></i></a><a href=\"\" class=\"me-4 link-secondary\"><i class=\"fab fa-twitter\"></i></a><a href=\"\" class=\"me-4 link-secondary\"><i class=\"fab fa-instagram\"></i></a><a href=\"\" class=\"me-4 link-secondary\"><i class=\"fab fa-linkedin\"></i></a></div><!-- Right --></div></div></footer>", 1);
+var _hoisted_5 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("hr", null, null, -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_6 = {
+  "class": "row mt-3"
+};
+
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-md-5 col mx-auto mb-4\" data-v-4eb0fa70><!-- Content --><h6 class=\"text-uppercase fw-bold mb-4\" data-v-4eb0fa70>Learnify </h6><form action=\"\" data-v-4eb0fa70><!--Grid row--><div class=\"row\" data-v-4eb0fa70><!--Grid column--><div class=\"col-auto mb-4 mb-md-0\" data-v-4eb0fa70><p class=\"pt-2 mb-4\" data-v-4eb0fa70><strong data-v-4eb0fa70>Suscribete a nuestro boletín de noticias</strong></p></div><!--Grid column--><!--Grid column--><div class=\"col-md-7 col-8\" data-v-4eb0fa70><!-- Email input --><div class=\"form-outline mb-4\" data-v-4eb0fa70><input type=\"email\" id=\"label\" class=\"form-control form-control-md\" placeholder=\"Correo electrónico\" data-v-4eb0fa70><!-- &lt;label class=&quot;form-label col-form-label col-form-label-sm&quot; for=&quot;label&quot;&gt;Correo electrónico&lt;/label&gt; --></div></div><!--Grid column--><!--Grid column--><div class=\"col mb-md-0\" data-v-4eb0fa70><!-- Submit button --><button type=\"submit\" class=\"btn btn-primary mb-4\" data-v-4eb0fa70> Suscribir </button></div><!--Grid column--></div><!--Grid row--></form></div>", 1);
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-md-4 mx-auto mb-4\" data-v-4eb0fa70><!-- Links --><h6 class=\"text-uppercase fw-bold mb-4\" data-v-4eb0fa70> Categorías </h6><div class=\"row\" data-v-4eb0fa70><div class=\"col-md-6\" data-v-4eb0fa70><p class=\"mb-1\" data-v-4eb0fa70><a href=\"#!\" class=\"text-reset text-decoration-none\" data-v-4eb0fa70>Desarrollo e Ingeniería</a></p><p class=\"mb-1\" data-v-4eb0fa70><a href=\"#!\" class=\"text-reset text-decoration-none\" data-v-4eb0fa70>Marketing</a></p><p class=\"mb-1\" data-v-4eb0fa70><a href=\"#!\" class=\"text-reset text-decoration-none\" data-v-4eb0fa70>Inglés</a></p><p class=\"mb-1\" data-v-4eb0fa70><a href=\"#!\" class=\"text-reset text-decoration-none\" data-v-4eb0fa70>Diseño UX/UI</a></p></div><div class=\"col-md-6\" data-v-4eb0fa70><p class=\"mb-1\" data-v-4eb0fa70><a href=\"#!\" class=\"text-reset text-decoration-none\" data-v-4eb0fa70>Negocios y Finanzas</a></p><p class=\"mb-1\" data-v-4eb0fa70><a href=\"#!\" class=\"text-reset text-decoration-none\" data-v-4eb0fa70>Videojuegos</a></p><p class=\"mb-1\" data-v-4eb0fa70><a href=\"#!\" class=\"text-reset text-decoration-none\" data-v-4eb0fa70>Estilo de vida</a></p><p class=\"mb-1\" data-v-4eb0fa70><a href=\"#!\" class=\"text-reset text-decoration-none\" data-v-4eb0fa70>Liderazgo</a></p></div></div></div>", 1);
+
+var _hoisted_9 = {
+  "class": "col-md-3 mx-auto mb-md-0 mb-4"
+};
+
+var _hoisted_10 = /*#__PURE__*/_withScopeId(function () {
+  return /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h6", {
+    "class": "text-uppercase fw-bold mb-4"
+  }, "Enlaces de ayuda", -1
+  /* HOISTED */
+  );
+});
+
+var _hoisted_11 = {
+  "class": "mb-3"
+};
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"container justify-content-md-between py-3 border-top\" data-v-4eb0fa70><div class=\"row\" data-v-4eb0fa70><!-- Left --><div class=\"col-md-9 col text-left\" style=\"font-size:14px;\" data-v-4eb0fa70> Todos los derechos reservados © 2022. <strong data-v-4eb0fa70>Learnify</strong></div><!-- Left --><!-- Right --><div class=\"sociales col-md-3 col text-end\" data-v-4eb0fa70><a href=\"\" class=\"me-4 link-secondary\" title=\"Síguenos en Facebook\" data-v-4eb0fa70><i class=\"fab fa-facebook-f\" data-v-4eb0fa70></i></a><a href=\"\" class=\"me-4 link-secondary\" title=\"Síguenos en Twitter\" data-v-4eb0fa70><i class=\"fab fa-twitter\" data-v-4eb0fa70></i></a><a href=\"\" class=\"me-4 link-secondary\" title=\"Síguenos en Instagram\" data-v-4eb0fa70><i class=\"fab fa-instagram\" data-v-4eb0fa70></i></a><a href=\"\" class=\"me-4 link-secondary\" title=\"Síguenos en Linkedin\" data-v-4eb0fa70><i class=\"fab fa-linkedin\" data-v-4eb0fa70></i></a></div><!-- Right --></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer "), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer ")]);
+  var _component_router_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-link");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("footer", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Section: Links  "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Grid row "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Grid column "), _hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Grid column "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Grid column "), _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Grid column "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Grid column "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Links "), _hoisted_10, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/informacion-legal",
+    "class": "text-reset text-decoration-none"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Centro de ayuda ")];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/informacion-legal#aviso-privacidad",
+    "class": "text-reset text-decoration-none"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Aviso de privacidad ")];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/informacion-legal#terminos-condiciones",
+    "class": "text-reset text-decoration-none"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Términos y condiciones ")];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/informacion-legal#politicas-calidad",
+    "class": "text-reset text-decoration-none"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Políticas de calidad ")];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("p", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_link, {
+    to: "/informacion-legal#aviso-privacidad",
+    "class": "text-reset text-decoration-none"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Derechos ARCO ")];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Grid column ")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Grid row ")])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Section: Links  "), _hoisted_12]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Footer ")]);
 }
 
 /***/ }),
@@ -466,6 +734,29 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* STYLE */
   );
 }
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.float[data-v-5cea7940]{\r\n    position: fixed;\r\n    width: 55px;\r\n    height: 55px;\r\n    bottom: 15px;\r\n    right: 15px;\r\n    background-color:  #0c2c4c;\r\n    color: white;\r\n    border-radius: 50px;\r\n    text-align: center;\r\n    font-size: 25px;\r\n    border: none;\r\n    /* box-shadow: .8px .8px 1px #; */\r\n    z-index: 100;\n}\n.float[data-v-5cea7940]:hover {\r\n    text-decoration: none;\r\n    color: white;\r\n    background-color:  #0c3448;\n}\n.my-float[data-v-5cea7940]{\r\n    margin-top:16px;\r\n    color: white !important;\n}\n@keyframes pulse-5cea7940 {\n0% {\r\n      transform: scale(1, 1);\n}\n50% {\r\n      opacity: 0.3;\n}\n100% {\r\n      transform: scale(1.45);\r\n      opacity: 0;\n}\n}\n.pulse[data-v-5cea7940] {\r\n    animation-name: pulse-5cea7940;\n}\n.nav-bottom[data-v-5cea7940] {\r\n    display: flex;\r\n    flex-direction: row;\r\n    justify-content: flex-end;\r\n    align-content: flex-end;\r\n    width: auto;\r\n    height: auto;\r\n    position: fixed;\r\n    z-index: 8;\r\n    bottom: 0px;\r\n    right: 0px;\r\n    padding: 5px;\r\n    margin: 0px;\n}\n@media (max-width: 360px) {\n.nav-bottom[data-v-5cea7940] {\r\n      width: 320px;\n}\n}\n.whatsapp-button[data-v-5cea7940] {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-content: center;\r\n    width: 55px;\r\n    height: 55px;\r\n    z-index: 8;\r\n    transition: .3s;\r\n    margin: 10px;\r\n    padding: 7px;\r\n    border: none;\r\n    outline: none;\r\n    cursor: pointer;\r\n    border-radius: 50%;\r\n    background-color: white;\r\n    box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705);\n}\n.circle-anime[data-v-5cea7940] {\r\n    display: flex;\r\n    position: absolute;\r\n    justify-content: center;\r\n    align-content: center;\r\n    width: 55px;\r\n    height: 55px;\r\n    top: 15px;\r\n    right: 15px;\r\n    border-radius: 50%;\r\n    transition: .3s;\r\n    background-color: #6c94b3;\r\n    animation: pulse-5cea7940 1.2s 4.0s ease 4;\n}\n.popup-whatsapp[data-v-5cea7940] {\r\n    display: none;\r\n    position: absolute;\r\n    flex-direction: column;\r\n    justify-content: flex-start;\r\n    align-items: flex-start;\r\n    width: auto;\r\n    height: auto;\r\n    padding: 10px;\r\n    bottom: 85px;\r\n    right: 6px;\r\n    transition: .5s;\r\n    border-radius: 10px;\r\n    background-color: white;\r\n    box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705);\r\n    animation: slideInRight .6s 0.0s both;\n}\n.popup-whatsapp > div[data-v-5cea7940] {\r\n    margin: 5px;\n}\n@media (max-width: 680px) {\n.popup-whatsapp p[data-v-5cea7940] {\r\n    font-size: 0.9em;\n}\n}\n.popup-whatsapp > .content-whatsapp.-top[data-v-5cea7940] {\r\n    display: flex;\r\n    flex-direction: column;\n}\n.popup-whatsapp > .content-whatsapp.-top .texto[data-v-5cea7940] {\r\n    color: #585858;\r\n    font-family: 'Roboto';\r\n    font-weight: 400;\r\n    font-size: 1.2em;\r\n    padding: 5px;\n}\n.popup-whatsapp > .content-whatsapp.-bottom[data-v-5cea7940] {\r\n    display: flex;\r\n    flex-direction: row;\n}\n.closePopup[data-v-5cea7940] {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 28px;\r\n    height: 28px;\r\n    margin: 0px 0px 15px 0px;\r\n    border-radius: 50%;\r\n    border: none;\r\n    outline: none;\r\n    cursor: pointer;\r\n    background-color: #276391;\r\n    box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);\n}\n.closePopup[data-v-5cea7940]:hover {\r\n    background-color: #0d202f;\r\n    transition: .3s;\n}\n.send-msPopup[data-v-5cea7940] {\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    width: 40px;\r\n    height: 40px;\r\n    border-radius: 50%;\r\n    background-color: white;\r\n    margin: 0px 0px 0px 5px;\r\n    border: none;\r\n    outline: none;\r\n    cursor: pointer;\r\n    box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);\n}\n.send-msPopup[data-v-5cea7940]:hover {\r\n    background-color: #f8f8f8;\r\n    transition: .3s;\n}\n.is-active-whatsapp-popup[data-v-5cea7940] {\r\n    display: flex;\r\n    animation: slideInRight .6s 0.0s both;\r\n    background-color: #fafafa;\r\n    color: black;\n}\nimg .asistente[data-v-5cea7940] {\r\n    border-radius: 25% 10%;\n}\ninput.whats-input[type=text][data-v-5cea7940] {\r\n    width: 250px;\r\n    height: 40px;\r\n    box-sizing: border-box;\r\n    border: .9px solid #F2F2F2;\r\n    border-radius: 20px;\r\n    font-size: .8em;\r\n    background-color: #ffffff;\r\n    padding: 0px 0px 0px 10px;\r\n    transition: width 0.3s ease-in-out;\r\n    outline: none;\r\n    transition: .3s;\n}\n@media (max-width: 420px) {\ninput.whats-input[type=text][data-v-5cea7940] {\r\n      width: 225px;\n}\n}\ninput.whats-input[data-v-5cea7940]::-moz-placeholder {\r\n    color: rgba(68, 68, 68, 0.705);\r\n    opacity: 1;\n}\ninput.whats-input[data-v-5cea7940]::placeholder {\r\n    color: rgba(68, 68, 68, 0.705);\r\n    opacity: 1;\n}\ninput.whats-input[type=text][data-v-5cea7940]:focus {\r\n    background-color: #C9C9C9;\r\n    transition: width 0.3s ease-in-out;\r\n    transition: .3s;\n}\r\n  ", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
 
 /***/ }),
 
@@ -515,6 +806,29 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.row .card {\r\n  border: none;\r\n 
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\na[data-v-4eb0fa70]:hover {\r\n  color:#184E77 !important;\r\n  font-weight: bold;\n}\n@media (min-width: 300px) {\n.text-reset[data-v-4eb0fa70] {\r\n    font-size: 14px !important;\n}\r\n/* .sociales{\r\n  text-align: center !important;\r\n} */\n}\r\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css ***!
@@ -538,6 +852,20 @@ ___CSS_LOADER_EXPORT___.push([module.id, "\n.pricing .card {\r\n   border: none;
 
 /***/ }),
 
+/***/ "./resources/img/Asistente.png":
+/*!*************************************!*\
+  !*** ./resources/img/Asistente.png ***!
+  \*************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/Asistente.png?3e39c2bca052b3f2452bfac694c9485b");
+
+/***/ }),
+
 /***/ "./resources/img/bg.png":
 /*!******************************!*\
   !*** ./resources/img/bg.png ***!
@@ -549,6 +877,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/bg.png?9fc2288778bf997f5c00bf670cfaf6b2");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BurbujaWhatsapp_vue_vue_type_style_index_0_id_5cea7940_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BurbujaWhatsapp_vue_vue_type_style_index_0_id_5cea7940_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BurbujaWhatsapp_vue_vue_type_style_index_0_id_5cea7940_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -610,6 +967,35 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Footer_vue_vue_type_style_index_0_id_4eb0fa70_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Footer_vue_vue_type_style_index_0_id_4eb0fa70_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Footer_vue_vue_type_style_index_0_id_4eb0fa70_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css":
 /*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=style&index=0&id=311a586c&lang=css ***!
@@ -636,6 +1022,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Planes_vue_vue_type_style_index_0_id_311a586c_lang_css__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./resources/js/components/BurbujaWhatsapp.vue":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/BurbujaWhatsapp.vue ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _BurbujaWhatsapp_vue_vue_type_template_id_5cea7940_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./BurbujaWhatsapp.vue?vue&type=template&id=5cea7940&scoped=true */ "./resources/js/components/BurbujaWhatsapp.vue?vue&type=template&id=5cea7940&scoped=true");
+/* harmony import */ var _BurbujaWhatsapp_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./BurbujaWhatsapp.vue?vue&type=script&lang=js */ "./resources/js/components/BurbujaWhatsapp.vue?vue&type=script&lang=js");
+/* harmony import */ var _BurbujaWhatsapp_vue_vue_type_style_index_0_id_5cea7940_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css */ "./resources/js/components/BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css");
+/* harmony import */ var C_laragon_www_learnify_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+
+
+
+
+;
+
+
+const __exports__ = /*#__PURE__*/(0,C_laragon_www_learnify_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_BurbujaWhatsapp_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_BurbujaWhatsapp_vue_vue_type_template_id_5cea7940_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-5cea7940"],['__file',"resources/js/components/BurbujaWhatsapp.vue"]])
+/* hot reload */
+if (false) {}
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
 
 /***/ }),
 
@@ -736,15 +1152,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Footer_vue_vue_type_template_id_4eb0fa70__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer.vue?vue&type=template&id=4eb0fa70 */ "./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70");
+/* harmony import */ var _Footer_vue_vue_type_template_id_4eb0fa70_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer.vue?vue&type=template&id=4eb0fa70&scoped=true */ "./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70&scoped=true");
 /* harmony import */ var _Footer_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.vue?vue&type=script&lang=js */ "./resources/js/components/home/Footer.vue?vue&type=script&lang=js");
-/* harmony import */ var C_laragon_www_learnify_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _Footer_vue_vue_type_style_index_0_id_4eb0fa70_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css */ "./resources/js/components/home/Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css");
+/* harmony import */ var C_laragon_www_learnify_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_learnify_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_Footer_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Footer_vue_vue_type_template_id_4eb0fa70__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/components/home/Footer.vue"]])
+
+
+const __exports__ = /*#__PURE__*/(0,C_laragon_www_learnify_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_3__["default"])(_Footer_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_Footer_vue_vue_type_template_id_4eb0fa70_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render],['__scopeId',"data-v-4eb0fa70"],['__file',"resources/js/components/home/Footer.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -780,6 +1199,21 @@ if (false) {}
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__exports__);
+
+/***/ }),
+
+/***/ "./resources/js/components/BurbujaWhatsapp.vue?vue&type=script&lang=js":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/components/BurbujaWhatsapp.vue?vue&type=script&lang=js ***!
+  \*****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BurbujaWhatsapp_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__["default"])
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BurbujaWhatsapp_vue_vue_type_script_lang_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./BurbujaWhatsapp.vue?vue&type=script&lang=js */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=script&lang=js");
+ 
 
 /***/ }),
 
@@ -858,6 +1292,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/BurbujaWhatsapp.vue?vue&type=template&id=5cea7940&scoped=true":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/BurbujaWhatsapp.vue?vue&type=template&id=5cea7940&scoped=true ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BurbujaWhatsapp_vue_vue_type_template_id_5cea7940_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BurbujaWhatsapp_vue_vue_type_template_id_5cea7940_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./BurbujaWhatsapp.vue?vue&type=template&id=5cea7940&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=template&id=5cea7940&scoped=true");
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Home.vue?vue&type=template&id=f2b6376c":
 /*!************************************************************************!*\
   !*** ./resources/js/components/Home.vue?vue&type=template&id=f2b6376c ***!
@@ -903,17 +1352,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70":
-/*!*******************************************************************************!*\
-  !*** ./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70 ***!
-  \*******************************************************************************/
+/***/ "./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70&scoped=true":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70&scoped=true ***!
+  \*******************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Footer_vue_vue_type_template_id_4eb0fa70__WEBPACK_IMPORTED_MODULE_0__.render)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Footer_vue_vue_type_template_id_4eb0fa70_scoped_true__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
-/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Footer_vue_vue_type_template_id_4eb0fa70__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Footer.vue?vue&type=template&id=4eb0fa70 */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70");
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Footer_vue_vue_type_template_id_4eb0fa70_scoped_true__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Footer.vue?vue&type=template&id=4eb0fa70&scoped=true */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=template&id=4eb0fa70&scoped=true");
 
 
 /***/ }),
@@ -929,6 +1378,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* reexport safe */ _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Planes_vue_vue_type_template_id_311a586c__WEBPACK_IMPORTED_MODULE_0__.render)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_use_0_node_modules_vue_loader_dist_templateLoader_js_ruleSet_1_rules_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Planes_vue_vue_type_template_id_311a586c__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!../../../../node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Planes.vue?vue&type=template&id=311a586c */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5.use[0]!./node_modules/vue-loader/dist/templateLoader.js??ruleSet[1].rules[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Planes.vue?vue&type=template&id=311a586c");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css":
+/*!*************************************************************************************************************!*\
+  !*** ./resources/js/components/BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css ***!
+  \*************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_BurbujaWhatsapp_vue_vue_type_style_index_0_id_5cea7940_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/BurbujaWhatsapp.vue?vue&type=style&index=0&id=5cea7940&scoped=true&lang=css");
 
 
 /***/ }),
@@ -953,6 +1414,18 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Categorias_vue_vue_type_style_index_0_id_22884d16_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Categorias.vue?vue&type=style&index=0&id=22884d16&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Categorias.vue?vue&type=style&index=0&id=22884d16&lang=css");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/home/Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css":
+/*!*********************************************************************************************************!*\
+  !*** ./resources/js/components/home/Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_use_1_node_modules_vue_loader_dist_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_use_2_node_modules_vue_loader_dist_index_js_ruleSet_0_use_0_Footer_vue_vue_type_style_index_0_id_4eb0fa70_scoped_true_lang_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader/dist/cjs.js!../../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!../../../../node_modules/vue-loader/dist/stylePostLoader.js!../../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!../../../../node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9.use[1]!./node_modules/vue-loader/dist/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9.use[2]!./node_modules/vue-loader/dist/index.js??ruleSet[0].use[0]!./resources/js/components/home/Footer.vue?vue&type=style&index=0&id=4eb0fa70&scoped=true&lang=css");
 
 
 /***/ }),

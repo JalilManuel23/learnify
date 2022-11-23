@@ -38,10 +38,36 @@ class CursoController extends Controller
      */
     public function store(Request $request)
     {
-        $curso = Curso::create($request->post());
+        $status = 200;
+
+        if ($request->hasFile("imagen_portada")) {
+            $file = $request->file("imagen_portada");
+
+            $nombre = "img_" . time() . "." . $file->guessExtension();
+
+            $ruta = public_path("portadaCurso/" . $nombre);
+
+            if ($file->guessExtension() == "png" || $file->guessExtension() == "jpg" || $file->guessExtension() == "jpeg") {
+                copy($file, $ruta);
+
+                $getID3 = new \getID3;
+                $portada_file = $getID3->analyze($ruta);
+            } else {
+                $status = 404;
+            }
+
+            $request->merge([
+                'archivo' => $nombre
+            ]);
+
+            $curso = Curso::create($request->post());
+        }
+
+        $respuesta = ($status == 200) ? $curso : '';
+
         return response()->json([
-            'curso' => $curso
-        ]);
+            'curso' => $respuesta
+        ], $status);
     }
 
     /**
@@ -107,14 +133,13 @@ class CursoController extends Controller
 
         $cursos_devolver = array();
 
-        foreach($cursos as $curso) 
-        {
+        foreach ($cursos as $curso) {
             $instructor = DB::table('users')->where('id', $curso->instructor)->get();
             $curso->instructor = $instructor;
 
             $cursos_devolver[] = $curso;
         }
-        
+
 
         return response()->json([
             'cursos' => $cursos_devolver
