@@ -4,28 +4,33 @@
     <div class="container">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
-                <form @submit.prevent="crearCurso" class="w-50 mt-5">
+                <form @submit.prevent="crearCurso" id="formulario" enctype="multipart/form-data" class="w-50 mt-5">
                     <div class="mb-3">
                         <label for="titulo" class="form-label">Título del curso</label>
-                        <input v-model="nuevoCurso.titulo" type="text" class="form-control" id="titulo" placeholder="Ejemplo: Fundamentos de la programación">
+                        <input type="text" class="form-control" id="titulo"
+                        v-model="fields.titulo" placeholder="Ejemplo: Fundamentos de la programación">
                     </div>
                     <div class="mb-3">
                         <label for="precio" class="form-label">Precio</label>
-                        <input v-model="nuevoCurso.precio" type="number" class="form-control" id="precio" placeholder="Ejemplo: $125.00">
+                        <input type="number" class="form-control" id="precio"
+                        v-model="fields.precio" placeholder="Ejemplo: $125.00">
                     </div>
                     <div class="mb-3">
                         <label for="portada" class="form-label">Portada</label>
-                        <input type="file" class="form-control" id="portada">
+                        <input type="file" accept="image/png, image/jpg, image/jpeg" class="form-control" id="portada" aria-describedby="archivoPortada"
+                            v-on:change="previewFiles">
                     </div>
                     <div class="mb-3">
                         <label for="categoria" class="form-label mr-5">Categoría:</label>
-                        <select v-model="nuevoCurso.categoria" class="form-select" name="categoria" id="categoria">
-                            <option v-for="{ id, titulo } in this.categorias" :key="id" :value="titulo">{{ titulo }}</option>
+                        <select class="form-select" name="categoria" id="categoria" v-model="fields.categoria">
+                            <option v-for="{ id, titulo } in this.categorias" :key="id" :value="titulo">{{ titulo }}
+                            </option>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label for="" class="form-label">Descripción</label>
-                        <textarea v-model="nuevoCurso.descripcion" class="form-control" id="descripcion" rows="3"></textarea>
+                        <textarea class="form-control" id="descripcion"
+                        v-model="fields.descripcion" rows="3"></textarea>
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">Guardar</button>
@@ -47,17 +52,35 @@ export default {
     data() {
         return {
             userData: {},
-            nuevoCurso: {},
-            categorias
+            categorias,
+            fields: {
+                instructor:'',
+                titulo:'',
+                precio:'',
+                archivo: '',
+                portada_archivo: null,
+                categoria:'',
+                descripcion:'',
+            }
         }
     },
     methods: {
         async crearCurso() {
-            this.nuevoCurso.instructor = this.userData.id;
 
-            console.log(this.nuevoCurso);
+            var form = document.getElementById("formulario");
+            var formdata = new FormData(form);
 
-            await $api.post('curso', this.nuevoCurso).then(response => {
+            this.fields.instructor = this.userData.id;
+
+            formdata.append("instructor", this.fields.instructor);
+            formdata.append("categoria", this.fields.categoria);
+            formdata.append("titulo", this.fields.titulo);
+            formdata.append("precio", this.fields.precio);
+            formdata.append("imagen", this.fields.archivo);
+            formdata.append("imagen_portada", this.fields.portada_archivo);
+            formdata.append("descripcion", this.fields.descripcion);
+            
+            await $api.post('curso', formdata).then(response => {
                 Toast.fire({
                     icon: 'success',
                     title: '¡Curso creado correctamente!'
@@ -65,14 +88,18 @@ export default {
 
                 this.$router.push({ name: 'InicioInstructor' });
             });
+        },
+        previewFiles(event) {
+            this.fields.portada_archivo = event.target.files[0];
+            this.fields.archivo = event.target.files[0].name;
         }
     },
     async mounted() {
         await $api.get('usuario').then(response => {
             let { data } = response.data;
             this.userData = data;
-        }).catch( error => {
-            this.$router.push({ name:"InicioSesion" });
+        }).catch(error => {
+            this.$router.push({ name: "InicioSesion" });
         });
     },
     components: {
