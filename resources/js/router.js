@@ -163,6 +163,22 @@ const routes = [
         path: '/Pago-tarjeta',
         component: () => import('./components/auth/PagoTarjeta.vue')
     },
+    {
+        name: 'PlanBasico',
+        path: '/Plan-basico',
+        component: () => import('./components/auth/PlanBasico.vue')
+    },
+    {
+        name: 'PlanIntermedio',
+        path: '/Plan-intermedio',
+        component: () => import('./components/auth/PlanIntermedio.vue')
+    },
+    {
+        name: 'PlanPro',
+        path: '/Plan-pro',
+        component: () => import('./components/auth/PlanPro.vue')
+    },
+
 
     // Dashboard Estudiante
     {

@@ -90,7 +90,7 @@
                         <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Espacio para realización de Proyectos</li>
                      </ul>
                      <div class="d-grid">
-                        <a href="#" class="btn btn-primary text-uppercase">¡Lo quiero!</a>
+                        <router-link to="/plan-basico" class="btn btn-primary text-uppercase">¡Lo quiero!</router-link>
                      </div>
                   </div>
                </div>
@@ -111,7 +111,7 @@
                         <li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>Espacio para realización de Proyectos</li>
                      </ul>
                      <div class="d-grid">
-                        <a href="#" class="btn btn-primary text-uppercase">¡Lo quiero!</a>
+                        <router-link to="/plan-intermedio" class="btn btn-primary text-uppercase">¡Lo quiero!</router-link>
                      </div>
                   </div>
                </div>
@@ -132,7 +132,7 @@
                         <li><span class="fa-li"><i class="fas fa-check"></i></span>Espacio para realización de Proyectos</li>
                      </ul>
                      <div class="d-grid">
-                        <a href="#" class="btn btn-primary text-uppercase">¡Lo quiero!</a>
+                        <router-link to="/plan-pro" class="btn btn-primary text-uppercase">¡Lo quiero!</router-link>
                      </div>
                   </div>
                </div>
