@@ -25,8 +25,7 @@
                 <div class="row">
                     <div class="col-3">
                         <div id="list-example" class="list-group mt-5">
-                            <a class="list-group-item list-group-item-action list-group-item-light" href="">Sobre Learnify</a>
-                            <a class="list-group-item list-group-item-action list-group-item-light" href="">Centro de Ayuda</a>
+                            <router-link class="list-group-item list-group-item-action list-group-item-light" to="/centro-de-ayuda">Centro de Ayuda</router-link>
                             <a class="list-group-item list-group-item-action list-group-item-light" href="#aviso-privacidad">Aviso de Privacidad</a>
                             <a class="list-group-item list-group-item-action list-group-item-light" href="#terminos-condiciones">Términos y condiciones</a>
                             <a class="list-group-item list-group-item-action list-group-item-light" href="#politicas-calidad">Políticas de calidad</a>
@@ -156,7 +155,7 @@
         border-left: 5px solid #184E77;
         border-bottom: 1px solid rgba(0,0,0,.125);
     }
-    @media (min-width: 300px) {
+    @media only screen and (max-width: 700px) {
         .inicio .container .row {
             margin-top: 10vh !important;
             margin-bottom: 10vh !important;
