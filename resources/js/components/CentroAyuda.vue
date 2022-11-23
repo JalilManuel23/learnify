@@ -2,8 +2,8 @@
     <section id="header" class="inicio">
       <div class="container d-flex align-items-center">
         <div class="row">
-          <div class="col-md-6 col text-center d-flex flex-column align-md-items-start justify-md-content-start justify-content-center align-items-center">
-            <div class="title-container text-md-start text-center mb-4">
+          <div class="col-md-7 col text-center d-flex flex-column align-md-items-start justify-md-content-start justify-content-center align-items-center">
+            <div class="title-container text-md-start text-center">
               <h1 class="display-6">Centro de Ayuda</h1>
               <nav class="mt-2" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                 <ol class="breadcrumb">
@@ -13,7 +13,7 @@
             </nav>
             </div>
           </div>
-          <div class="col-md-6 col d-flex align-md-items-end justify-md-content-center justify-content-center pt-md-5 mt-5">
+          <div class="col-md-5 col d-flex align-md-items-end justify-md-content-center justify-content-center pt-md-5 mt-5">
             <img src="../../img/questions.png" class="img-fluid w-75 text-center" />
           </div>
         </div>
@@ -37,48 +37,45 @@
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingOne">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                        Pregunta 1
+                        <p>¿Cómo puedo tomar un curso de <strong> Learnify</strong>?</p>
                     </button>
                     </h2>
                     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            Respuesta
+                            <p class="text-break">Todos los cursos de <strong>Learnify</strong> son bajo demanda y puedes acceder a ellos desde diversos dispositivos y plataformas, incluidos equipos de escritorio, portátiles.
+                                Después de inscribirte en un curso, puedes acceder a él iniciando sesión y navegando hasta la página la sección de mis cursos.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingTwo">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                        Pregunta 2
+                        <p>¿Qué incluyen los cursos de <strong> Learnify</strong>?</p>
                     </button>
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            Respuesta
+                            <p class="text-break">
+                                Los instructores crean, poseen y gestionan cada curso de <strong>Learnify</strong>. La base de cada curso de <strong>Learnify</strong> son sus clases, que pueden incluir vídeos, diapositivas y texto.
+                            </p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Pregunta 3
+                        <p>¿Cómo puedo pagar un curso de <strong>Learnify</strong>?</p>
                     </button>
                     </h2>
                     <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            Respuesta
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="flush-headingThree">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                        Pregunta 4
-                    </button>
-                    </h2>
-                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            Respuesta
+                            <p class="text-break">
+                                Actualmente, <strong>Learnify</strong> admite métodos de pago con tarjetas de crédito y débito.
+                                Para pagar y puedas adquirir un curso, sigue estos pasos:<br>
+                                1. Después de encontrar el curso en el que deseas inscribirte, haz clic en la canastita en la página de inicio del curso.<br>
+                                2. Se te dirigirá a la página de Pago.<br>
+                                3. Ingresa los campos que se requieren de tu tarjeta.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -102,7 +99,7 @@
     }
     h1 {
         font-weight: bold;
-        font-size: 9vmin;
+        font-size: 10vmin;
         color: #FFFFFF;
     }
     .accordion-item , .accordion-header {
@@ -113,7 +110,7 @@
     }
     div .accordion-item {
         /* box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3); */
-        box-shadow: 0 2px 20px 0 rgba(110, 130, 208, .18);
+        /* box-shadow: 0 2px 20px 0 rgba(110, 130, 208, .18); */
         border-radius: 1rem !important;
     }
     .accordion-button {
@@ -121,27 +118,74 @@
         height: 60px;
         color: #184E77;
         font-weight: bold !important;
-        border-left: 5px solid #184E77;
+        /* border-left: 5px solid #184E77; */
         border-radius: 12px;
+    }
+    .accordion-button:focus {
+        box-shadow: none !important;
     }
     .accordion-body {
         background-color: #FFFFFF;
     }
-    @media (min-width: 300px) {
+
+     .accordion-flush .accordion-item .accordion-button {
+        border-radius: 1rem;
+    }
+    .accordion-item , .accordion-header {
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 20px;
+    }
+    .accordion-button {
+        width: 100%;
+        height: 60px;
+        color: #184E77;
+        background-color: #eef5fb;
+        border-radius: 12px;
+    }
+    p {
+        text-align: justify;
+    }
+    @media only screen and (max-width: 1176px) {
+       .display-6 {
+        font-size: 8vmin;
+       } 
+    }
+    @media only screen and (max-width: 700px) {
         .inicio .container .row {
             margin-top: 10vh !important;
             margin-bottom: 10vh !important;
         }
         .title-container {
-            margin-top: 15vh;
+            margin-top: 10vh;
             text-align: left !important;
         }
          .title-container .display-6 {
-            font-size: 8vmin !important;
+            font-size: 7vmin !important;
         }
         .accordion-body {
-            padding-bottom: 25px;
+            /* padding-bottom: 25px; */
             font-size: 12px !important;
+        }
+    }
+    @media only screen and (max-width: 598px) {
+        .inicio {
+            padding: 5px;
+        }
+        .inicio .container .row {
+            margin-top: 5vh !important;
+            margin-bottom: 5vh !important;
+        }
+        .title-container {
+            margin-top: 10vh;
+            text-align: left !important;
+        }
+         .title-container .display-6 {
+            font-size: 7vmin !important;
+        }
+        p {
+            font-size: 12px;
         }
     }
 </style>
