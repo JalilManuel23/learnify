@@ -58,6 +58,7 @@
                 <div class="row">
                   <div class="col-md-6">
                     <p class="mb-1">
+                      
                       <a href="#!" class="text-reset text-decoration-none">Desarrollo e Ingeniería</a>
                     </p>
                     <p class="mb-1">
@@ -93,7 +94,7 @@
                 <!-- Links -->
                 <h6 class="text-uppercase fw-bold mb-4">Enlaces de ayuda</h6>
                 <p>
-                  <router-link to="/informacion-legal" class="text-reset text-decoration-none">
+                  <router-link to="/centro-de-ayuda" class="text-reset text-decoration-none">
                     Centro de ayuda
                   </router-link>
                 </p>
@@ -155,8 +156,12 @@
 </template>
 
 <script>
+
   export default {
-      name: "Footer"
+      name: "Footer",
+      data() {
+
+      }
   }
 </script>
 
@@ -165,12 +170,9 @@ a:hover {
   color:#184E77 !important;
   font-weight: bold;
 }
- @media (min-width: 300px) {
+ @media only screen and (min-width: 300px) {
   .text-reset {
     font-size: 14px !important;
   }
-/* .sociales{
-  text-align: center !important;
-} */
 }
 </style>
