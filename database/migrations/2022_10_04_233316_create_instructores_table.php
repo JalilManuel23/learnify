@@ -13,11 +13,11 @@ class CreateInstructoresTable extends Migration
      */
     public function up()
     {
-        Schema::create('instructores', function (Blueprint $table) {
+        Schema::create('instructors', function (Blueprint $table) {
             $table->id();
             $table->string('usuario');
-            $table->string('calificacion');
-            $table->string('especialidad');
+            $table->string('calificacion')->nullable();
+            $table->string('especialidad')->nullable();
             $table->timestamps();
         });
     }

@@ -26,7 +26,7 @@
         
         <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet"/>
 
-
+        @laravelPWA
     </head>
     <body>
         <div id="app"></div>

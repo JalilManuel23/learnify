@@ -37,6 +37,7 @@ export default {
     },
     methods: {
         async crearPerfil(tipo) {
+            console.log(this.userData);
             await $api.post(tipo, this.userData).then(response => {
                 Swal.fire({
                     title: '¡Cuenta creada!',
