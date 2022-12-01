@@ -17,11 +17,11 @@ class CreateCursosTable extends Migration
             $table->id();
             $table->string('instructor');
             $table->string('categoria');
-            $table->string('duracion');
+            $table->string('duracion')->nullable();;
             $table->string('titulo');
             $table->string('descripcion');
             $table->string('precio');
-            $table->string('imagen');
+            $table->string('imagen')->default('default_curso.webp');;
             $table->timestamps();
         });
     }

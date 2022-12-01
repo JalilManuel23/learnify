@@ -7,7 +7,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
         <h2 class="h1-responsive font-weight-bold text-left mb-3 mt-4">
-            Hola, <b>{{ `${ this.userData.name } ${ this.userData.apellido_p } ${ this.userData.apellido_m }` }}</b>. ¡Te damos la bienvenida a Learnify!
+            Hola, <b>{{ `${ this.userData.name } ${ this.userData.apellido_p }` }}</b>. ¡Te damos la bienvenida a Learnify!
         </h2>
         <div class="pt-5">
             <div class="row">
