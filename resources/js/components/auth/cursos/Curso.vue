@@ -97,14 +97,26 @@ export default {
             });
         },
         async eliminarCurso() {
-            await $api.delete(`curso/${ this.cursoData.id }`).then(response => {
-                Toast.fire({
-                    icon: 'success',
-                    title: '¡Curso eliminado correctamente!'
-                });
-            });
+            Swal.fire({
+                    title: '¿Está seguro que desea eliminar este curso?',
+                    showDenyButton: true,
+                    confirmButtonText: 'Eliminar',
+                    denyButtonText: `Cancelar`,
+                }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    $api.delete(`curso/${ this.cursoData.id }`).then(response => {
+                        Toast.fire({
+                            icon: 'success',
+                            title: '¡Curso eliminado correctamente!'
+                        });
 
-            this.$router.push({ name:"InicioInstructor" });
+                        this.$router.push({ name:"InicioInstructor" });
+                    });
+                } else if (result.isDenied) {
+                    Swal.fire('Acción cancelada', '', 'info')
+                }
+            });
         },
         async cargarVideos() {
             await $api.get(`traer_videos/curso/${this.cursoData.id}`).then(response => {
@@ -112,13 +124,25 @@ export default {
             });
         },
         async eliminarVideo(idVideo) {
-            await $api.delete(`videos/${idVideo}`).then(response => {
-                this.videos = response.data.videos;
+            Swal.fire({
+                    title: '¿Está seguro que desea eliminar este vídeo?',
+                    showDenyButton: true,
+                    confirmButtonText: 'Eliminar',
+                    denyButtonText: `Cancelar`,
+                }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    $api.delete(`videos/${idVideo}`).then(response => {
+                        this.videos = response.data.videos;
 
-                Toast.fire({
-                    icon: 'success',
-                    title: '¡Vídeo eliminado correctamente!'
-                });
+                        Toast.fire({
+                            icon: 'success',
+                            title: '¡Vídeo eliminado correctamente!'
+                        });
+                    });
+                } else if (result.isDenied) {
+                    Swal.fire('Acción cancelada', '', 'info')
+                }
             });
         },
         async setSrcVideo(archivo) {
