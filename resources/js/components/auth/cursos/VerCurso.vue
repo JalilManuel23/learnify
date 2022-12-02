@@ -32,7 +32,7 @@
                         </div>
                     </li>
                     <router-link 
-                        to="/curso-completo/9"
+                        :to="`/curso-completo/${this.cursoData.id}`"
                         class="enlace-video d-flex justify-content-start align-items-start"
                         v-bind:class="[(parseInt((this.inscripcionData.avance / this.videos.length) * 100) == 100) && 'completo']"
                     >
@@ -93,6 +93,17 @@ export default {
             this.tituloVideo = titulo;
 
             this.setAvance(avance);
+
+            if(this.inscripcionData.avance == this.videos.length) {
+                console.log('actualizando');
+                //TODO aqui actualizar el estatus del curso a completo
+                let nuevoEstatus = {
+                    estatus: '1'
+                }
+                await $api.put(`curso/${this.cursoData.id}`, nuevoEstatus).then(response => {
+                    console.log(response);
+                });
+            }
         },
         async traerInscripcion() {
             let data = {

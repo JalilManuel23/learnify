@@ -21,6 +21,7 @@ class CreateCursosTable extends Migration
             $table->string('titulo');
             $table->string('descripcion');
             $table->string('precio');
+            $table->string('estatus')->default('0');
             $table->string('imagen')->default('default_curso.webp');;
             $table->timestamps();
         });

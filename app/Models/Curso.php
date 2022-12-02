@@ -17,6 +17,7 @@ class Curso extends Model
         'calificacion',
         'descripcion',
         'precio',
+        'estatus',
         'imagen'
     ];
 
