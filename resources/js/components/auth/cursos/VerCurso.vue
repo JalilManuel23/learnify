@@ -94,13 +94,8 @@ export default {
 
             this.setAvance(avance);
 
-            if(this.inscripcionData.avance == this.videos.length) {
-                console.log('actualizando');
-                //TODO aqui actualizar el estatus del curso a completo
-                let nuevoEstatus = {
-                    estatus: '1'
-                }
-                await $api.put(`curso/${this.cursoData.id}`, nuevoEstatus).then(response => {
+            if(avance == this.videos.length) {
+                await $api.post(`/inscripcion/completa/${this.$route.params.inscripcion}`).then(response => {
                     console.log(response);
                 });
             }

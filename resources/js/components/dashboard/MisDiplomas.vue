@@ -18,8 +18,11 @@ import AuthFooter from '../auth/Footer.vue';
 
 export default {
   name: "MisDiplomas",
-  setup() {
-
+  data() {
+    return {
+        userData: {},
+        cursos
+    }
   },
   components: { AuthFooter }
 }

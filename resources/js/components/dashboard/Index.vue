@@ -46,7 +46,7 @@
                 <div class="tab-pane fade" id="pills-mis-cursos" role="tabpanel" aria-labelledby="pills-mis-cursos-tab" tabindex="0">
                     <div class="d-flex flex-wrap">
                         <!-- Tarjetas de cada curso -->
-                        <div v-for="{ id, titulo, descripcion, precio, categoria, duracion, imagen } in this.cursosComprados" :key="id" class="card col-12 col-md-2" style="margin: 20px">
+                        <div v-for="{ id, titulo, descripcion, precio, categoria, duracion, imagen, id_inscripcion } in this.cursosComprados" :key="id" class="card col-12 col-md-2" style="margin: 20px">
                             <div class="view overlay">
                                 <img class="card-img-top" :src="'/img/'+`${ imagen }`" />
                                 <a href="#!">
@@ -63,7 +63,7 @@
                                 <p class="text-muted desc">${{ precio }}</p>
                                 <p class="text-muted desc">{{ duracion }}mins.</p>
                                 </div>
-                                <router-link :to="`/ver-curso/${ id }`" class="btn btn-primary">Ver</router-link>
+                                <router-link :to="`/ver-curso/${ id }/${ id_inscripcion }`" class="btn btn-primary">Ver</router-link>
                             </div>
                         </div>
                     </div>
@@ -124,6 +124,7 @@ export default {
             let cursos = [];
 
             inscripciones.map(inscripcion => {
+                inscripcion.info_curso.id_inscripcion = inscripcion.id;
                 cursos.push(inscripcion.info_curso);
             });
             

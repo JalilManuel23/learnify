@@ -94,6 +94,17 @@ class InscripcionController extends Controller
         $inscripcion->delete();
     }
 
+    public function set_completo($id)
+    {
+        $inscripcion = Inscripcion::where('id', $id)->first();
+        $inscripcion->estatus = '1';
+        $inscripcion->save();
+
+        return response()->json([
+            'inscripcion' => $inscripcion
+        ]);
+    }
+
     public function comprobar_inscripcion(Request $request)
     {
         $estudiante = $request->estudiante;
@@ -123,6 +134,17 @@ class InscripcionController extends Controller
 
             $inscripciones_completas[] = $nueva_inscripcion;
         }
+
+        return response()->json([
+            'inscripciones' => $inscripciones
+        ]);
+    }
+
+    public function traer_cursos_completos(Request $request)
+    {
+        $estudiante = $request->estudiante;
+
+        $inscripciones = Inscripcion::where('estudiante', $estudiante)->where('estatus', '1')->get();
 
         return response()->json([
             'inscripciones' => $inscripciones

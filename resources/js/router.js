@@ -145,7 +145,7 @@ const routes = [
     },
     {
         name: 'VerCurso',
-        path: '/ver-curso/:curso',
+        path: '/ver-curso/:curso/:inscripcion',
         component: VerCurso
     },
     {

@@ -20,7 +20,7 @@ class CreateInscripcionesTable extends Migration
             $table->string('avance');
             $table->string('fecha_inicio');
             $table->string('fecha_fin');
-            $table->string('estatus');
+            $table->string('estatus')->default('0');
             $table->timestamps();
         });
     }
