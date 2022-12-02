@@ -31,6 +31,16 @@
                             <p style="margin-left: 3px;" v-on:click="verVideos">{{ duracion }}</p>
                         </div>
                     </li>
+                    <router-link 
+                        to="/curso-completo/9"
+                        class="enlace-video d-flex justify-content-start align-items-start"
+                        v-bind:class="[(parseInt((this.inscripcionData.avance / this.videos.length) * 100) == 100) && 'completo']"
+                    >
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-trophy" style="margin-right: 5px;" aria-hidden="true"></i>
+                            <p>Curso completo: {{ parseInt((this.inscripcionData.avance / this.videos.length) * 100) }}%</p>
+                        </div>
+                    </router-link>
                 </ul>
             </div>
             <div v-if="this.videos.length == 0" class="alert alert-primary col-8 mt-4" role="alert">
@@ -140,6 +150,8 @@ ul {
     border-bottom:1px solid rgb(197, 194, 194);
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+    color: black;
 }
 
 .enlace-video:hover {
@@ -156,4 +168,8 @@ ul {
     color: rgb(10, 118, 206);
 }
 
+.completo, .completo:hover {
+    background-color: rgb(7, 158, 15);
+    color: #fff;
+}
 </style>

@@ -222,6 +222,11 @@ const routes = [
         path: '/auth/calificaciones',
         component: () => import ('./components/auth/Calificaciones.vue')
     },
+    {
+        name: 'CursoCompleto',
+        path: '/curso-completo/:curso',
+        component: () => import ('./components/auth/cursos/CursoCompleto.vue')
+    },
 ]
 
 export default createRouter({

@@ -25,7 +25,7 @@
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         
         <link href="{{ mix('css/app.css') }}" type="text/css" rel="stylesheet"/>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
         @laravelPWA
     </head>
     <body>
