@@ -12,6 +12,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Validation\Rules\Password;
+use App\Mail\UserEmail;
+use Illuminate\Support\Facades\Mail;
 
 class UserController extends Controller
 {
@@ -153,6 +155,8 @@ class UserController extends Controller
                 'apellido_p' => $request->apellido_p,
                 'apellido_m' => $request->apellido_m,
             ]);
+
+            Mail::to($request->email)->send(new UserEmail);
 
             return response()->json([
                 'status' => true,
