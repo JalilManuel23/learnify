@@ -127,8 +127,8 @@ export default {
         this.cursoData.id = this.$route.params.curso;
 
         this.cargarCursoData();
-        this.cargarVideos();
         this.traerInscripcion();
+        this.cargarVideos();
     },
     components: {
         VideoPlayer

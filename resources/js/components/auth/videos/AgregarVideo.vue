@@ -13,6 +13,10 @@
               <input type="text" class="form-control" id="tituloVideo" aria-describedby="tituloVideo" v-model="fields.titulo">
             </div>
             <div class="col-12 col-md-6">
+              <label for="descripcion" class="form-label">Descripción</label>
+              <textarea name="descripcion" id="descripcion" cols="30" rows="5" class="form-control" v-model="fields.descripcion"></textarea>
+            </div>
+            <div class="col-12 col-md-6">
               <label for="archivoVideo" class="form-label mt-3">Archivo del vídeo</label>
               <input type="file" class="form-control" id="archivoVideo" aria-describedby="archivoVideo" v-on:change="previewFiles">
             </div>
@@ -36,7 +40,8 @@ export default {
                 titulo: '',
                 archivo: '',
                 avance: null,
-                video_archivo: null
+                video_archivo: null,
+                descripcion: ''
             }
         }
     },
@@ -67,6 +72,7 @@ export default {
             formdata.append("titulo", this.fields.titulo);
             formdata.append("archivo", this.fields.archivo);
             formdata.append("avance", this.fields.avance);
+            formdata.append("descripcion", this.fields.descripcion);
             formdata.append("video_archivo", this.fields.video_archivo);
 
             Swal.fire({

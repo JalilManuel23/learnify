@@ -33,9 +33,13 @@
                                         
                                     </div>
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9 d-flex flex-column align-items-start">
                                     <button class="btn btn-primary mt-4" v-on:click="inscribirse" v-if="!this.inscripcion">Inscribirme</button>
                                     <span v-else class="badge bg-success">Estás inscrito a este curso</span>
+                                    <router-link 
+                                        :to="`/ver-curso/${ this.cursoData.id }/${ this.inscripcion_id }`"
+                                        class="btn btn-primary mt-2 mb-4"
+                                    >Ir al curso</router-link>
                                 </div>
                                 <div class="col-3">
                                     <div class="justify-content-enda">
@@ -55,81 +59,27 @@
                                 <strong>Temario del curso</strong>
                             </h5>
                             <div class="accordion accordion-flush" id="accordionFlushExample">
-                                <div class="accordion-item">
+                                <div class="accordion-item" v-for="video in this.videos">
                                     <h2 class="accordion-header" id="flush-headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                        Introducción
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" :data-bs-target="`#flush-${video.id_flush}`" aria-expanded="false" aria-controls="flush-collapseOne">
+                                        {{ video.titulo }}
                                     </button>
                                     </h2>
-                                    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div :id="`flush-${video.id_flush}`" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                                         <div class="accordion-body">
                                             <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">1. Subtema</li>
-                                                <li class="list-group-item">2. Subtema</li>
-                                                <li class="list-group-item">3. Subtema</li>
-                                                <li class="list-group-item">4. Subtema</li>
-                                                <li class="list-group-item">5. Subtema</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                        Pregunta 2
-                                    </button>
-                                    </h2>
-                                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">1. Subtema</li>
-                                                <li class="list-group-item">2. Subtema</li>
-                                                <li class="list-group-item">3. Subtema</li>
-                                                <li class="list-group-item">4. Subtema</li>
-                                                <li class="list-group-item">5. Subtema</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                        Pregunta 4
-                                    </button>
-                                    </h2>
-                                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">1. Subtema</li>
-                                                <li class="list-group-item">2. Subtema</li>
-                                                <li class="list-group-item">3. Subtema</li>
-                                                <li class="list-group-item">4. Subtema</li>
-                                                <li class="list-group-item">5. Subtema</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="accordion-item">
-                                    <h2 class="accordion-header" id="flush-headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                        Pregunta 5
-                                    </button>
-                                    </h2>
-                                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                        <div class="accordion-body">
-                                            <ul class="list-group list-group-flush">
-                                                <li class="list-group-item">1. Subtema</li>
-                                                <li class="list-group-item">2. Subtema</li>
-                                                <li class="list-group-item">3. Subtema</li>
-                                                <li class="list-group-item">4. Subtema</li>
-                                                <li class="list-group-item">5. Subtema</li>
+                                                <p><b>Descripción:</b> {{ video.descripcion }}</p>
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fa fa-play-circle mr-2" aria-hidden="true"></i> 
+                                                    <p style="margin-left: 3px;">{{ video.duracion }}</p>
+                                                </div>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="py-5">
+                        <!-- <div class="py-5">
                             <h5 class="font-weight-bold text-left">
                                 <strong>Comentarios</strong>
                             </h5>
@@ -150,11 +100,8 @@
                                     <div class="user-image"> <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp" class="rounded-circle" width="70"> </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
-                </div>
-                <div class="col-md-3">
-
                 </div>
             </div>
         </div>
@@ -173,7 +120,9 @@
             return {
                 userData: {},
                 cursoData: {},
-                inscripcion: null
+                inscripcion: null,
+                inscripcion_id: null,
+                videos: []
             }
         },
         async mounted() {
@@ -186,6 +135,7 @@
 
             this.cargarCursoData();
             this.comprobarInscripcion();
+            this.cargarVideos();
         },  
         methods: {
             async cargarCursoData() {
@@ -223,8 +173,52 @@
                 await $api.post('/inscripcion/comprobar', data).then(response => {
                     if(response.data.inscripcion) {
                         this.inscripcion = true;
+
+                        let inscripcion = {
+                            estudiante: data.estudiante
+                        }
+
+                        $api.post('inscripciones/estudiante', inscripcion).then(response => {
+                            let inscripciones = response.data.inscripciones;
+
+                            console.log(inscripciones);
+                            inscripciones.map(inscripcion => {
+                                if(inscripcion.curso == data.curso) {
+                                    this.inscripcion_id = inscripcion.id;
+                                    console.log('entra');
+                                }
+                            });
+                        });
                     }
                 });
+            },
+            async cargarVideos() {
+                await $api.get(`traer_videos/curso/${this.$route.params.id}`).then(response => {
+                    let videosPeticion = response.data.videos;
+
+                    let videosFinal = [];
+                    videosPeticion.map(video => {
+                        video.id_flush = this.generarRandom(6);
+                        videosFinal.push(video);
+                    });
+
+                    this.videos = videosFinal;
+                });
+
+                console.log(this.videos);
+            },
+            generarRandom(num) {
+                const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+                const charactersLength = characters.length;
+                let result = "";
+                let ch;
+                while (result.length < num){
+                    ch = characters.charAt(Math.floor(Math.random() * charactersLength));
+                    if (!result.includes(ch)){
+                        result += ch;
+                    }
+                }
+                return result;
             }
         },  
         components: { Footer },

@@ -14,6 +14,7 @@ class Video extends Model
         'avance',
         'archivo',
         'titulo',
+        'descripcion',
         'duracion'
     ];
 

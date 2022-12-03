@@ -40,15 +40,17 @@
                   <tr>
                     <th scope="col">#</th>
                     <th scope="col">Título</th>
+                    <th scope="col">Descripción</th>
                     <th scope="col">Nombre del archivo</th>
                     <th scope="col">Duración</th>
                     <th scope="col">Acciones</th>
                   </tr>
                 </thead>
-                <tbody v-for="{ id, titulo, archivo, avance, duracion } in this.videos" :key="id">
+                <tbody v-for="{ id, titulo, archivo, avance, duracion, descripcion } in this.videos" :key="id">
                   <tr>
                     <th scope="row">{{ avance }}</th>
                     <td>{{ titulo }}</td>
+                    <td>{{ descripcion }}</td>
                     <td>{{ archivo }}</td>
                     <td>{{ duracion }}</td>
                     <td>
