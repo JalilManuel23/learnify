@@ -37,6 +37,7 @@
                                     <button class="btn btn-primary mt-4" v-on:click="inscribirse" v-if="!this.inscripcion">Inscribirme</button>
                                     <span v-else class="badge bg-success">Estás inscrito a este curso</span>
                                     <router-link 
+                                        v-if="this.inscripcion"
                                         :to="`/ver-curso/${ this.cursoData.id }/${ this.inscripcion_id }`"
                                         class="btn btn-primary mt-2 mb-4"
                                     >Ir al curso</router-link>

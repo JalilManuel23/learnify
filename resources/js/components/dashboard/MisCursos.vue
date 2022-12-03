@@ -9,10 +9,9 @@
 					<div>
 						<div class="d-flex flex-wrap">
 							<!-- Tarjetas de cada curso -->
-							<div v-for="{ id, titulo, descripcion, precio, categoria, duracion } in this.cursosComprados" :key="id" class="card col-12 col-md-2" style="margin: 20px">
+							<div v-for="{ id, titulo, descripcion, precio, categoria, duracion, imagen } in this.cursosComprados" :key="id" class="card col-12 col-md-2" style="margin: 20px">
 								<div class="view overlay">
-									<img class="card-img-top" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).webp"
-									alt="Card image cap">
+                  <img class="card-img-top" :src="'/img/'+`${ imagen }`" />
 									<a href="#!">
 										<div class="mask rgba-white-slight"></div>
 									</a>
