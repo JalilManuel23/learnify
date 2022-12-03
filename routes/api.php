@@ -54,6 +54,7 @@ Route::post('/inscripcion/comprobar', [App\Http\Controllers\InscripcionControlle
 Route::post('/inscripciones/estudiante', [App\Http\Controllers\InscripcionController::class, 'traer_cursos_estudiante']);
 Route::put('inscripcion/editar_avance/{avance}', [App\Http\Controllers\InscripcionController::class, 'set_avance']);
 Route::post('/inscripcion/completa/{id}', [App\Http\Controllers\InscripcionController::class, 'set_completo']);
+Route::post('/inscripcion/traer_completas', [App\Http\Controllers\InscripcionController::class, 'traer_cursos_completos']);
 Route::resource('inscripciones', InscripcionController::class);
 
 Route::get('/cursos/por_instructor/{id}', [App\Http\Controllers\CursoController::class, 'traer_cursos_por_instructor']);

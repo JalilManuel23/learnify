@@ -146,8 +146,20 @@ class InscripcionController extends Controller
 
         $inscripciones = Inscripcion::where('estudiante', $estudiante)->where('estatus', '1')->get();
 
+        $inscripciones_completas = array();
+
+        foreach($inscripciones as $inscripcion)
+        {
+            $curso = Inscripcion::find($inscripcion->id)->curso_datos;
+            
+            $nueva_inscripcion = $inscripcion;
+            $nueva_inscripcion->info_curso = $curso;
+
+            $inscripciones_completas[] = $nueva_inscripcion;
+        }
+
         return response()->json([
-            'inscripciones' => $inscripciones
+            'inscripciones' => $inscripciones_completas
         ]);
     }
 }
