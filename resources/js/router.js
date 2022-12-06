@@ -227,6 +227,19 @@ const routes = [
         path: '/curso-completo/:curso',
         component: () => import ('./components/auth/cursos/CursoCompleto.vue')
     },
+
+    // ERROR 404
+    {
+        name: '404',
+        path: '/404',
+        component: () => import ('./components/404.vue')
+    },
+    {
+         path:"/:catchAll(.*)",
+         redirect:{
+             name:"404"
+         }
+    }
 ]
 
 export default createRouter({
