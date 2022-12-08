@@ -12,7 +12,7 @@
             </p>
             <div class="container mt-3">
               <div class="row">              
-                <div v-for="({ titulo, name, cursos, imagen }, index) in this.categorias" :key="index" class="col-xl-3 col-md-6 mb-4">
+                <div v-for="({ titulo, name, cursos, imagen }, index) in this.categorias" :key="index" class="col-xl-3 col-12 col-md-6 mb-4">
                   <router-link :to="{
                     name: 'Categoria',
                     params: {

@@ -61,13 +61,17 @@
         data() {
             return {
                 isActive: false,
-                pagesNavWhite: ['Categorias', 'Planes', 'Contacto','Categoria'],
+                pagesNavWhite: ['Categorias', 'Planes', 'Contacto','Categoria', 'CentroAyuda', 'Legal'],
                 categorias: []
             }
         },
         methods: {
             handleScroll(event) {
                 this.isActive = (window.scrollY > 0) ? true : false;
+
+                if(window.innerWidth < 600) {
+                    this.isActive = true;
+                }
             },
             cargarCategorias() {
                 this.categorias = categorias;
@@ -78,6 +82,10 @@
             this.handleDebouncedScroll = debounce(this.handleScroll);
             window.addEventListener('scroll', this.handleDebouncedScroll);
             this.cargarCategorias();
+
+            if(window.innerWidth < 600) {
+                this.isActive = true;
+            }
         },
 
         beforeDestroy() {
@@ -105,11 +113,11 @@
     }
     @media (max-width: 600px) {
         .dropdown-menu .submenu {
-        display:none;
-        position: absolute;
-    }
+            display:none;
+            position: absolute;
+        }
         .dropdown-menu>li:hover>.submenu {
-        display:block;
-    }
+            display:block;
+        }
     }
 </style>

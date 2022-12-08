@@ -1,5 +1,5 @@
 <template>
-    <section id="contacto" class="contact" v-bind:style="$route.name == 'Contacto' ? 'padding-top: 20vh;' : 'padding-top: 0;'">
+    <section id="contacto" class="contact pb-4" v-bind:style="$route.name == 'Contacto' ? 'padding-top: 20vh;' : 'padding-top: 10vh;'">
         <div class="container align-items-center my-4">
           <section class="mb-4">
             <!--Section heading-->
